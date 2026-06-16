@@ -4,7 +4,7 @@ import ClusterTile from "@/components/ClusterTile";
 import PropertyCard from "@/components/PropertyCard";
 import ConversationalSearch from "@/components/ConversationalSearch";
 import { SkeletonCard, SkeletonClusterTile } from "@/components/Skeletons";
-import { getAllClustersWithImages, getFeaturedProperties, totalCount } from "@/lib/repo";
+import { getAllClustersWithImages, getFeaturedProperties } from "@/lib/repo";
 
 async function FeaturedGrid() {
   const featured = await getFeaturedProperties(12);
@@ -18,16 +18,12 @@ async function FeaturedGrid() {
 }
 
 export default function Home() {
-  const total = totalCount();
   const clusters = getAllClustersWithImages();
   return (
     <main className="min-h-screen">
       {/* HERO */}
       <section className="relative pt-16 pb-20 px-5 sm:px-8">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="text-xs uppercase tracking-[0.3em] text-spice-400 mb-6 animate-fade-in">
-            {total}+ curated stays · refreshed daily
-          </div>
           <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl leading-[1.05] text-balance animate-slide-up">
             Stay where India
             <br />
@@ -127,7 +123,7 @@ export default function Home() {
               {
                 kicker: "02",
                 title: "We curate, not list",
-                body: "An LLM matches against our hand-picked catalogue and explains why each stay fits.",
+                body: "We match your description against our hand-picked catalogue and explain why each stay fits.",
               },
               {
                 kicker: "03",
