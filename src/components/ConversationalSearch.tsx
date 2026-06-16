@@ -79,7 +79,7 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
           ref={inputRef}
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          rows={1}
+          rows={2}
           onInput={(e) => {
             const el = e.currentTarget;
             el.style.height = "auto";
@@ -91,16 +91,19 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
               submit(input);
             }
           }}
-          placeholder="What kind of stay?"
+          placeholder="Tell me what you want — landscape, mood, food, budget, vibe…"
           className="flex-1 min-w-0 bg-transparent outline-none resize-none py-3 text-sm sm:text-base placeholder:text-faint"
         />
-        <button
-          type="submit"
-          disabled={phase === "thinking"}
-          className="h-10 sm:h-11 px-4 sm:px-5 rounded-xl sm:rounded-2xl bg-spice-500 hover:bg-spice-400 text-ink-900 font-medium text-sm whitespace-nowrap disabled:opacity-50 transition-colors shrink-0"
-        >
-          {phase === "thinking" ? "…" : "Ask"}
-        </button>
+        <div className="flex flex-col gap-1.5 pb-1.5">
+          <MicButton onTranscript={(t) => { setInput((prev) => prev + t); }} />
+          <button
+            type="submit"
+            disabled={phase === "thinking"}
+            className="h-10 sm:h-11 px-4 sm:px-5 rounded-xl sm:rounded-2xl bg-spice-500 hover:bg-spice-400 text-ink-900 font-medium text-sm whitespace-nowrap disabled:opacity-50 transition-colors shrink-0"
+          >
+            {phase === "thinking" ? "…" : "Ask"}
+          </button>
+        </div>
       </form>
 
       {phase === "idle" && !minimal && (
@@ -229,5 +232,59 @@ function ResultCard({ hit }: { hit: SearchHit & { property: Property } }) {
         {hit.reason}
       </div>
     </Link>
+  );
+}
+
+function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
+  const [listening, setListening] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const recognitionRef = useRef<any>(null);
+
+  function toggle() {
+    if (listening) {
+      recognitionRef.current?.stop();
+      setListening(false);
+      return;
+    }
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const w = window as any;
+    const SpeechRecognition = w.SpeechRecognition || w.webkitSpeechRecognition;
+    if (!SpeechRecognition) return;
+
+    const recognition = new SpeechRecognition();
+    recognition.lang = "en-IN";
+    recognition.interimResults = false;
+    recognition.continuous = false;
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    recognition.onresult = (event: any) => {
+      const transcript: string = event?.results?.[0]?.[0]?.transcript || "";
+      if (transcript) onTranscript(transcript);
+      setListening(false);
+    };
+    recognition.onerror = () => setListening(false);
+    recognition.onend = () => setListening(false);
+
+    recognitionRef.current = recognition;
+    recognition.start();
+    setListening(true);
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      className={`h-10 w-10 rounded-xl flex items-center justify-center transition-colors shrink-0 ${
+        listening ? "bg-red-500/20 text-red-400 animate-pulse" : "bg-ink-800 hover:bg-ink-700 text-muted hover:text-foreground"
+      }`}
+      title={listening ? "Stop listening" : "Speak your request"}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+        <line x1="12" y1="19" x2="12" y2="22" />
+      </svg>
+    </button>
   );
 }
