@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { getPropertyBySlug, getAllProperties } from "@/lib/repo";
 import { getCluster } from "@/data/clusters";
@@ -8,7 +7,6 @@ import PropertyImage from "@/components/PropertyImage";
 import PropertyCard from "@/components/PropertyCard";
 import ReviewsPanel from "@/components/ReviewsPanel";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
-import { SkeletonReviewBlock } from "@/components/Skeletons";
 import pricingData from "@/data/property-pricing.json";
 
 export async function generateStaticParams() {
@@ -152,16 +150,7 @@ export default async function StayPage({ params }: { params: { slug: string } })
               <div className="text-xs uppercase tracking-[0.3em] text-spice-400 mb-4">
                 What guests say
               </div>
-              <Suspense
-                fallback={
-                  <div className="space-y-6">
-                    <SkeletonReviewBlock />
-                    <SkeletonReviewBlock />
-                  </div>
-                }
-              >
-                <ReviewsPanel propertySlug={property.slug} />
-              </Suspense>
+              <ReviewsPanel propertySlug={property.slug} />
             </div>
           </div>
 

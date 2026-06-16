@@ -1,99 +1,66 @@
 "use client";
-import { useEffect, useState } from "react";
-import { SkeletonReviewBlock } from "./Skeletons";
-import type { ReviewSummary } from "@/types";
+import reviewsData from "@/data/property-reviews.json";
+
+type ReviewEntry = {
+  rating: number | null;
+  ratingCount: number;
+  editorial: string | null;
+  reviews: { text: string; rating: number; time: string; author: string }[];
+  fetchedAt: string;
+};
+
+const allReviews = reviewsData as Record<string, ReviewEntry>;
 
 export default function ReviewsPanel({ propertySlug }: { propertySlug: string }) {
-  const [data, setData] = useState<ReviewSummary | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const data = allReviews[propertySlug];
 
-  useEffect(() => {
-    let cancelled = false;
-    fetch(`/api/reviews?slug=${propertySlug}`)
-      .then((r) => (r.ok ? r.json() : null))
-      .then((d) => {
-        if (!cancelled) {
-          if (d) setData(d);
-          else setError(true);
-        }
-      })
-      .catch(() => {
-        if (!cancelled) setError(true);
-      })
-      .finally(() => {
-        if (!cancelled) setLoading(false);
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [propertySlug]);
-
-  if (loading) {
-    return (
-      <div className="space-y-6">
-        <SkeletonReviewBlock />
-        <SkeletonReviewBlock />
-      </div>
-    );
-  }
-
-  if (error || !data || (data.highlights.length === 0 && data.quotes.length === 0)) {
+  if (!data || (!data.rating && data.reviews.length === 0)) {
     return (
       <div className="text-sm text-muted leading-relaxed max-w-xl">
         We haven&apos;t pulled public guest reviews for this stay yet. The host&apos;s site
-        and TripAdvisor/Google listings (linked on the right) are the best sources for
-        first-hand stories.
+        and Google Maps listing are the best sources for first-hand stories.
       </div>
     );
   }
 
   return (
-    <div className="space-y-8 animate-fade-in">
-      {data.highlights.length > 0 && (
-        <div>
-          <div className="text-xs uppercase tracking-wider text-spice-400 mb-3">
-            What guests keep saying
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {data.highlights.map((h, i) => (
-              <span
-                key={i}
-                className="text-sm px-3 py-1.5 rounded-full bg-ink-800 border border-hairline"
-              >
-                {h}
-              </span>
-            ))}
+    <div className="space-y-6 animate-fade-in">
+      {/* Aggregate rating */}
+      {data.rating && (
+        <div className="flex items-center gap-3">
+          <span className="font-display text-4xl text-spice-400">{data.rating}</span>
+          <div>
+            <div className="flex gap-0.5">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <span key={i} className={i < Math.round(data.rating!) ? "text-spice-400" : "text-ink-600"}>★</span>
+              ))}
+            </div>
+            <div className="text-xs text-muted">{data.ratingCount.toLocaleString()} Google reviews</div>
           </div>
         </div>
       )}
 
-      {data.quotes.length > 0 && (
+      {/* Editorial summary */}
+      {data.editorial && (
+        <p className="text-sm text-foreground/80 italic leading-relaxed">
+          {data.editorial}
+        </p>
+      )}
+
+      {/* Top quotes */}
+      {data.reviews.length > 0 && (
         <div className="space-y-5">
-          {data.quotes.map((q, i) => (
+          {data.reviews.slice(0, 3).map((rv, i) => (
             <figure
               key={i}
               className="border-l-2 border-spice-500/40 pl-5 animate-slide-up"
               style={{ animationDelay: `${i * 80}ms` }}
             >
-              <blockquote className="font-display text-xl leading-snug text-balance">
-                &ldquo;{q.text}&rdquo;
+              <blockquote className="text-sm leading-relaxed text-balance">
+                &ldquo;{rv.text.length > 200 ? rv.text.slice(0, 200) + "…" : rv.text}&rdquo;
               </blockquote>
               <figcaption className="text-xs text-muted mt-2">
-                — {q.source}
-                {q.sourceUrl && (
-                  <>
-                    {" · "}
-                    <a
-                      href={q.sourceUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline decoration-dotted hover:text-foreground"
-                    >
-                      read source
-                    </a>
-                  </>
-                )}
+                — {rv.author} · {"★".repeat(rv.rating)} · {rv.time}
               </figcaption>
             </figure>
           ))}
@@ -101,7 +68,7 @@ export default function ReviewsPanel({ propertySlug }: { propertySlug: string })
       )}
 
       <div className="text-[10px] text-faint">
-        Pulled from public reviews · {new Date(data.fetchedAt).toLocaleString()}
+        Source: Google Maps · fetched {new Date(data.fetchedAt).toLocaleDateString()}
       </div>
     </div>
   );
