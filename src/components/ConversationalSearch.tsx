@@ -237,8 +237,15 @@ function ResultCard({ hit }: { hit: SearchHit & { property: Property } }) {
 
 function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
   const [listening, setListening] = useState(false);
+  const [supported, setSupported] = useState(false);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const recognitionRef = useRef<any>(null);
+
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const w = window as any;
+    setSupported(!!(w.SpeechRecognition || w.webkitSpeechRecognition));
+  }, []);
 
   function toggle() {
     if (listening) {
@@ -270,6 +277,8 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
     recognition.start();
     setListening(true);
   }
+
+  if (!supported) return null;
 
   return (
     <button
