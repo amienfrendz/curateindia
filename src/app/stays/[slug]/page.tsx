@@ -7,6 +7,7 @@ import PropertyImage from "@/components/PropertyImage";
 import PropertyCard from "@/components/PropertyCard";
 import ReviewsPanel from "@/components/ReviewsPanel";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
+import ShareButton from "@/components/ShareButton";
 import pricingData from "@/data/property-pricing.json";
 
 export async function generateStaticParams() {
@@ -70,9 +71,12 @@ export default async function StayPage({ params }: { params: { slug: string } })
             <h1 className="font-display text-5xl sm:text-7xl text-balance leading-[1.05] max-w-4xl">
               {property.name}
             </h1>
-            <div className="mt-3 text-base text-foreground/80">
-              {property.location} · {property.state} ·{" "}
-              <span className="text-spice-400">{property.priceTier}</span>
+            <div className="mt-3 flex items-center gap-4">
+              <span className="text-base text-foreground/80">
+                {property.location} · {property.state} ·{" "}
+                <span className="text-spice-400">{property.priceTier}</span>
+              </span>
+              <ShareButton name={property.name} slug={property.slug} />
             </div>
           </div>
         </div>
