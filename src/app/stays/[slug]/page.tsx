@@ -41,7 +41,7 @@ export default async function StayPage({ params }: { params: { slug: string } })
   return (
     <main className="min-h-screen pb-20">
       {/* HERO */}
-      <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
+      <section className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] min-h-[350px] sm:min-h-[450px] overflow-hidden">
         <PropertyImage
           imageUrl={property.imageUrl}
           website={property.website}
@@ -68,11 +68,11 @@ export default async function StayPage({ params }: { params: { slug: string } })
                 );
               })}
             </div>
-            <h1 className="font-display text-5xl sm:text-7xl text-balance leading-[1.05] max-w-4xl">
+            <h1 className="font-display text-3xl sm:text-5xl lg:text-7xl text-balance leading-[1.05] max-w-4xl">
               {property.name}
             </h1>
-            <div className="mt-3 flex items-center gap-4">
-              <span className="text-base text-foreground/80">
+            <div className="mt-3 flex flex-wrap items-center gap-2 sm:gap-4">
+              <span className="text-sm sm:text-base text-foreground/80">
                 {property.location} · {property.state} ·{" "}
                 <span className="text-spice-400">{property.priceTier}</span>
               </span>
@@ -88,7 +88,7 @@ export default async function StayPage({ params }: { params: { slug: string } })
           {/* LEFT */}
           <div className="space-y-12">
             {/* Quick facts */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2 sm:gap-3">
               <Fact label="Type" value={property.type} />
               {property.rooms && <Fact label="Rooms" value={`${property.rooms}`} />}
               <Fact label="Region" value={property.region} />

@@ -24,7 +24,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative pt-16 pb-20 px-5 sm:px-8">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl leading-[1.05] text-balance animate-slide-up">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl xl:text-8xl leading-[1.05] text-balance animate-slide-up">
             Stay where India
             <br />
             <span className="italic text-sand-400">still lives.</span>
@@ -108,7 +108,7 @@ export default function Home() {
       {/* HOW IT WORKS */}
       <section className="px-5 sm:px-8 py-20 border-t border-hairline">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="font-display text-4xl sm:text-5xl text-balance mb-12">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-balance mb-12">
             We don&apos;t take bookings.
             <br />
             <span className="italic text-sand-400">We take you to the right host.</span>

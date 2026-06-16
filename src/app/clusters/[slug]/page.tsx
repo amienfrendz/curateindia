@@ -28,7 +28,7 @@ export default async function ClusterPage({ params }: { params: { slug: string }
   return (
     <main className="min-h-screen">
       {/* HERO */}
-      <section className="relative h-[60vh] min-h-[420px] flex items-end overflow-hidden">
+      <section className="relative h-[45vh] sm:h-[55vh] lg:h-[60vh] min-h-[320px] sm:min-h-[400px] flex items-end overflow-hidden">
         <ClusterImage
           imageUrl={cluster.imageUrl}
           query={`${cluster.name} india ${cluster.tagline}`}
@@ -48,10 +48,10 @@ export default async function ClusterPage({ params }: { params: { slug: string }
               {properties.length} {properties.length === 1 ? "stay" : "stays"} curated
             </span>
           </div>
-          <h1 className="font-display text-5xl sm:text-7xl text-balance leading-[1.05]">
+          <h1 className="font-display text-3xl sm:text-5xl lg:text-7xl text-balance leading-[1.05]">
             {cluster.name}
           </h1>
-          <p className="mt-4 text-lg text-foreground/80 max-w-2xl text-balance">
+          <p className="mt-4 text-base sm:text-lg text-foreground/80 max-w-2xl text-balance">
             {cluster.description}
           </p>
         </div>

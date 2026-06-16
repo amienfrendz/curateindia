@@ -91,8 +91,8 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
               submit(input);
             }
           }}
-          placeholder="Tell me what you want — landscape, mood, food, budget, vibe…"
-          className="flex-1 bg-transparent outline-none resize-none py-3 text-base placeholder:text-faint"
+          placeholder="Describe what you want — mood, landscape, budget…"
+          className="flex-1 bg-transparent outline-none resize-none py-3 text-sm sm:text-base placeholder:text-faint"
         />
         <button
           type="submit"
@@ -104,19 +104,50 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
       </form>
 
       {phase === "idle" && !minimal && (
-        <div className="mt-4 flex flex-wrap gap-2">
-          {SUGGESTIONS.map((s) => (
+        <div className="mt-4 flex flex-wrap gap-2 justify-center">
+          {SUGGESTIONS.slice(0, 4).map((s) => (
             <button
               key={s}
               onClick={() => {
                 setInput(s);
                 submit(s);
               }}
-              className="text-xs px-3 py-1.5 rounded-full border border-hairline text-muted hover:text-foreground hover:border-ink-300/30 transition-colors"
+              className="text-xs px-3 py-1.5 rounded-full border border-hairline text-muted hover:text-foreground hover:border-ink-300/30 transition-colors text-left"
             >
               {s}
             </button>
           ))}
+          <details className="w-full sm:hidden">
+            <summary className="text-xs text-muted cursor-pointer text-center mt-1">More ideas…</summary>
+            <div className="mt-2 flex flex-wrap gap-2 justify-center">
+              {SUGGESTIONS.slice(4).map((s) => (
+                <button
+                  key={s}
+                  onClick={() => {
+                    setInput(s);
+                    submit(s);
+                  }}
+                  className="text-xs px-3 py-1.5 rounded-full border border-hairline text-muted hover:text-foreground hover:border-ink-300/30 transition-colors text-left"
+                >
+                  {s}
+                </button>
+              ))}
+            </div>
+          </details>
+          <div className="hidden sm:contents">
+            {SUGGESTIONS.slice(4).map((s) => (
+              <button
+                key={s}
+                onClick={() => {
+                  setInput(s);
+                  submit(s);
+                }}
+                className="text-xs px-3 py-1.5 rounded-full border border-hairline text-muted hover:text-foreground hover:border-ink-300/30 transition-colors"
+              >
+                {s}
+              </button>
+            ))}
+          </div>
         </div>
       )}
 
