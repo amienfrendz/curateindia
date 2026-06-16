@@ -18,33 +18,50 @@ export async function POST(req: NextRequest) {
     }
 
     const properties = await getAllProperties();
-    // Compact catalogue for the LLM. Trim verbose fields to keep the prompt
-    // under gpt-4o-mini's 8000-token request limit (catalogue is now 65+).
-    const compact = properties.map((p) => ({
-      id: p.id,
-      name: p.name,
-      type: p.type,
-      loc: `${p.location}, ${p.state}`,
-      clusters: p.clusters,
-      tier: p.priceTier,
-      blurb: p.blurb,
-    }));
 
-    const system = `You are CurateIndia's conversational concierge. The user describes the kind of stay they want, in any tone — moods, food, landscapes, budgets, dates, occasions. You match against a curated catalogue of small Indian experiential stays (havelis, villas, bungalows, cottages, huts, homestays, houseboats, ashrams, farmstays, treehouses, mostly ≤10 rooms, hosted, family/community-run).
+    // Split catalogue into chunks and run a quick pre-filter via cluster/keyword match,
+    // then send only relevant subset to LLM.
+    const queryLower = query.toLowerCase();
+    
+    // Score each property for relevance to the query (lightweight keyword match)
+    const scored = properties.map((p) => {
+      let score = 0;
+      const text = `${p.name} ${p.location} ${p.state} ${p.type} ${p.clusters.join(" ")} ${p.blurb} ${p.priceTier}`.toLowerCase();
+      const words = queryLower.split(/\s+/).filter(w => w.length > 2);
+      for (const w of words) {
+        if (text.includes(w)) score += 1;
+      }
+      // Boost if cluster matches
+      for (const c of p.clusters) {
+        if (queryLower.includes(c.replace(/-/g, " "))) score += 3;
+      }
+      return { p, score };
+    });
 
-Return ONLY a JSON object with shape:
-{
-  "intent": "1-2 sentence restatement of what the user wants, in second person ('You're after...')",
-  "hits": [{ "propertyId": "<exact id from catalogue>", "reason": "1-sentence specific reason this property fits — name the experience or food or host hook", "matchScore": 0.0-1.0 }]
-}
+    // Take top 40 by keyword relevance, plus 20 random others for diversity
+    scored.sort((a, b) => b.score - a.score);
+    const topRelevant = scored.slice(0, 40).map(s => s.p);
+    const rest = scored.slice(40);
+    // Shuffle rest and take 20
+    for (let i = rest.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [rest[i], rest[j]] = [rest[j], rest[i]];
+    }
+    const diverseSample = rest.slice(0, 20).map(s => s.p);
+    const subset = [...topRelevant, ...diverseSample];
 
-Rules:
-- Return up to 12 hits, ordered by matchScore (desc).
-- Only use propertyIds that exist in the catalogue. Never invent.
-- If the user's request is incompatible with the catalogue, return zero hits and explain in intent.
-- Reasons must reference the property's actual experiences/food/location — no generic praise.`;
+    const compact = subset.map((p) => (
+      `${p.id}|${p.name}|${p.type}|${p.location},${p.state}|${p.clusters.join("+")}|${p.priceTier}`
+    )).join("\n");
 
-    const userMsg = `User query:\n"""${query}"""\n\nCatalogue (${compact.length} properties):\n${JSON.stringify(compact)}`;
+    const system = `You are CurateIndia's concierge. Match the user's request to properties from the catalogue.
+
+Return ONLY JSON:
+{"intent":"1-2 sentence restatement in second person","hits":[{"propertyId":"exact id","reason":"1-sentence why it fits","matchScore":0.0-1.0}]}
+
+Rules: up to 12 hits, desc by matchScore. Only use IDs from the catalogue. Never invent.`;
+
+    const userMsg = `Query: "${query}"\n\nCatalogue (${subset.length} properties, format: id|name|type|location|clusters|price):\n${compact}`;
 
     const llm = await chatJSON<LLMResponse>({
       system,

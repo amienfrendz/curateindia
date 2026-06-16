@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Suspense } from "react";
 import ClusterTile from "@/components/ClusterTile";
 import PropertyCard from "@/components/PropertyCard";
-import ConversationalSearch from "@/components/ConversationalSearch";
 import { SkeletonCard, SkeletonClusterTile } from "@/components/Skeletons";
 import { getAllClustersWithImages, getFeaturedProperties } from "@/lib/repo";
 
@@ -35,7 +34,12 @@ export default function Home() {
           </p>
 
           <div className="mt-10 animate-slide-up" style={{ animationDelay: "200ms" }}>
-            <ConversationalSearch />
+            <Link
+              href="/search"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-spice-500 hover:bg-spice-400 text-ink-900 font-medium transition-colors"
+            >
+              Ask CurateIndia →
+            </Link>
           </div>
         </div>
       </section>
