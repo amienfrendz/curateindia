@@ -16,7 +16,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, "..");
 
-const API_KEY = process.env.GOOGLE_PLACES_API_KEY || "";
+const envFile = await fs.readFile(path.join(ROOT, ".env.local"), "utf8");
+const API_KEY = envFile.match(/GOOGLE_PLACES_API_KEY=(.+)/)?.[1]?.trim() || process.env.GOOGLE_PLACES_API_KEY || "";
+if (!API_KEY) { console.error("No GOOGLE_PLACES_API_KEY in .env.local"); process.exit(1); }
 const PLACES_SEARCH_URL = "https://places.googleapis.com/v1/places:searchText";
 const PLACES_PHOTO_URL = "https://places.googleapis.com/v1";
 
