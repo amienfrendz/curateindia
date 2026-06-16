@@ -73,7 +73,7 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
           e.preventDefault();
           submit(input);
         }}
-        className="glass rounded-3xl p-2 pl-5 pr-2 flex items-end gap-2"
+        className="glass rounded-2xl sm:rounded-3xl p-2 pl-4 sm:pl-5 pr-2 flex items-end gap-1.5 sm:gap-2"
       >
         <textarea
           ref={inputRef}
@@ -91,15 +91,15 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
               submit(input);
             }
           }}
-          placeholder="Describe what you want — mood, landscape, budget…"
-          className="flex-1 bg-transparent outline-none resize-none py-3 text-sm sm:text-base placeholder:text-faint"
+          placeholder="What kind of stay?"
+          className="flex-1 min-w-0 bg-transparent outline-none resize-none py-3 text-sm sm:text-base placeholder:text-faint"
         />
         <button
           type="submit"
           disabled={phase === "thinking"}
-          className="h-11 px-5 rounded-2xl bg-spice-500 hover:bg-spice-400 text-ink-900 font-medium text-sm disabled:opacity-50 transition-colors"
+          className="h-10 sm:h-11 px-4 sm:px-5 rounded-xl sm:rounded-2xl bg-spice-500 hover:bg-spice-400 text-ink-900 font-medium text-sm whitespace-nowrap disabled:opacity-50 transition-colors shrink-0"
         >
-          {phase === "thinking" ? "Curating…" : "Ask"}
+          {phase === "thinking" ? "…" : "Ask"}
         </button>
       </form>
 
