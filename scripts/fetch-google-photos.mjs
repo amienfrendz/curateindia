@@ -16,7 +16,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, "..");
 
-const API_KEY = "REDACTED_GOOGLE_KEY";
+const API_KEY = process.env.GOOGLE_PLACES_API_KEY || "";
 const PLACES_SEARCH_URL = "https://places.googleapis.com/v1/places:searchText";
 const PLACES_PHOTO_URL = "https://places.googleapis.com/v1";
 
