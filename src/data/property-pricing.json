@@ -388,5 +388,305 @@
     "highINR": 6000,
     "basis": "per room",
     "includes": "breakfast; tea plantation tour; guided trek to the nearby scenic viewpoints"
+  },
+  "the-bangala": {
+    "lowINR": 12000,
+    "highINR": 18000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, access to estate facilities"
+  },
+  "visalam-chettinad": {
+    "lowINR": 15000,
+    "highINR": 25000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, guided Chettinad heritage tour"
+  },
+  "villa-retreat-kodaikanal": {
+    "lowINR": 4000,
+    "highINR": 8000,
+    "basis": "per room",
+    "includes": "breakfast, access to bungalow facilities, guided trekking"
+  },
+  "sadhana-forest-auroville": {
+    "lowINR": 800,
+    "highINR": 1500,
+    "basis": "per person",
+    "includes": "dormitory accommodation, vegetarian meals, yoga and meditation sessions"
+  },
+  "harivihar-heritage-homestead": {
+    "lowINR": 10000,
+    "highINR": 20000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, Ayurvedic massage, access to homestead facilities"
+  },
+  "tranquil-resort-wayanad": {
+    "lowINR": 12000,
+    "highINR": 25000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, guided forest treks, and yoga sessions"
+  },
+  "kairali-ayurvedic-healing-village": {
+    "lowINR": 15000,
+    "highINR": 30000,
+    "basis": "per person",
+    "includes": "Ayurvedic treatments, yoga, meditation, and all meals"
+  },
+  "malabar-house-fort-kochi": {
+    "lowINR": 18000,
+    "highINR": 35000,
+    "basis": "per room",
+    "includes": "breakfast, complimentary sunset cruise, and access to the hotel's pool and gym"
+  },
+  "kalari-rasayana-paravur": {
+    "lowINR": 10000,
+    "highINR": 20000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, Kalari massage, and yoga sessions"
+  },
+  "swaswara-gokarna": {
+    "lowINR": 25000,
+    "highINR": 50000,
+    "basis": "per person",
+    "includes": "all meals, yoga, meditation, and art classes"
+  },
+  "honey-valley-estate": {
+    "lowINR": 4000,
+    "highINR": 8000,
+    "basis": "per room",
+    "includes": "breakfast, and guided estate walks"
+  },
+  "shreyas-retreat-bengaluru": {
+    "lowINR": 30000,
+    "highINR": 60000,
+    "basis": "per person",
+    "includes": "all meals, yoga, meditation, and farm activities"
+  },
+  "old-kent-estate-chikmagalur": {
+    "lowINR": 12000,
+    "highINR": 25000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, and guided estate walks"
+  },
+  "nrityagram-dance-village": {
+    "lowINR": 3000,
+    "highINR": 6000,
+    "basis": "per person",
+    "includes": "breakfast, lunch, and dinner, and dance classes"
+  },
+  "siolim-house-goa": {
+    "lowINR": 15000,
+    "highINR": 30000,
+    "basis": "per room",
+    "includes": "breakfast, and access to the hotel's pool and gym"
+  },
+  "bhakti-kutir-palolem": {
+    "lowINR": 3500,
+    "highINR": 6000,
+    "basis": "per room",
+    "includes": "breakfast, yoga classes, and access to private beach"
+  },
+  "yoga-magic-anjuna": {
+    "lowINR": 8000,
+    "highINR": 12000,
+    "basis": "per person",
+    "includes": "all meals, yoga classes, and meditation sessions"
+  },
+  "house-of-mg-ahmedabad": {
+    "lowINR": 9000,
+    "highINR": 15000,
+    "basis": "per room",
+    "includes": "breakfast, heritage walk, and access to rooftop restaurant"
+  },
+  "bhujodi-weavers-village": {
+    "lowINR": 2500,
+    "highINR": 4000,
+    "basis": "per room",
+    "includes": "all meals, village tour, and interaction with local weavers"
+  },
+  "dhordo-dark-sky-camp": {
+    "lowINR": 3000,
+    "highINR": 5000,
+    "basis": "per person",
+    "includes": "all meals, stargazing, and desert safari"
+  },
+  "ken-river-lodge": {
+    "lowINR": 8000,
+    "highINR": 12000,
+    "basis": "per room",
+    "includes": "all meals, jungle safari, and boat ride on Ken River"
+  },
+  "forsyth-lodge-satpura": {
+    "lowINR": 20000,
+    "highINR": 30000,
+    "basis": "per room",
+    "includes": "all meals, jungle safari, and boat ride on Denwa River"
+  },
+  "ahilya-fort-maheshwar": {
+    "lowINR": 25000,
+    "highINR": 40000,
+    "basis": "per room",
+    "includes": "all meals, heritage walk, and access to private ghats on Narmada River"
+  },
+  "bagh-block-print-stay": {
+    "lowINR": 1500,
+    "highINR": 2500,
+    "basis": "per room",
+    "includes": "all meals, block printing workshop, and village tour"
+  },
+  "bundi-vilas": {
+    "lowINR": 8000,
+    "highINR": 12000,
+    "basis": "per room",
+    "includes": "breakfast, heritage walk, and access to rooftop restaurant with views of Bundi fort"
+  },
+  "apani-dhani-nawalgarh": {
+    "lowINR": 4000,
+    "highINR": 7000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner; farm activities like cow milking and vegetable picking"
+  },
+  "rohet-garh-jodhpur": {
+    "lowINR": 12000,
+    "highINR": 18000,
+    "basis": "per room",
+    "includes": "breakfast; guided village tours and horse riding"
+  },
+  "raghurajpur-pattachitra-village": {
+    "lowINR": 800,
+    "highINR": 1500,
+    "basis": "per person",
+    "includes": "breakfast and lunch; pattachitra art workshops"
+  },
+  "simlipal-jungle-lodge": {
+    "lowINR": 3500,
+    "highINR": 6000,
+    "basis": "per room",
+    "includes": "breakfast and dinner; guided jungle treks"
+  },
+  "chilika-eco-retreat": {
+    "lowINR": 3000,
+    "highINR": 5500,
+    "basis": "per room",
+    "includes": "breakfast; boat cruises on Chilika Lake"
+  },
+  "pochampally-ikat-homestay": {
+    "lowINR": 600,
+    "highINR": 1200,
+    "basis": "per person",
+    "includes": "breakfast and lunch; ikat weaving workshops"
+  },
+  "ananthagiri-hills-retreat": {
+    "lowINR": 4000,
+    "highINR": 7000,
+    "basis": "per room",
+    "includes": "breakfast and dinner; guided treks in Ananthagiri Hills"
+  },
+  "ziro-apatani-homestay": {
+    "lowINR": 500,
+    "highINR": 1000,
+    "basis": "per person",
+    "includes": "breakfast and lunch; Apatani tribal culture experiences"
+  },
+  "eagle-nest-wildlife-camp": {
+    "lowINR": 15000,
+    "highINR": 25000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner; guided wildlife treks and birdwatching"
+  },
+  "reiek-heritage-village-mizoram": {
+    "lowINR": 2500,
+    "highINR": 4500,
+    "basis": "per room",
+    "includes": "breakfast; guided tours of Reiek village and surrounding hills"
+  },
+  "neermahal-palace-hotel": {
+    "lowINR": 4000,
+    "highINR": 7000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, boat ride on Rudrasagar Lake"
+  },
+  "netarhat-bungalow": {
+    "lowINR": 3500,
+    "highINR": 6000,
+    "basis": "per room",
+    "includes": "breakfast, guided forest trek, bonfire"
+  },
+  "palamu-forest-lodge": {
+    "lowINR": 3000,
+    "highINR": 5500,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, jungle safari"
+  },
+  "root-institute-guesthouse": {
+    "lowINR": 800,
+    "highINR": 1500,
+    "basis": "per person",
+    "includes": "vegetarian meals, yoga classes, meditation sessions"
+  },
+  "rajgir-eco-nature-camp": {
+    "lowINR": 2500,
+    "highINR": 4500,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, guided nature walk"
+  },
+  "parmarth-niketan-rishikesh": {
+    "lowINR": 500,
+    "highINR": 1200,
+    "basis": "per person",
+    "includes": "vegetarian meals, yoga classes, Ganges aarti"
+  },
+  "phool-chatti-ashram": {
+    "lowINR": 2000,
+    "highINR": 3500,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, yoga classes, rafting"
+  },
+  "makaibari-tea-estate": {
+    "lowINR": 4000,
+    "highINR": 7000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, tea tasting, estate tour"
+  },
+  "bansbari-lodge-manas": {
+    "lowINR": 12000,
+    "highINR": 20000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, jungle safari, guided tour"
+  },
+  "araku-valley-tribal-eco-lodge": {
+    "lowINR": 3000,
+    "highINR": 5500,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, tribal dance performance, guided trek"
+  },
+  "lepakshi-heritage-homestay": {
+    "lowINR": 3500,
+    "highINR": 6000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner; guided tour of Lepakshi temple and surrounding areas"
+  },
+  "tirthan-valley-homestay": {
+    "lowINR": 4000,
+    "highINR": 8000,
+    "basis": "per room",
+    "includes": "breakfast and dinner; trekking and fishing activities in Tirthan Valley"
+  },
+  "kanger-valley-nature-camp": {
+    "lowINR": 3000,
+    "highINR": 5500,
+    "basis": "per person",
+    "includes": "all meals; guided jungle trek and visit to Tirathgarh waterfall"
+  },
+  "the-machan-lonavala": {
+    "lowINR": 25000,
+    "highINR": 50000,
+    "basis": "per room",
+    "includes": "all meals; private deck with valley view, and guided nature walk"
+  },
+  "tharu-heritage-eco-lodge": {
+    "lowINR": 4500,
+    "highINR": 7000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner; guided jungle safari and Tharu village tour"
   }
 }

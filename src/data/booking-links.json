@@ -398,7 +398,7 @@
       "name": "direct",
       "label": "Host’s site",
       "url": "http://www.devpurhomestay.com/",
-      "verified": true
+      "verified": false
     },
     {
       "name": "google-maps",
@@ -3138,6 +3138,1906 @@
       "name": "tripadvisor",
       "label": "TripAdvisor",
       "url": "https://www.tripadvisor.in/Search?q=Kolukkumalai%20Tea%20Estate%20Bungalow%20Kolukkumalai%2C%20near%20Munnar",
+      "verified": true
+    }
+  ],
+  "the-bangala": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=The%20Bangala%20Karaikudi%2C%20Chettinad",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=The%20Bangala%20Karaikudi%2C%20Chettinad",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=The%20Bangala%20Karaikudi%2C%20Chettinad",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/The%20Bangala%20Karaikudi%2C%20Chettinad/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Karaikudi%2C%20Chettinad%20Tamil%20Nadu&q=The%20Bangala",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=The%20Bangala%20Karaikudi%2C%20Chettinad",
+      "verified": true
+    }
+  ],
+  "visalam-chettinad": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Visalam%20Karaikudi%2C%20Chettinad",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Visalam%20Karaikudi%2C%20Chettinad",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Visalam%20Karaikudi%2C%20Chettinad",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Visalam%20Karaikudi%2C%20Chettinad/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Karaikudi%2C%20Chettinad%20Tamil%20Nadu&q=Visalam",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Visalam%20Karaikudi%2C%20Chettinad",
+      "verified": true
+    }
+  ],
+  "villa-retreat-kodaikanal": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Villa%20Retreat%20Kodaikanal%2C%20Palani%20Hills",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Villa%20Retreat%20Kodaikanal%2C%20Palani%20Hills",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Villa%20Retreat%20Kodaikanal%2C%20Palani%20Hills",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Villa%20Retreat%20Kodaikanal%2C%20Palani%20Hills/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Kodaikanal%2C%20Palani%20Hills%20Tamil%20Nadu&q=Villa%20Retreat",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Villa%20Retreat%20Kodaikanal%2C%20Palani%20Hills",
+      "verified": true
+    }
+  ],
+  "sadhana-forest-auroville": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Sadhana%20Forest%20Auroville%2C%20Bommayapalayam",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Sadhana%20Forest%20Auroville%2C%20Bommayapalayam",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Sadhana%20Forest%20Auroville%2C%20Bommayapalayam",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Sadhana%20Forest%20Auroville%2C%20Bommayapalayam/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Auroville%2C%20Bommayapalayam%20Tamil%20Nadu&q=Sadhana%20Forest",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Sadhana%20Forest%20Auroville%2C%20Bommayapalayam",
+      "verified": true
+    }
+  ],
+  "harivihar-heritage-homestead": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Harivihar%20Heritage%20Homestead%20Calicut%20(Kozhikode)",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Harivihar%20Heritage%20Homestead%20Calicut%20(Kozhikode)",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Harivihar%20Heritage%20Homestead%20Calicut%20(Kozhikode)",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Harivihar%20Heritage%20Homestead%20Calicut%20(Kozhikode)/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Calicut%20(Kozhikode)%20Kerala&q=Harivihar%20Heritage%20Homestead",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Harivihar%20Heritage%20Homestead%20Calicut%20(Kozhikode)",
+      "verified": true
+    }
+  ],
+  "tranquil-resort-wayanad": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Tranquil%20Resort%20Vythiri%2C%20Wayanad",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Tranquil%20Resort%20Vythiri%2C%20Wayanad",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Tranquil%20Resort%20Vythiri%2C%20Wayanad",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Tranquil%20Resort%20Vythiri%2C%20Wayanad/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Vythiri%2C%20Wayanad%20Kerala&q=Tranquil%20Resort",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Tranquil%20Resort%20Vythiri%2C%20Wayanad",
+      "verified": true
+    }
+  ],
+  "kairali-ayurvedic-healing-village": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Kairali%20Ayurvedic%20Healing%20Village%20Palakkad%2C%20Olassery",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Kairali%20Ayurvedic%20Healing%20Village%20Palakkad%2C%20Olassery",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Kairali%20Ayurvedic%20Healing%20Village%20Palakkad%2C%20Olassery",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Kairali%20Ayurvedic%20Healing%20Village%20Palakkad%2C%20Olassery/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Palakkad%2C%20Olassery%20Kerala&q=Kairali%20Ayurvedic%20Healing%20Village",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Kairali%20Ayurvedic%20Healing%20Village%20Palakkad%2C%20Olassery",
+      "verified": true
+    }
+  ],
+  "malabar-house-fort-kochi": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Malabar%20House%20Fort%20Kochi%20(Parade%20Road)",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Malabar%20House%20Fort%20Kochi%20(Parade%20Road)",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Malabar%20House%20Fort%20Kochi%20(Parade%20Road)",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Malabar%20House%20Fort%20Kochi%20(Parade%20Road)/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Fort%20Kochi%20(Parade%20Road)%20Kerala&q=Malabar%20House",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Malabar%20House%20Fort%20Kochi%20(Parade%20Road)",
+      "verified": true
+    }
+  ],
+  "kalari-rasayana-paravur": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Kalari%20Rasayana%20Paravur%2C%20Kollam%20Backwaters",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Kalari%20Rasayana%20Paravur%2C%20Kollam%20Backwaters",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Kalari%20Rasayana%20Paravur%2C%20Kollam%20Backwaters",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Kalari%20Rasayana%20Paravur%2C%20Kollam%20Backwaters/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Paravur%2C%20Kollam%20Backwaters%20Kerala&q=Kalari%20Rasayana",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Kalari%20Rasayana%20Paravur%2C%20Kollam%20Backwaters",
+      "verified": true
+    }
+  ],
+  "swaswara-gokarna": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=SwaSwara%20Gokarna%2C%20Om%20Beach",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=SwaSwara%20Gokarna%2C%20Om%20Beach",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=SwaSwara%20Gokarna%2C%20Om%20Beach",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/SwaSwara%20Gokarna%2C%20Om%20Beach/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Gokarna%2C%20Om%20Beach%20Karnataka&q=SwaSwara",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=SwaSwara%20Gokarna%2C%20Om%20Beach",
+      "verified": true
+    }
+  ],
+  "honey-valley-estate": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Honey%20Valley%20Estate%20Virajpet%2C%20Coorg",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Honey%20Valley%20Estate%20Virajpet%2C%20Coorg",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Honey%20Valley%20Estate%20Virajpet%2C%20Coorg",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Honey%20Valley%20Estate%20Virajpet%2C%20Coorg/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Virajpet%2C%20Coorg%20Karnataka&q=Honey%20Valley%20Estate",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Honey%20Valley%20Estate%20Virajpet%2C%20Coorg",
+      "verified": true
+    }
+  ],
+  "shreyas-retreat-bengaluru": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Shreyas%20Retreat%20Santoshima%20Farm%2C%20Hessaraghatta%2C%20Bengaluru",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Shreyas%20Retreat%20Santoshima%20Farm%2C%20Hessaraghatta%2C%20Bengaluru",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Shreyas%20Retreat%20Santoshima%20Farm%2C%20Hessaraghatta%2C%20Bengaluru",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Shreyas%20Retreat%20Santoshima%20Farm%2C%20Hessaraghatta%2C%20Bengaluru/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Santoshima%20Farm%2C%20Hessaraghatta%2C%20Bengaluru%20Karnataka&q=Shreyas%20Retreat",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Shreyas%20Retreat%20Santoshima%20Farm%2C%20Hessaraghatta%2C%20Bengaluru",
+      "verified": true
+    }
+  ],
+  "old-kent-estate-chikmagalur": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Old%20Kent%20Estate%20Chikmagalur%2C%20Western%20Ghats",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Old%20Kent%20Estate%20Chikmagalur%2C%20Western%20Ghats",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Old%20Kent%20Estate%20Chikmagalur%2C%20Western%20Ghats",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Old%20Kent%20Estate%20Chikmagalur%2C%20Western%20Ghats/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Chikmagalur%2C%20Western%20Ghats%20Karnataka&q=Old%20Kent%20Estate",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Old%20Kent%20Estate%20Chikmagalur%2C%20Western%20Ghats",
+      "verified": true
+    }
+  ],
+  "nrityagram-dance-village": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Nrityagram%20Dance%20Village%20Hessaraghatta%2C%20Bengaluru",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Nrityagram%20Dance%20Village%20Hessaraghatta%2C%20Bengaluru",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Nrityagram%20Dance%20Village%20Hessaraghatta%2C%20Bengaluru",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Nrityagram%20Dance%20Village%20Hessaraghatta%2C%20Bengaluru/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Hessaraghatta%2C%20Bengaluru%20Karnataka&q=Nrityagram%20Dance%20Village",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Nrityagram%20Dance%20Village%20Hessaraghatta%2C%20Bengaluru",
+      "verified": true
+    }
+  ],
+  "siolim-house-goa": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Siolim%20House%20Siolim%2C%20North%20Goa",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Siolim%20House%20Siolim%2C%20North%20Goa",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Siolim%20House%20Siolim%2C%20North%20Goa",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Siolim%20House%20Siolim%2C%20North%20Goa/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Siolim%2C%20North%20Goa%20Goa&q=Siolim%20House",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Siolim%20House%20Siolim%2C%20North%20Goa",
+      "verified": true
+    }
+  ],
+  "bhakti-kutir-palolem": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Bhakti%20Kutir%20Palolem%2C%20South%20Goa",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Bhakti%20Kutir%20Palolem%2C%20South%20Goa",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Bhakti%20Kutir%20Palolem%2C%20South%20Goa",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Bhakti%20Kutir%20Palolem%2C%20South%20Goa/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Palolem%2C%20South%20Goa%20Goa&q=Bhakti%20Kutir",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Bhakti%20Kutir%20Palolem%2C%20South%20Goa",
+      "verified": true
+    }
+  ],
+  "yoga-magic-anjuna": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Yoga%20Magic%20Anjuna%2C%20North%20Goa",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Yoga%20Magic%20Anjuna%2C%20North%20Goa",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Yoga%20Magic%20Anjuna%2C%20North%20Goa",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Yoga%20Magic%20Anjuna%2C%20North%20Goa/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Anjuna%2C%20North%20Goa%20Goa&q=Yoga%20Magic",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Yoga%20Magic%20Anjuna%2C%20North%20Goa",
+      "verified": true
+    }
+  ],
+  "house-of-mg-ahmedabad": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=House%20of%20MG%20Old%20Ahmedabad%2C%20Lal%20Darwaja",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=House%20of%20MG%20Old%20Ahmedabad%2C%20Lal%20Darwaja",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=House%20of%20MG%20Old%20Ahmedabad%2C%20Lal%20Darwaja",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/House%20of%20MG%20Old%20Ahmedabad%2C%20Lal%20Darwaja/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Old%20Ahmedabad%2C%20Lal%20Darwaja%20Gujarat&q=House%20of%20MG",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=House%20of%20MG%20Old%20Ahmedabad%2C%20Lal%20Darwaja",
+      "verified": true
+    }
+  ],
+  "bhujodi-weavers-village": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Bhujodi%20Weavers%20Village%20Homestay%20Bhujodi%20village%2C%20Kutch",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Bhujodi%20Weavers%20Village%20Homestay%20Bhujodi%20village%2C%20Kutch",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Bhujodi%20Weavers%20Village%20Homestay%20Bhujodi%20village%2C%20Kutch",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Bhujodi%20Weavers%20Village%20Homestay%20Bhujodi%20village%2C%20Kutch/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Bhujodi%20village%2C%20Kutch%20Gujarat&q=Bhujodi%20Weavers%20Village%20Homestay",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Bhujodi%20Weavers%20Village%20Homestay%20Bhujodi%20village%2C%20Kutch",
+      "verified": true
+    }
+  ],
+  "dhordo-dark-sky-camp": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Dhordo%20Dark%20Sky%20Camp%20Dhordo%2C%20Great%20Rann%20of%20Kutch",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Dhordo%20Dark%20Sky%20Camp%20Dhordo%2C%20Great%20Rann%20of%20Kutch",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Dhordo%20Dark%20Sky%20Camp%20Dhordo%2C%20Great%20Rann%20of%20Kutch",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Dhordo%20Dark%20Sky%20Camp%20Dhordo%2C%20Great%20Rann%20of%20Kutch/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Dhordo%2C%20Great%20Rann%20of%20Kutch%20Gujarat&q=Dhordo%20Dark%20Sky%20Camp",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Dhordo%20Dark%20Sky%20Camp%20Dhordo%2C%20Great%20Rann%20of%20Kutch",
+      "verified": true
+    }
+  ],
+  "ken-river-lodge": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Ken%20River%20Lodge%20Panna%20National%20Park",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Ken%20River%20Lodge%20Panna%20National%20Park",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Ken%20River%20Lodge%20Panna%20National%20Park",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Ken%20River%20Lodge%20Panna%20National%20Park/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Panna%20National%20Park%20Madhya%20Pradesh&q=Ken%20River%20Lodge",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Ken%20River%20Lodge%20Panna%20National%20Park",
+      "verified": true
+    }
+  ],
+  "forsyth-lodge-satpura": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Forsyth%20Lodge%20Satpura%20National%20Park%2C%20Denwa%20River",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Forsyth%20Lodge%20Satpura%20National%20Park%2C%20Denwa%20River",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Forsyth%20Lodge%20Satpura%20National%20Park%2C%20Denwa%20River",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Forsyth%20Lodge%20Satpura%20National%20Park%2C%20Denwa%20River/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Satpura%20National%20Park%2C%20Denwa%20River%20Madhya%20Pradesh&q=Forsyth%20Lodge",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Forsyth%20Lodge%20Satpura%20National%20Park%2C%20Denwa%20River",
+      "verified": true
+    }
+  ],
+  "ahilya-fort-maheshwar": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Ahilya%20Fort%20Maheshwar%2C%20Narmada%20River",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Ahilya%20Fort%20Maheshwar%2C%20Narmada%20River",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Ahilya%20Fort%20Maheshwar%2C%20Narmada%20River",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Ahilya%20Fort%20Maheshwar%2C%20Narmada%20River/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Maheshwar%2C%20Narmada%20River%20Madhya%20Pradesh&q=Ahilya%20Fort",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Ahilya%20Fort%20Maheshwar%2C%20Narmada%20River",
+      "verified": true
+    }
+  ],
+  "bagh-block-print-stay": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Bagh%20Village%20Block%20Print%20Stay%20Bagh%2C%20Dhar%20district",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Bagh%20Village%20Block%20Print%20Stay%20Bagh%2C%20Dhar%20district",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Bagh%20Village%20Block%20Print%20Stay%20Bagh%2C%20Dhar%20district",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Bagh%20Village%20Block%20Print%20Stay%20Bagh%2C%20Dhar%20district/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Bagh%2C%20Dhar%20district%20Madhya%20Pradesh&q=Bagh%20Village%20Block%20Print%20Stay",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Bagh%20Village%20Block%20Print%20Stay%20Bagh%2C%20Dhar%20district",
+      "verified": true
+    }
+  ],
+  "bundi-vilas": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Bundi%20Vilas%20Bundi%20old%20city",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Bundi%20Vilas%20Bundi%20old%20city",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Bundi%20Vilas%20Bundi%20old%20city",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Bundi%20Vilas%20Bundi%20old%20city/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Bundi%20old%20city%20Rajasthan&q=Bundi%20Vilas",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Bundi%20Vilas%20Bundi%20old%20city",
+      "verified": true
+    }
+  ],
+  "apani-dhani-nawalgarh": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Apani%20Dhani%20Eco%20Lodge%20Nawalgarh%2C%20Shekhawati",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Apani%20Dhani%20Eco%20Lodge%20Nawalgarh%2C%20Shekhawati",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Apani%20Dhani%20Eco%20Lodge%20Nawalgarh%2C%20Shekhawati",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Apani%20Dhani%20Eco%20Lodge%20Nawalgarh%2C%20Shekhawati/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Nawalgarh%2C%20Shekhawati%20Rajasthan&q=Apani%20Dhani%20Eco%20Lodge",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Apani%20Dhani%20Eco%20Lodge%20Nawalgarh%2C%20Shekhawati",
+      "verified": true
+    }
+  ],
+  "rohet-garh-jodhpur": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Rohet%20Garh%20Rohet%20village%2C%20Jodhpur",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Rohet%20Garh%20Rohet%20village%2C%20Jodhpur",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Rohet%20Garh%20Rohet%20village%2C%20Jodhpur",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Rohet%20Garh%20Rohet%20village%2C%20Jodhpur/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Rohet%20village%2C%20Jodhpur%20Rajasthan&q=Rohet%20Garh",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Rohet%20Garh%20Rohet%20village%2C%20Jodhpur",
+      "verified": true
+    }
+  ],
+  "raghurajpur-pattachitra-village": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Raghurajpur%20Heritage%20Crafts%20Village%20Raghurajpur%2C%20near%20Puri",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Raghurajpur%20Heritage%20Crafts%20Village%20Raghurajpur%2C%20near%20Puri",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Raghurajpur%20Heritage%20Crafts%20Village%20Raghurajpur%2C%20near%20Puri",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Raghurajpur%20Heritage%20Crafts%20Village%20Raghurajpur%2C%20near%20Puri/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Raghurajpur%2C%20near%20Puri%20Odisha&q=Raghurajpur%20Heritage%20Crafts%20Village",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Raghurajpur%20Heritage%20Crafts%20Village%20Raghurajpur%2C%20near%20Puri",
+      "verified": true
+    }
+  ],
+  "simlipal-jungle-lodge": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Simlipal%20Jungle%20Lodge%20Jashipur%2C%20Mayurbhanj%2C%20Simlipal%20Biosphere",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Simlipal%20Jungle%20Lodge%20Jashipur%2C%20Mayurbhanj%2C%20Simlipal%20Biosphere",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Simlipal%20Jungle%20Lodge%20Jashipur%2C%20Mayurbhanj%2C%20Simlipal%20Biosphere",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Simlipal%20Jungle%20Lodge%20Jashipur%2C%20Mayurbhanj%2C%20Simlipal%20Biosphere/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Jashipur%2C%20Mayurbhanj%2C%20Simlipal%20Biosphere%20Odisha&q=Simlipal%20Jungle%20Lodge",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Simlipal%20Jungle%20Lodge%20Jashipur%2C%20Mayurbhanj%2C%20Simlipal%20Biosphere",
+      "verified": true
+    }
+  ],
+  "chilika-eco-retreat": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Chilika%20Eco%20Retreat%20Mangalajodi%2C%20Chilika%20Lake",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Chilika%20Eco%20Retreat%20Mangalajodi%2C%20Chilika%20Lake",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Chilika%20Eco%20Retreat%20Mangalajodi%2C%20Chilika%20Lake",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Chilika%20Eco%20Retreat%20Mangalajodi%2C%20Chilika%20Lake/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Mangalajodi%2C%20Chilika%20Lake%20Odisha&q=Chilika%20Eco%20Retreat",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Chilika%20Eco%20Retreat%20Mangalajodi%2C%20Chilika%20Lake",
+      "verified": true
+    }
+  ],
+  "pochampally-ikat-homestay": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Pochampally%20Ikat%20Weaver's%20Homestay%20Bhoodan%20Pochampally%2C%20Yadadri%20Bhongir",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Pochampally%20Ikat%20Weaver's%20Homestay%20Bhoodan%20Pochampally%2C%20Yadadri%20Bhongir",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Pochampally%20Ikat%20Weaver's%20Homestay%20Bhoodan%20Pochampally%2C%20Yadadri%20Bhongir",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Pochampally%20Ikat%20Weaver's%20Homestay%20Bhoodan%20Pochampally%2C%20Yadadri%20Bhongir/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Bhoodan%20Pochampally%2C%20Yadadri%20Bhongir%20Telangana&q=Pochampally%20Ikat%20Weaver's%20Homestay",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Pochampally%20Ikat%20Weaver's%20Homestay%20Bhoodan%20Pochampally%2C%20Yadadri%20Bhongir",
+      "verified": true
+    }
+  ],
+  "ananthagiri-hills-retreat": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Ananthagiri%20Hills%20Heritage%20Stay%20Ananthagiri%20Hills%2C%20Vikarabad",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Ananthagiri%20Hills%20Heritage%20Stay%20Ananthagiri%20Hills%2C%20Vikarabad",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Ananthagiri%20Hills%20Heritage%20Stay%20Ananthagiri%20Hills%2C%20Vikarabad",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Ananthagiri%20Hills%20Heritage%20Stay%20Ananthagiri%20Hills%2C%20Vikarabad/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Ananthagiri%20Hills%2C%20Vikarabad%20Telangana&q=Ananthagiri%20Hills%20Heritage%20Stay",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Ananthagiri%20Hills%20Heritage%20Stay%20Ananthagiri%20Hills%2C%20Vikarabad",
+      "verified": true
+    }
+  ],
+  "ziro-apatani-homestay": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Ziro%20Valley%20Apatani%20Homestay%20Hong%2C%20Ziro%20Valley%2C%20Lower%20Subansiri",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Ziro%20Valley%20Apatani%20Homestay%20Hong%2C%20Ziro%20Valley%2C%20Lower%20Subansiri",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Ziro%20Valley%20Apatani%20Homestay%20Hong%2C%20Ziro%20Valley%2C%20Lower%20Subansiri",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Ziro%20Valley%20Apatani%20Homestay%20Hong%2C%20Ziro%20Valley%2C%20Lower%20Subansiri/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Hong%2C%20Ziro%20Valley%2C%20Lower%20Subansiri%20Arunachal%20Pradesh&q=Ziro%20Valley%20Apatani%20Homestay",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Ziro%20Valley%20Apatani%20Homestay%20Hong%2C%20Ziro%20Valley%2C%20Lower%20Subansiri",
+      "verified": true
+    }
+  ],
+  "eagle-nest-wildlife-camp": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Eagle%20Nest%20Wilderness%20Camp%20Eaglenest%20Wildlife%20Sanctuary%2C%20West%20Kameng",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Eagle%20Nest%20Wilderness%20Camp%20Eaglenest%20Wildlife%20Sanctuary%2C%20West%20Kameng",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Eagle%20Nest%20Wilderness%20Camp%20Eaglenest%20Wildlife%20Sanctuary%2C%20West%20Kameng",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Eagle%20Nest%20Wilderness%20Camp%20Eaglenest%20Wildlife%20Sanctuary%2C%20West%20Kameng/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Eaglenest%20Wildlife%20Sanctuary%2C%20West%20Kameng%20Arunachal%20Pradesh&q=Eagle%20Nest%20Wilderness%20Camp",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Eagle%20Nest%20Wilderness%20Camp%20Eaglenest%20Wildlife%20Sanctuary%2C%20West%20Kameng",
+      "verified": true
+    }
+  ],
+  "reiek-heritage-village-mizoram": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Reiek%20Heritage%20Village%20Reiek%2C%20near%20Aizawl",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Reiek%20Heritage%20Village%20Reiek%2C%20near%20Aizawl",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Reiek%20Heritage%20Village%20Reiek%2C%20near%20Aizawl",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Reiek%20Heritage%20Village%20Reiek%2C%20near%20Aizawl/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Reiek%2C%20near%20Aizawl%20Mizoram&q=Reiek%20Heritage%20Village",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Reiek%20Heritage%20Village%20Reiek%2C%20near%20Aizawl",
+      "verified": true
+    }
+  ],
+  "neermahal-palace-hotel": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Neermahal%20Palace%20Hotel%20Melaghar%2C%20Rudrasagar%20Lake%2C%20Sepahijala",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Neermahal%20Palace%20Hotel%20Melaghar%2C%20Rudrasagar%20Lake%2C%20Sepahijala",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Neermahal%20Palace%20Hotel%20Melaghar%2C%20Rudrasagar%20Lake%2C%20Sepahijala",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Neermahal%20Palace%20Hotel%20Melaghar%2C%20Rudrasagar%20Lake%2C%20Sepahijala/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Melaghar%2C%20Rudrasagar%20Lake%2C%20Sepahijala%20Tripura&q=Neermahal%20Palace%20Hotel",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Neermahal%20Palace%20Hotel%20Melaghar%2C%20Rudrasagar%20Lake%2C%20Sepahijala",
+      "verified": true
+    }
+  ],
+  "netarhat-bungalow": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Netarhat%20Bungalow%20Netarhat%2C%20Palamu%20Plateau",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Netarhat%20Bungalow%20Netarhat%2C%20Palamu%20Plateau",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Netarhat%20Bungalow%20Netarhat%2C%20Palamu%20Plateau",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Netarhat%20Bungalow%20Netarhat%2C%20Palamu%20Plateau/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Netarhat%2C%20Palamu%20Plateau%20Jharkhand&q=Netarhat%20Bungalow",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Netarhat%20Bungalow%20Netarhat%2C%20Palamu%20Plateau",
+      "verified": true
+    }
+  ],
+  "palamu-forest-lodge": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Palamu%20Forest%20Lodge%20Betla%2C%20Palamu%20Tiger%20Reserve",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Palamu%20Forest%20Lodge%20Betla%2C%20Palamu%20Tiger%20Reserve",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Palamu%20Forest%20Lodge%20Betla%2C%20Palamu%20Tiger%20Reserve",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Palamu%20Forest%20Lodge%20Betla%2C%20Palamu%20Tiger%20Reserve/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Betla%2C%20Palamu%20Tiger%20Reserve%20Jharkhand&q=Palamu%20Forest%20Lodge",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Palamu%20Forest%20Lodge%20Betla%2C%20Palamu%20Tiger%20Reserve",
+      "verified": true
+    }
+  ],
+  "root-institute-guesthouse": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Root%20Institute%20Guesthouse%20Bodh%20Gaya",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Root%20Institute%20Guesthouse%20Bodh%20Gaya",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Root%20Institute%20Guesthouse%20Bodh%20Gaya",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Root%20Institute%20Guesthouse%20Bodh%20Gaya/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Bodh%20Gaya%20Bihar&q=Root%20Institute%20Guesthouse",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Root%20Institute%20Guesthouse%20Bodh%20Gaya",
+      "verified": true
+    }
+  ],
+  "rajgir-eco-nature-camp": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Rajgir%20Eco%20Nature%20Camp%20Rajgir%2C%20Nalanda%20district",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Rajgir%20Eco%20Nature%20Camp%20Rajgir%2C%20Nalanda%20district",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Rajgir%20Eco%20Nature%20Camp%20Rajgir%2C%20Nalanda%20district",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Rajgir%20Eco%20Nature%20Camp%20Rajgir%2C%20Nalanda%20district/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Rajgir%2C%20Nalanda%20district%20Bihar&q=Rajgir%20Eco%20Nature%20Camp",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Rajgir%20Eco%20Nature%20Camp%20Rajgir%2C%20Nalanda%20district",
+      "verified": true
+    }
+  ],
+  "parmarth-niketan-rishikesh": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Parmarth%20Niketan%20Ashram%20Rishikesh%2C%20Ganges%20Ghats",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Parmarth%20Niketan%20Ashram%20Rishikesh%2C%20Ganges%20Ghats",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Parmarth%20Niketan%20Ashram%20Rishikesh%2C%20Ganges%20Ghats",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Parmarth%20Niketan%20Ashram%20Rishikesh%2C%20Ganges%20Ghats/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Rishikesh%2C%20Ganges%20Ghats%20Uttarakhand&q=Parmarth%20Niketan%20Ashram",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Parmarth%20Niketan%20Ashram%20Rishikesh%2C%20Ganges%20Ghats",
+      "verified": true
+    }
+  ],
+  "phool-chatti-ashram": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Phool%20Chatti%20Ashram%20Shivpuri%2C%20Rishikesh%2C%20Ganges",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Phool%20Chatti%20Ashram%20Shivpuri%2C%20Rishikesh%2C%20Ganges",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Phool%20Chatti%20Ashram%20Shivpuri%2C%20Rishikesh%2C%20Ganges",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Phool%20Chatti%20Ashram%20Shivpuri%2C%20Rishikesh%2C%20Ganges/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Shivpuri%2C%20Rishikesh%2C%20Ganges%20Uttarakhand&q=Phool%20Chatti%20Ashram",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Phool%20Chatti%20Ashram%20Shivpuri%2C%20Rishikesh%2C%20Ganges",
+      "verified": true
+    }
+  ],
+  "makaibari-tea-estate": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Makaibari%20Tea%20Estate%20Kurseong%2C%20Darjeeling%20Hills",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Makaibari%20Tea%20Estate%20Kurseong%2C%20Darjeeling%20Hills",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Makaibari%20Tea%20Estate%20Kurseong%2C%20Darjeeling%20Hills",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Makaibari%20Tea%20Estate%20Kurseong%2C%20Darjeeling%20Hills/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Kurseong%2C%20Darjeeling%20Hills%20West%20Bengal&q=Makaibari%20Tea%20Estate",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Makaibari%20Tea%20Estate%20Kurseong%2C%20Darjeeling%20Hills",
+      "verified": true
+    }
+  ],
+  "bansbari-lodge-manas": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Bansbari%20Lodge%20Bansbari%2C%20Manas%20National%20Park",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Bansbari%20Lodge%20Bansbari%2C%20Manas%20National%20Park",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Bansbari%20Lodge%20Bansbari%2C%20Manas%20National%20Park",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Bansbari%20Lodge%20Bansbari%2C%20Manas%20National%20Park/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Bansbari%2C%20Manas%20National%20Park%20Assam&q=Bansbari%20Lodge",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Bansbari%20Lodge%20Bansbari%2C%20Manas%20National%20Park",
+      "verified": true
+    }
+  ],
+  "araku-valley-tribal-eco-lodge": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Araku%20Valley%20Tribal%20Eco%20Lodge%20Araku%20Valley%2C%20Visakhapatnam",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Araku%20Valley%20Tribal%20Eco%20Lodge%20Araku%20Valley%2C%20Visakhapatnam",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Araku%20Valley%20Tribal%20Eco%20Lodge%20Araku%20Valley%2C%20Visakhapatnam",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Araku%20Valley%20Tribal%20Eco%20Lodge%20Araku%20Valley%2C%20Visakhapatnam/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Araku%20Valley%2C%20Visakhapatnam%20Andhra%20Pradesh&q=Araku%20Valley%20Tribal%20Eco%20Lodge",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Araku%20Valley%20Tribal%20Eco%20Lodge%20Araku%20Valley%2C%20Visakhapatnam",
+      "verified": true
+    }
+  ],
+  "lepakshi-heritage-homestay": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Lepakshi%20Heritage%20Homestay%20Lepakshi%2C%20Anantapur%20district",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Lepakshi%20Heritage%20Homestay%20Lepakshi%2C%20Anantapur%20district",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Lepakshi%20Heritage%20Homestay%20Lepakshi%2C%20Anantapur%20district",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Lepakshi%20Heritage%20Homestay%20Lepakshi%2C%20Anantapur%20district/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Lepakshi%2C%20Anantapur%20district%20Andhra%20Pradesh&q=Lepakshi%20Heritage%20Homestay",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Lepakshi%20Heritage%20Homestay%20Lepakshi%2C%20Anantapur%20district",
+      "verified": true
+    }
+  ],
+  "tirthan-valley-homestay": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Tirthan%20Valley%20Riverside%20Homestay%20Gushaini%2C%20Tirthan%20Valley%2C%20Kullu",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Tirthan%20Valley%20Riverside%20Homestay%20Gushaini%2C%20Tirthan%20Valley%2C%20Kullu",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Tirthan%20Valley%20Riverside%20Homestay%20Gushaini%2C%20Tirthan%20Valley%2C%20Kullu",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Tirthan%20Valley%20Riverside%20Homestay%20Gushaini%2C%20Tirthan%20Valley%2C%20Kullu/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Gushaini%2C%20Tirthan%20Valley%2C%20Kullu%20Himachal%20Pradesh&q=Tirthan%20Valley%20Riverside%20Homestay",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Tirthan%20Valley%20Riverside%20Homestay%20Gushaini%2C%20Tirthan%20Valley%2C%20Kullu",
+      "verified": true
+    }
+  ],
+  "kanger-valley-nature-camp": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Kanger%20Valley%20Nature%20Camp%20Jagdalpur%2C%20Bastar",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Kanger%20Valley%20Nature%20Camp%20Jagdalpur%2C%20Bastar",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Kanger%20Valley%20Nature%20Camp%20Jagdalpur%2C%20Bastar",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Kanger%20Valley%20Nature%20Camp%20Jagdalpur%2C%20Bastar/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Jagdalpur%2C%20Bastar%20Chhattisgarh&q=Kanger%20Valley%20Nature%20Camp",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Kanger%20Valley%20Nature%20Camp%20Jagdalpur%2C%20Bastar",
+      "verified": true
+    }
+  ],
+  "the-machan-lonavala": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=The%20Machan%20Lonavala%2C%20Sahyadri%20Hills",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=The%20Machan%20Lonavala%2C%20Sahyadri%20Hills",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=The%20Machan%20Lonavala%2C%20Sahyadri%20Hills",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/The%20Machan%20Lonavala%2C%20Sahyadri%20Hills/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Lonavala%2C%20Sahyadri%20Hills%20Maharashtra&q=The%20Machan",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=The%20Machan%20Lonavala%2C%20Sahyadri%20Hills",
+      "verified": true
+    }
+  ],
+  "tharu-heritage-eco-lodge": [
+    {
+      "name": "google-hotels",
+      "label": "Google Hotels",
+      "url": "https://www.google.com/travel/hotels/search?q=Tharu%20Heritage%20Eco%20Lodge%20Dudhwa%20buffer%20zone%2C%20Lakhimpur%20Kheri",
+      "verified": true
+    },
+    {
+      "name": "booking",
+      "label": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Tharu%20Heritage%20Eco%20Lodge%20Dudhwa%20buffer%20zone%2C%20Lakhimpur%20Kheri",
+      "verified": true
+    },
+    {
+      "name": "makemytrip",
+      "label": "MakeMyTrip",
+      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Tharu%20Heritage%20Eco%20Lodge%20Dudhwa%20buffer%20zone%2C%20Lakhimpur%20Kheri",
+      "verified": true
+    },
+    {
+      "name": "airbnb",
+      "label": "Airbnb",
+      "url": "https://www.airbnb.co.in/s/Tharu%20Heritage%20Eco%20Lodge%20Dudhwa%20buffer%20zone%2C%20Lakhimpur%20Kheri/homes",
+      "verified": true
+    },
+    {
+      "name": "agoda",
+      "label": "Agoda",
+      "url": "https://www.agoda.com/search?city=Dudhwa%20buffer%20zone%2C%20Lakhimpur%20Kheri%20Uttar%20Pradesh&q=Tharu%20Heritage%20Eco%20Lodge",
+      "verified": true
+    },
+    {
+      "name": "tripadvisor",
+      "label": "TripAdvisor",
+      "url": "https://www.tripadvisor.in/Search?q=Tharu%20Heritage%20Eco%20Lodge%20Dudhwa%20buffer%20zone%2C%20Lakhimpur%20Kheri",
       "verified": true
     }
   ]
