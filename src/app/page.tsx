@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* HERO */}
-      <section className="relative pt-16 pb-20 px-5 sm:px-8">
+      <section className="relative pt-16 pb-12 px-5 sm:px-8">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl xl:text-8xl leading-[1.05] text-balance animate-slide-up">
             Stay where India
@@ -32,15 +32,6 @@ export default function Home() {
             A real-time concierge for India&apos;s small, hosted, experience-led stays —
             havelis, plantation bungalows, tribal homestays, houseboats, and more.
           </p>
-
-          <div className="mt-10 animate-slide-up" style={{ animationDelay: "200ms" }}>
-            <Link
-              href="/search"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-spice-500 hover:bg-spice-400 text-ink-900 font-medium transition-colors"
-            >
-              Ask CurateIndia →
-            </Link>
-          </div>
         </div>
       </section>
 

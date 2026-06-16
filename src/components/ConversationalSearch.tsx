@@ -94,7 +94,7 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
           placeholder="Tell me what you want — landscape, mood, food, budget, vibe…"
           className="flex-1 min-w-0 bg-transparent outline-none resize-none py-3 text-sm sm:text-base placeholder:text-faint"
         />
-        <div className="flex flex-col gap-1.5 pb-1.5">
+        <div className="flex items-end gap-1.5 pb-1.5 shrink-0">
           <MicButton onTranscript={(t) => { setInput((prev) => prev + t); }} />
           <button
             type="submit"
