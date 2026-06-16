@@ -1,101 +1,153 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Suspense } from "react";
+import ClusterTile from "@/components/ClusterTile";
+import PropertyCard from "@/components/PropertyCard";
+import ConversationalSearch from "@/components/ConversationalSearch";
+import { SkeletonCard, SkeletonClusterTile } from "@/components/Skeletons";
+import { getAllClustersWithImages, getFeaturedProperties, totalCount } from "@/lib/repo";
+
+async function FeaturedGrid() {
+  const featured = await getFeaturedProperties(12);
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+      {featured.map((p) => (
+        <PropertyCard key={p.id} property={p} />
+      ))}
+    </div>
+  );
+}
 
 export default function Home() {
+  const total = totalCount();
+  const clusters = getAllClustersWithImages();
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="min-h-screen">
+      {/* HERO */}
+      <section className="relative pt-16 pb-20 px-5 sm:px-8">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="text-xs uppercase tracking-[0.3em] text-spice-400 mb-6 animate-fade-in">
+            {total}+ curated stays · refreshed daily
+          </div>
+          <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl leading-[1.05] text-balance animate-slide-up">
+            Stay where India
+            <br />
+            <span className="italic text-sand-400">still lives.</span>
+          </h1>
+          <p className="mt-6 text-base sm:text-lg text-muted max-w-2xl mx-auto text-balance animate-slide-up" style={{ animationDelay: "100ms" }}>
+            A real-time concierge for India&apos;s small, hosted, experience-led stays —
+            havelis, plantation bungalows, tribal homestays, houseboats, and more.
+          </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="mt-10 animate-slide-up" style={{ animationDelay: "200ms" }}>
+            <ConversationalSearch />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* EXPERIENCE CLUSTERS — front and centre */}
+      <section id="clusters" className="px-5 sm:px-8 py-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-end justify-between mb-8">
+            <div>
+              <div className="text-xs uppercase tracking-[0.3em] text-spice-400 mb-2">
+                Experiences
+              </div>
+              <h2 className="font-display text-4xl sm:text-5xl text-balance">
+                What do you want to feel?
+              </h2>
+            </div>
+            <Link
+              href="/search"
+              className="hidden md:block text-sm text-muted hover:text-foreground transition-colors"
+            >
+              Or just describe it →
+            </Link>
+          </div>
+
+          <Suspense
+            fallback={
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                {Array.from({ length: 14 }).map((_, i) => (
+                  <SkeletonClusterTile key={i} />
+                ))}
+              </div>
+            }
+          >
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              {clusters.map((c) => (
+                <ClusterTile key={c.slug} cluster={c} />
+              ))}
+            </div>
+          </Suspense>
+        </div>
+      </section>
+
+      {/* FEATURED STAYS */}
+      <section className="px-5 sm:px-8 py-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-end justify-between mb-8">
+            <div>
+              <div className="text-xs uppercase tracking-[0.3em] text-spice-400 mb-2">
+                Today&apos;s curation
+              </div>
+              <h2 className="font-display text-4xl sm:text-5xl text-balance">
+                Twelve worth waking up for.
+              </h2>
+            </div>
+          </div>
+          <Suspense
+            fallback={
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                {Array.from({ length: 8 }).map((_, i) => (
+                  <SkeletonCard key={i} />
+                ))}
+              </div>
+            }
+          >
+            <FeaturedGrid />
+          </Suspense>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="px-5 sm:px-8 py-20 border-t border-hairline">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="font-display text-4xl sm:text-5xl text-balance mb-12">
+            We don&apos;t take bookings.
+            <br />
+            <span className="italic text-sand-400">We take you to the right host.</span>
+          </h2>
+          <div className="grid sm:grid-cols-3 gap-8 text-left">
+            {[
+              {
+                kicker: "01",
+                title: "Describe what you want",
+                body: "Mood, food, landscape, budget, dates — natural language, no filters.",
+              },
+              {
+                kicker: "02",
+                title: "We curate, not list",
+                body: "An LLM matches against our hand-picked catalogue and explains why each stay fits.",
+              },
+              {
+                kicker: "03",
+                title: "Book with the host",
+                body: "Direct links to Google Hotels, Booking, Airbnb — or the host's own site. No middleman.",
+              },
+            ].map((s) => (
+              <div key={s.kicker}>
+                <div className="text-spice-400 font-display text-3xl mb-2">{s.kicker}</div>
+                <div className="font-display text-2xl mb-2">{s.title}</div>
+                <div className="text-muted text-sm leading-relaxed">{s.body}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <footer className="px-5 sm:px-8 py-8 border-t border-hairline text-center text-xs text-faint">
+        curate<span className="text-spice-500">India</span> · MVP · {new Date().getFullYear()}
       </footer>
-    </div>
+    </main>
   );
 }
