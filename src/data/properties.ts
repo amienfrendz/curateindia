@@ -1132,7 +1132,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "The first and finest heritage table in Chettinad, where a 100-year-old family home doubles as the definitive school of one of India's most complex cuisines.",
     website: "https://www.thebangala.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "visalam-chettinad",
@@ -1156,7 +1156,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "A meticulously restored 1930s Chettiar merchant mansion where CGH Earth has made every architectural detail — the pillared verandahs, mosaic floors, antique doors — part of a living heritage immersion.",
     website: "https://www.cghearth.com/visalam",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "villa-retreat-kodaikanal",
@@ -1180,7 +1180,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "One of India's oldest standing guest residences, this 1845 clifftop bungalow is the most atmospheric address in Kodaikanal, with unbroken views across the Palani Hills.",
     website: "https://villaretreat.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "sadhana-forest-auroville",
@@ -1204,7 +1204,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹",
     blurb: "A radical eco-volunteer community near Auroville where you earn your stay by helping replant a dryland tropical forest, living simply in bamboo huts under the Milky Way.",
     website: "https://sadhanaforest.org/india/",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "harivihar-heritage-homestead",
@@ -1228,7 +1228,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "A 170-year-old restored royal manor in Calicut where two doctor hosts deliver Kerala's most personal blend of Green Leaf–certified Ayurveda and genuine Malabar hospitality.",
     website: "https://harivihar.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "tranquil-resort-wayanad",
@@ -1252,7 +1252,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "Award-winning treehouses suspended above a working coffee and spice plantation in Wayanad, where the forest comes alive at night and the dawn chorus is your alarm clock.",
     website: "https://www.tranquilresort.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "kairali-ayurvedic-healing-village",
@@ -1276,7 +1276,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "One of India's most respected Ayurvedic retreat villages, where every element — architecture, food, sound, routine — is calibrated to ancient healing principles in a 50-acre coconut grove.",
     website: "https://www.kairali.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "malabar-house-fort-kochi",
@@ -1300,7 +1300,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "The most art-forward address in Fort Kochi — a colonial-era mansion turned gallery-hotel where contemporary Indian art and Malabar cuisine share the same intimate stage.",
     website: "https://www.malabarhouse.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "kalari-rasayana-paravur",
@@ -1324,7 +1324,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "CGH Earth's most intimate Ayurveda residence — 22 cottages on 8 acres of Paravur backwater coconut grove, where authentic Panchakarma meets the gentlest possible pace of life.",
     website: "https://www.cghearthayurveda.com/kalari-rasayana/",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "swaswara-gokarna",
@@ -1348,7 +1348,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹₹",
     blurb: "CGH Earth's most celebrated wellness retreat, where yoga, Ayurveda and creative arts come together in 24 private cottages on the sacred Gokarna coast above Om Beach.",
     website: "https://www.cghearth.com/swaswara",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "honey-valley-estate",
@@ -1372,7 +1372,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "A pioneering mountain estate in Coorg's highest reaches, where the M.M. Mathew family have been welcoming serious trekkers and naturalists for decades with 18 trails and unbeatable birding.",
     website: "https://www.honeyvalley.in",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "shreyas-retreat-bengaluru",
@@ -1396,7 +1396,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹₹",
     blurb: "AYUSH-certified and one of India's most awarded yoga and Ayurveda retreats, where a dedicated team of doctors, yoga masters and chefs deliver transformation on a working farm 40 km from Bengaluru.",
     website: "https://www.shreyasretreat.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "old-kent-estate-chikmagalur",
@@ -1420,7 +1420,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "A heritage coffee plantation in Chikmagalur, where misty mornings, lush forest trails and the unhurried rhythms of the estate's harvest calendar define the ideal Karnataka slow stay.",
     website: "https://oldkentresorts.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "nrityagram-dance-village",
@@ -1444,7 +1444,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "Protima Bedi's legendary dance village near Bengaluru, where Odissi is a way of life — resident artists share their world with overnight guests through immersive residency programmes.",
     website: "https://www.nrityagram.org",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "siolim-house-goa",
@@ -1468,7 +1468,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "A restored 300-year-old viceroy's residence in a quiet Goa village, where just seven rooms and a courtyard pool create the most intimate heritage experience in North Goa.",
     website: "https://www.siolimhouse.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "bhakti-kutir-palolem",
@@ -1492,7 +1492,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "Palolem's original eco-retreat for over 20 years — hand-built palm-leaf huts in a coconut grove where Ayurvedic therapies, yoga and the slow sound of the sea set the pace.",
     website: "https://www.bhaktikutir.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "yoga-magic-anjuna",
@@ -1516,7 +1516,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "The most stylish eco-lodge in Goa — canvas and bamboo tented suites decorated in khadi silks and natural cottons, with serious yoga and Ayurveda in a sustainably built garden.",
     website: "https://yogamagic.net",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "house-of-mg-ahmedabad",
@@ -1540,7 +1540,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "A magnificently restored 1924 family mansion in the heart of UNESCO World Heritage Ahmedabad, where the city's greatest restaurant and the most personal heritage tour in the old city begin at your door.",
     website: "https://houseofmg.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "bhujodi-weavers-village",
@@ -1564,7 +1564,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "Sleep among the looms in Bhujodi, Kutch's most celebrated weaving village, where three generations of the Vankar master-weaving family share their craft and home over handmade meals.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "dhordo-dark-sky-camp",
@@ -1588,7 +1588,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "In the deepest dark of the Great Rann, where the salt flats dissolve into the night sky and the Milky Way arcs unbroken — this small eco-camp offers the rawest astronomy experience in India.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "ken-river-lodge",
@@ -1612,7 +1612,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "The most memorable river camp in Central India, on the banks of the emerald Ken as it flows through Panna's tiger reserve — canoes, safaris, vultures and total wilderness.",
     website: "https://www.kenriverlodge.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "forsyth-lodge-satpura",
@@ -1636,7 +1636,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹₹",
     blurb: "The finest base for Satpura's unique walking safaris — a small eco-lodge on the Denwa River where the combination of foot safari, canoe and jeep makes tiger and leopard encounters feel genuinely earned.",
     website: "https://www.forsythlodge.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "ahilya-fort-maheshwar",
@@ -1660,7 +1660,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹₹",
     blurb: "Live in the private residence of Maharani Ahilyabai Holkar, one of India's most revered rulers — a 250-year-old fort above the Narmada whose twelve rooms remain exactly as her descendant designed them.",
     website: "https://ahilyafort.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "bagh-block-print-stay",
@@ -1684,7 +1684,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹",
     blurb: "Sleep in the home of the Khatri family, master printers of Bagh's centuries-old resist-block printing tradition, in a village where every yard is strung with brilliant hand-printed cotton.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "bundi-vilas",
@@ -1708,7 +1708,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "The finest rooftop in Bundi — a boutique heritage villa where the Taragarh Fort glows amber at sunset, step wells and painted temples line the walk to your door, and the miniature painters still work downstairs.",
     website: "https://bundivilas.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "apani-dhani-nawalgarh",
@@ -1732,7 +1732,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "The pioneer of ethical eco-tourism in Shekhawati since 1990 — François Patte's eight-room adobe lodge is the most authentic base for exploring India's most extraordinary open-air fresco gallery.",
     website: "https://apanidhani.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "rohet-garh-jodhpur",
@@ -1756,7 +1756,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "A 400-year-old family fort near Jodhpur where 15 generations of the Rohet Thakurs offer the most authentic expression of Rajput living — superb horses, endangered folk music, and genuine Bishnoi access.",
     website: "https://www.houseofrohet.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "raghurajpur-pattachitra-village",
@@ -1780,7 +1780,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹",
     blurb: "Every home in Raghurajpur is a UNESCO heritage studio — staying with a Pattachitra family in India's most concentrated art village means falling asleep to the sound of brush on lacquered palm leaf.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "simlipal-jungle-lodge",
@@ -1804,7 +1804,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "On the gateway to one of India's most biodiverse biosphere reserves, this small jungle lodge is the base for Simlipal's waterfalls, tiger territory and the extraordinary honey-gathering Mankidia tribe.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "chilika-eco-retreat",
@@ -1828,7 +1828,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "The most enchanting bird camp in India — small eco-huts on the shore of Chilika Lake where 160,000 migratory birds arrive each winter and Irrawaddy dolphins break the silver surface at dawn.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "pochampally-ikat-homestay",
@@ -1852,7 +1852,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹",
     blurb: "Sleep among the looms in India's ikat capital — a weaver family homestay in Pochampally where the rhythm of the handloom is the heartbeat of the village and every sari tells a story in thread.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "ananthagiri-hills-retreat",
@@ -1876,7 +1876,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "A forgotten range of forested hills just 90 km from Hyderabad, where Chenchu tribal villages, cascading waterfalls and perfectly dark skies offer a complete escape from the Deccan's urban frenzy.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "ziro-apatani-homestay",
@@ -1900,7 +1900,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹",
     blurb: "Sleep in a bamboo longhouse in Ziro Valley, home of the Apatani — one of northeast India's most distinctive tribes whose unique agriculture, tattooing and nose-plug traditions are a living UNESCO nomination.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "eagle-nest-wildlife-camp",
@@ -1924,7 +1924,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "The most important birding destination in the Eastern Himalayas — where the one-of-a-kind Bugun Liocichla was discovered in 2006, and 450 other species await before the sun rises each morning.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "reiek-heritage-village-mizoram",
@@ -1948,7 +1948,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "A living heritage village in the forested hills 29 km from Aizawl, where Mizo bamboo architecture, traditional cuisine, weaving and bamboo dance are an unperformed daily reality.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "neermahal-palace-hotel",
@@ -1972,7 +1972,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "The only water palace in northeast India — a fairy-tale 1930s structure on Rudrasagar Lake, where the Maharajas of Tripura once retreated by royal shikara and the romance of that era still lingers.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "netarhat-bungalow",
@@ -1996,7 +1996,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "A forgotten colonial hill station on the Chotanagpur Plateau at 1100 m — where the sunsets are legendary, the dark sky is pristine, and the forested Adivasi landscape stretches unbroken to the horizon.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "palamu-forest-lodge",
@@ -2020,7 +2020,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "Betla National Park remains one of India's most undervisited tiger reserves — a wild, forest lodge at the park gate gives you the whole park virtually to yourself.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "root-institute-guesthouse",
@@ -2044,7 +2044,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹",
     blurb: "A Tibetan Buddhist centre 500 metres from the Mahabodhi Tree — the gentlest and most authentic base for a Bodh Gaya pilgrimage, where dharma teachings, meditation and respectful silence set the atmosphere.",
     website: "https://rootinstitute.ngo",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "rajgir-eco-nature-camp",
@@ -2068,7 +2068,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "Ancient Rajgir — where Buddha and Mahavira both taught, where hot springs still bubble and the ruins of Nalanda's great university are a 20-minute cycle away — is the Bihar that most tourists miss.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "parmarth-niketan-rishikesh",
@@ -2092,7 +2092,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹",
     blurb: "Rishikesh's most iconic riverside ashram, where the nightly Ganga Aarti draws thousands but the river-view rooms, morning yoga and sincere spiritual atmosphere remain genuinely transformative.",
     website: "https://parmarth.org",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "phool-chatti-ashram",
@@ -2116,7 +2116,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "An intimate ashram directly on the Ganges at Shivpuri, 8 km north of Rishikesh, where the river runs loudest, yoga sits on rock platforms above the current, and forest caves hold ancient practice.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "makaibari-tea-estate",
@@ -2140,7 +2140,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "Sleep in the tea pluckers' homes at the world's most celebrated biodynamic estate — where the first-flush muscatel is prized at auction and the Lepcha community forest is as important as the tea itself.",
     website: "https://makaibari.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "bansbari-lodge-manas",
@@ -2164,7 +2164,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "On the edge of UNESCO Manas — a community eco-lodge where elephant safaris, golden langur tracking and the Bodo tribal culture of the Brahmaputra floodplain meet in eight carefully managed cottages.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "araku-valley-tribal-eco-lodge",
@@ -2188,7 +2188,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "The coffee-growing Eastern Ghats, home to the Kondh and Savara tribes and India's finest single-origin coffee — a tribal eco-lodge in Araku Valley that makes the journey from Visakhapatnam completely worthwhile.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "lepakshi-heritage-homestay",
@@ -2212,7 +2212,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "Sleep next to one of the Vijayanagara Empire's most extraordinary temples — Lepakshi's hanging pillar and Kalamkari frescoes are among India's least-visited and most astonishing art treasures.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "tirthan-valley-homestay",
@@ -2236,7 +2236,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "A pristine river valley carved deep into the Kullu mountains, where crystal-clear water, snow-fed trout fishing, dark night skies and direct access to a UNESCO wilderness park make this HP's best-kept secret.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "kanger-valley-nature-camp",
@@ -2260,7 +2260,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "Deep in India's most densely tribal landscape, Kanger Valley's forested gorges, limestone cave systems and Gond village culture create an experience entirely unlike anything else in the country.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "the-machan-lonavala",
@@ -2284,7 +2284,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹₹",
     blurb: "India's most awarded treehouse resort in the Sahyadri hills — 33 canopy suites built without a nail through a single tree, where leopards walk the perimeter and the dawn birdsong is extraordinary.",
     website: "https://www.themachan.com",
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
   {
     id: "tharu-heritage-eco-lodge",
@@ -2308,7 +2308,7 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "At the edge of Dudhwa's jungle — one of India's least-visited tiger reserves — the Tharu tribal community opens their homes and their forest knowledge to travellers willing to go where no tourist buses go.",
     website: undefined,
-    unsplashId: ""
+    unsplashId: "", batch: "jun-2026"
   },
 ];
 

@@ -75,6 +75,7 @@ export type Property = {
   lastVerified?: string;     // ISO date — for freshness badges
   source?: PropertySource;
   status?: PropertyStatus;
+  batch?: string;            // e.g. "jun-2026" — for bulk enable/disable
 };
 
 export type SearchHit = {

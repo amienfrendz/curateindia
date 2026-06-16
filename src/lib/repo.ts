@@ -22,7 +22,12 @@ function hydrate(p: Property): Property {
   };
 }
 
-const ALL = RAW.map(hydrate);
+// Comma-separated batch names to disable (e.g. "jun-2026,jul-2026")
+const DISABLED_BATCHES = (process.env.DISABLE_BATCHES || "").split(",").filter(Boolean);
+
+const ALL = RAW.map(hydrate).filter(
+  (p) => !p.batch || !DISABLED_BATCHES.includes(p.batch)
+);
 
 export async function getAllProperties(): Promise<Property[]> {
   return ALL.filter((p) => p.status === "active");
