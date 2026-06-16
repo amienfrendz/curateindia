@@ -8,7 +8,7 @@ import PropertyImage from "@/components/PropertyImage";
 import PropertyCard from "@/components/PropertyCard";
 import ReviewsPanel from "@/components/ReviewsPanel";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
-import { SkeletonReviewBlock, SkeletonAvailability } from "@/components/Skeletons";
+import { SkeletonReviewBlock } from "@/components/Skeletons";
 
 export async function generateStaticParams() {
   const all = await getAllProperties();
@@ -90,6 +90,7 @@ export default async function StayPage({ params }: { params: { slug: string } })
               {property.rooms && <Fact label="Rooms" value={`${property.rooms}`} />}
               <Fact label="Region" value={property.region} />
               {property.host && <Fact label="Host" value={property.host} />}
+              <Fact label="Approx. rate" value={getPriceRange(property.priceTier)} />
             </div>
 
             {/* Blurb */}
@@ -160,14 +161,9 @@ export default async function StayPage({ params }: { params: { slug: string } })
             </div>
           </div>
 
-          {/* RIGHT — sticky availability */}
+          {/* RIGHT — sticky booking */}
           <aside className="lg:sticky lg:top-24 lg:self-start space-y-4">
-            <Suspense fallback={<SkeletonAvailability />}>
-              <AvailabilityBadge propertySlug={property.slug} bookingLinks={links} />
-            </Suspense>
-            <div className="text-[10px] text-faint px-1">
-              We don&apos;t take bookings. Links go directly to the host or your preferred travel platform.
-            </div>
+            <AvailabilityBadge propertySlug={property.slug} bookingLinks={links} />
           </aside>
         </div>
       </section>
@@ -199,4 +195,14 @@ function Fact({ label, value }: { label: string; value: string }) {
       <div className="text-sm capitalize">{value}</div>
     </div>
   );
+}
+
+function getPriceRange(tier: string): string {
+  switch (tier) {
+    case "₹": return "₹500–₹2,500/night";
+    case "₹₹": return "₹2,500–₹8,000/night";
+    case "₹₹₹": return "₹8,000–₹20,000/night";
+    case "₹₹₹₹": return "₹20,000–₹60,000+/night";
+    default: return tier;
+  }
 }
