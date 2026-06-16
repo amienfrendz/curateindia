@@ -212,6 +212,7 @@ function ResultCard({ hit }: { hit: SearchHit & { property: Property } }) {
     <Link href={`/stays/${p.slug}`} className="block group">
       <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border-hairline border">
         <PropertyImage
+          imageUrl={p.imageUrl}
           website={p.website}
           query={`${p.name} ${p.location} ${p.type}`}
           alt={p.name}
