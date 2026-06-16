@@ -9,6 +9,7 @@ import PropertyCard from "@/components/PropertyCard";
 import ReviewsPanel from "@/components/ReviewsPanel";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
 import { SkeletonReviewBlock } from "@/components/Skeletons";
+import pricingData from "@/data/property-pricing.json";
 
 export async function generateStaticParams() {
   const all = await getAllProperties();
@@ -90,7 +91,10 @@ export default async function StayPage({ params }: { params: { slug: string } })
               {property.rooms && <Fact label="Rooms" value={`${property.rooms}`} />}
               <Fact label="Region" value={property.region} />
               {property.host && <Fact label="Host" value={property.host} />}
-              <Fact label="Approx. rate" value={getPriceRange(property.priceTier)} />
+              <Fact label="Approx. rate" value={getPriceRange(property.slug, property.priceTier)} />
+              {getPriceIncludes(property.slug) && (
+                <Fact label="Includes" value={getPriceIncludes(property.slug)!} />
+              )}
             </div>
 
             {/* Blurb */}
@@ -197,7 +201,13 @@ function Fact({ label, value }: { label: string; value: string }) {
   );
 }
 
-function getPriceRange(tier: string): string {
+function getPriceRange(slug: string, tier: string): string {
+  const pricing = (pricingData as Record<string, { lowINR: number; highINR: number; basis: string; includes: string }>)[slug];
+  if (pricing) {
+    const low = pricing.lowINR >= 1000 ? `₹${Math.round(pricing.lowINR / 1000)}k` : `₹${pricing.lowINR}`;
+    const high = pricing.highINR >= 1000 ? `₹${Math.round(pricing.highINR / 1000)}k` : `₹${pricing.highINR}`;
+    return `${low}–${high}/night`;
+  }
   switch (tier) {
     case "₹": return "₹500–₹2,500/night";
     case "₹₹": return "₹2,500–₹8,000/night";
@@ -205,4 +215,9 @@ function getPriceRange(tier: string): string {
     case "₹₹₹₹": return "₹20,000–₹60,000+/night";
     default: return tier;
   }
+}
+
+function getPriceIncludes(slug: string): string | null {
+  const pricing = (pricingData as Record<string, { lowINR: number; highINR: number; basis: string; includes: string }>)[slug];
+  return pricing?.includes || null;
 }
