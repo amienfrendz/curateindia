@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 type IntentExtraction = {
   intent: string;
-  nearbyStates: string[];
+  travelConstraints: string;
   clusters: string[];
   mood: string[];
   budget: string;
@@ -22,40 +22,9 @@ type MatchResponse = {
   hits: { propertyId: string; reason: string; matchScore: number }[];
 };
 
-// ── Geographic proximity map ───────────────────────────────────────────────
-
-const GEO_PROXIMITY: Record<string, string[]> = {
-  bangalore: ["Karnataka", "Kerala", "Tamil Nadu", "Goa", "Andhra Pradesh", "Telangana", "Puducherry"],
-  bengaluru: ["Karnataka", "Kerala", "Tamil Nadu", "Goa", "Andhra Pradesh", "Telangana", "Puducherry"],
-  delhi: ["Rajasthan", "Uttarakhand", "Himachal Pradesh", "Uttar Pradesh", "Haryana", "Punjab", "Madhya Pradesh"],
-  ncr: ["Rajasthan", "Uttarakhand", "Himachal Pradesh", "Uttar Pradesh", "Haryana", "Punjab"],
-  gurgaon: ["Rajasthan", "Uttarakhand", "Himachal Pradesh", "Uttar Pradesh", "Haryana", "Punjab"],
-  noida: ["Rajasthan", "Uttarakhand", "Himachal Pradesh", "Uttar Pradesh", "Haryana"],
-  mumbai: ["Maharashtra", "Goa", "Gujarat", "Madhya Pradesh", "Rajasthan", "Karnataka"],
-  pune: ["Maharashtra", "Goa", "Gujarat", "Karnataka", "Madhya Pradesh"],
-  kolkata: ["West Bengal", "Sikkim", "Odisha", "Jharkhand", "Assam", "Meghalaya"],
-  chennai: ["Tamil Nadu", "Kerala", "Andhra Pradesh", "Karnataka", "Puducherry", "Telangana"],
-  hyderabad: ["Telangana", "Andhra Pradesh", "Karnataka", "Maharashtra", "Goa"],
-  ahmedabad: ["Gujarat", "Rajasthan", "Madhya Pradesh", "Maharashtra"],
-  jaipur: ["Rajasthan", "Uttarakhand", "Himachal Pradesh", "Uttar Pradesh", "Gujarat", "Madhya Pradesh"],
-  lucknow: ["Uttar Pradesh", "Uttarakhand", "Madhya Pradesh", "Rajasthan", "Bihar"],
-  guwahati: ["Assam", "Meghalaya", "Arunachal Pradesh", "Nagaland", "Manipur", "Sikkim", "West Bengal"],
-  kochi: ["Kerala", "Tamil Nadu", "Karnataka", "Goa"],
-  cochin: ["Kerala", "Tamil Nadu", "Karnataka", "Goa"],
-};
-
 // ── Stage 1: Intent extraction (tiny LLM call — no catalogue) ──────────
 
 async function extractIntent(query: string): Promise<IntentExtraction> {
-  const allStates = [
-    "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
-    "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
-    "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram",
-    "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu",
-    "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal",
-    "Jammu & Kashmir", "Ladakh", "Puducherry", "Lakshadweep",
-  ];
-
   const clusterSlugs = [
     "wildlife-birding-photography", "art-craft", "plantation-experiences",
     "culinary-immersion", "heritage-cultural", "spirituality", "wellness-ayurveda",
@@ -68,22 +37,21 @@ async function extractIntent(query: string): Promise<IntentExtraction> {
 Return ONLY JSON:
 {
   "intent": "1-2 sentence restatement of what the user wants, in second person",
-  "nearbyStates": ["states the user can realistically reach — infer from city mentioned, travel context, or stated preference. Use: ${allStates.join(", ")}"],
+  "travelConstraints": "Natural language summary of ALL travel/logistics constraints — origin city, max travel time, transport mode (flight, drive, train), max car ride, weather preferences, who is travelling (elderly, kids, couple). Empty string if none mentioned.",
   "clusters": ["matching cluster slugs from: ${clusterSlugs.join(", ")}"],
   "mood": ["e.g. peaceful, romantic, adventure, family, luxury, offbeat, spiritual"],
   "budget": "any | budget | mid | luxury",
   "propertyTypes": ["e.g. homestay, villa, cottage, hut, treehouse, houseboat, farmstay, bungalow, haveli, estate, ashram"],
-  "keywords": ["other important terms for matching — e.g. river, mountain, beach, coffee, tribal"]
+  "keywords": ["important descriptors — e.g. cool weather, hill station, beach, forest, river, tribal, heritage, remote, coffee, tea, wildlife"]
 }
 
 Rules:
-- nearbyStates: if user says "from Bangalore", include Karnataka + neighbouring states. If "weekend", limit to drivable distance. If no location mentioned, leave empty.
-- clusters: match broadly — "food" → culinary-immersion, "nature" → wildlife + slow-living, etc. Include multiple if relevant.
+- travelConstraints: capture the user's EXACT logistics constraints in natural language. Examples: "Direct flight from Hyderabad plus max 2-3 hour car ride", "Drivable from Bangalore within 6 hours", "Within 4 hours flying time and 2 hours car time from Delhi". If no constraints, empty string.
+- clusters: match broadly — "food" → culinary-immersion, "wildlife" → wildlife-birding-photography, "nature" → wildlife + slow-living. Include multiple if relevant.
+- keywords: extract specific descriptors the user cares about. Be thorough.
 - Leave arrays empty if no signal — do NOT guess.`;
 
   try {
-    // Use gpt-4.1-nano for intent extraction — cheapest model, separate quota
-    // Falls back to mistral-small if nano is rate-limited
     return await chatJSON<IntentExtraction>({
       system,
       user: query,
@@ -102,15 +70,11 @@ Rules:
         });
       } catch { /* fall through to keyword fallback */ }
     }
-    // Fallback: basic keyword extraction if LLM fails
+    // Fallback: basic keyword extraction if all LLMs fail
     const queryLower = query.toLowerCase();
-    const detectedStates: string[] = [];
-    for (const [city, states] of Object.entries(GEO_PROXIMITY)) {
-      if (queryLower.includes(city)) detectedStates.push(...states);
-    }
     return {
       intent: query,
-      nearbyStates: Array.from(new Set(detectedStates)),
+      travelConstraints: "",
       clusters: [],
       mood: [],
       budget: "any",
@@ -120,7 +84,9 @@ Rules:
   }
 }
 
-// ── Stage 2: Smart pre-filter (zero LLM cost) ─────────────────────────
+// ── Stage 2: Experience-based pre-filter (zero LLM cost) ───────────────
+// Scores on experience/cluster/mood/keywords ONLY — no geography.
+// Geography is the LLM's job in Stage 3.
 
 function scoreProperty(
   p: { name: string; location: string; state: string; type: string; clusters: string[]; blurb: string; priceTier: string; region: string },
@@ -130,55 +96,58 @@ function scoreProperty(
   let score = 0;
   const text = `${p.name} ${p.location} ${p.state} ${p.type} ${p.region} ${p.blurb}`.toLowerCase();
 
-  // Geographic match (strongest signal)
-  if (intent.nearbyStates.length > 0) {
-    if (intent.nearbyStates.includes(p.state)) score += 15;
-    // Slight penalty if states were specified but property isn't in them
-    else score -= 5;
-  }
-
-  // Cluster match
+  // Cluster match (strongest experience signal)
   for (const c of intent.clusters) {
-    if (p.clusters.includes(c)) score += 8;
+    if (p.clusters.includes(c)) score += 10;
   }
 
   // Property type match
   for (const t of intent.propertyTypes) {
-    if (p.type.toLowerCase() === t.toLowerCase()) score += 4;
+    if (p.type.toLowerCase() === t.toLowerCase()) score += 5;
   }
 
-  // Keyword match
+  // Keyword match in property text
   for (const kw of intent.keywords) {
-    if (text.includes(kw.toLowerCase())) score += 2;
+    if (text.includes(kw.toLowerCase())) score += 3;
   }
 
   // Budget alignment
-  if (intent.budget === "budget" && (p.priceTier === "₹" || p.priceTier === "₹₹")) score += 3;
-  if (intent.budget === "luxury" && p.priceTier === "₹₹₹₹") score += 3;
+  if (intent.budget === "budget" && (p.priceTier === "₹" || p.priceTier === "₹₹")) score += 4;
+  if (intent.budget === "luxury" && p.priceTier === "₹₹₹₹") score += 4;
   if (intent.budget === "mid" && (p.priceTier === "₹₹" || p.priceTier === "₹₹₹")) score += 2;
 
   // Mood alignment
   const moods = intent.mood.map(m => m.toLowerCase());
-  if (moods.includes("peaceful") || moods.includes("serene") || moods.includes("calm")) {
-    if (p.clusters.includes("slow-living-sustainability")) score += 4;
+  if (moods.some(m => ["peaceful", "serene", "calm", "relaxing"].includes(m))) {
+    if (p.clusters.includes("slow-living-sustainability")) score += 5;
   }
   if (moods.includes("adventure")) {
-    if (p.clusters.includes("trekking-adventure")) score += 4;
+    if (p.clusters.includes("trekking-adventure")) score += 5;
   }
   if (moods.includes("spiritual")) {
-    if (p.clusters.includes("spirituality")) score += 4;
+    if (p.clusters.includes("spirituality")) score += 5;
   }
   if (moods.includes("offbeat")) {
-    if (p.clusters.includes("tribal-village-life") || p.clusters.includes("astronomy-stargazing")) score += 3;
+    if (p.clusters.includes("tribal-village-life") || p.clusters.includes("astronomy-stargazing")) score += 4;
+  }
+  if (moods.includes("romantic")) {
+    if (p.clusters.includes("slow-living-sustainability") || p.clusters.includes("marine-water-living")) score += 3;
   }
 
-  // Direct state name in query
-  if (queryLower.includes(p.state.toLowerCase())) score += 10;
+  // Direct state/region name in query (light boost, not a gate)
+  if (queryLower.includes(p.state.toLowerCase())) score += 6;
+  if (queryLower.includes(p.region.toLowerCase())) score += 3;
+
+  // Direct word overlap for catch-all queries
+  const words = queryLower.split(/\s+/).filter(w => w.length > 3);
+  for (const w of words) {
+    if (text.includes(w)) score += 1;
+  }
 
   return score;
 }
 
-// ── Stage 3: Final LLM matching (small, focused call) ─────────────────
+// ── Stage 3: LLM matching with travel constraint reasoning ─────────────
 
 export async function POST(req: NextRequest) {
   try {
@@ -190,35 +159,42 @@ export async function POST(req: NextRequest) {
     const properties = await getAllProperties();
     const queryLower = query.toLowerCase();
 
-    // Stage 1: Extract intent (tiny LLM call)
+    // Stage 1: Extract intent (tiny LLM call — just the query, no catalogue)
     const intent = await extractIntent(query);
 
-    // Stage 2: Score and filter (free)
+    // Stage 2: Score on experience fit, take top 25 candidates
     const scored = properties.map((p) => ({
       p,
       score: scoreProperty(p, intent, queryLower),
     }));
     scored.sort((a, b) => b.score - a.score);
+    const subset = scored.slice(0, 25).map(s => s.p);
 
-    // Take top 20 — smart filter means fewer, better candidates
-    const subset = scored.slice(0, 20).map(s => s.p);
-
-    // Stage 3: Final matching (small focused LLM call)
+    // Stage 3: LLM picks the best matches, reasoning about geography + travel constraints
     const compact = subset.map((p) => (
       `${p.id}|${p.name}|${p.type}|${p.location},${p.state}|${p.clusters.join("+")}|${p.priceTier}`
     )).join("\n");
 
-    const system = `You are CurateIndia's concierge. The user wants: "${intent.intent}"
+    const travelNote = intent.travelConstraints
+      ? `\n\nTRAVEL CONSTRAINTS (apply these strictly when ranking):\n${intent.travelConstraints}\nUse your knowledge of Indian airports, flight routes, and driving distances to evaluate each property's accessibility.`
+      : "";
 
-From the shortlisted properties below, pick the best matches. Explain why each fits in one vivid sentence.
+    const system = `You are CurateIndia's concierge — an expert on Indian travel, geography, flight routes, and driving distances.
+
+The user wants: "${intent.intent}"${travelNote}
+
+From the shortlisted properties below, pick the ones that BEST match the user's request. Consider:
+1. Experience fit — does the property offer what the user is looking for?
+2. Accessibility — can the user realistically reach it given their travel constraints?
+3. Suitability — is it right for their travel party (elderly, kids, couples, etc.)?
 
 Return ONLY JSON:
-{"intent":"${intent.intent}","hits":[{"propertyId":"exact id","reason":"1-sentence why","matchScore":0.0-1.0}]}
+{"intent":"${intent.intent}","hits":[{"propertyId":"exact id","reason":"1 vivid sentence explaining why this fits AND how to get there","matchScore":0.0-1.0}]}
 
 Rules:
-- Up to 8 hits, desc by matchScore.
-- Only return properties that genuinely fit — if only 3 fit, return 3.
-- Only use IDs from the list below. Never invent.`;
+- Up to 8 hits, desc by matchScore. Quality over quantity — if only 3 fit well, return 3.
+- Only use IDs from the list below. Never invent.
+- In the "reason" field, mention the nearest airport or driving route if travel constraints were specified.`;
 
     const userMsg = `Shortlist (${subset.length} properties):\n${compact}`;
 
@@ -243,7 +219,7 @@ Rules:
         break;
       } catch (e: unknown) {
         const is429 = e instanceof Error && e.message.includes("429");
-        if (is429 && attempt < MATCH_MODELS.length - 1) continue; // try next model
+        if (is429 && attempt < MATCH_MODELS.length - 1) continue;
         throw e;
       }
     }
