@@ -107,13 +107,13 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
           e.preventDefault();
           submit(input);
         }}
-        className="glass rounded-2xl sm:rounded-3xl p-2 pl-3 sm:pl-5 pr-2 flex items-end gap-1 sm:gap-2 w-full min-w-0"
+        className="glass rounded-2xl sm:rounded-3xl p-2 pl-3 sm:pl-5 pr-2 flex items-center gap-1 sm:gap-2 w-full min-w-0"
       >
         <textarea
           ref={inputRef}
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          rows={2}
+          rows={1}
           onInput={(e) => {
             const el = e.currentTarget;
             el.style.height = "auto";
@@ -128,7 +128,7 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
           placeholder="Describe what you want…"
           className="flex-1 min-w-0 bg-transparent outline-none resize-none py-3 text-base placeholder:text-faint break-words"
         />
-        <div className="flex items-end gap-1 sm:gap-1.5 pb-1.5 shrink-0">
+        <div className="flex items-center gap-1 sm:gap-1.5 shrink-0">
           <MicButton onTranscript={(t) => { setInput((prev) => prev + t); }} />
           {phase === "results" && (
             <button
