@@ -229,7 +229,7 @@ function ResultCard({ hit }: { hit: SearchHit & { property: Property } }) {
           <div className="font-display text-xl leading-tight text-balance">{p.name}</div>
         </div>
       </div>
-      <div className="text-xs text-sand-400 italic mt-2 line-clamp-3 leading-relaxed">
+      <div className="text-xs text-sand-400 italic mt-2 leading-relaxed">
         {hit.reason}
       </div>
     </Link>
