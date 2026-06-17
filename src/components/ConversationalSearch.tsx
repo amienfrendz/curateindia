@@ -22,6 +22,8 @@ type ResultPayload = {
   hits: (SearchHit & { property: Property })[];
 };
 
+const SESSION_KEY = "curateindia-search";
+
 export default function ConversationalSearch({ minimal = false }: { minimal?: boolean }) {
   const [input, setInput] = useState("");
   const [phase, setPhase] = useState<Phase>("idle");
@@ -30,7 +32,21 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
   const [error, setError] = useState<string>("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
+  // Restore last search from sessionStorage on mount
   useEffect(() => {
+    try {
+      const saved = sessionStorage.getItem(SESSION_KEY);
+      if (saved) {
+        const { query, intent: savedIntent, hits: savedHits } = JSON.parse(saved);
+        if (query && savedHits?.length) {
+          setInput(query);
+          setIntent(savedIntent || "");
+          setHits(savedHits);
+          setPhase("results");
+          return;
+        }
+      }
+    } catch { /* ignore parse errors */ }
     inputRef.current?.focus();
   }, []);
 
@@ -60,20 +76,38 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
       setIntent(data.intent || "");
       setHits(data.hits || []);
       setPhase("results");
+      // Persist to sessionStorage so back-navigation restores results
+      try {
+        sessionStorage.setItem(SESSION_KEY, JSON.stringify({
+          query,
+          intent: data.intent || "",
+          hits: data.hits || [],
+        }));
+      } catch { /* storage full — ignore */ }
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : "Something went wrong");
       setPhase("idle");
     }
   }
 
+  function clearSearch() {
+    setInput("");
+    setPhase("idle");
+    setIntent("");
+    setHits([]);
+    setError("");
+    try { sessionStorage.removeItem(SESSION_KEY); } catch {}
+    inputRef.current?.focus();
+  }
+
   return (
-    <div className={minimal ? "" : "max-w-3xl mx-auto w-full overflow-hidden"}>
+    <div className={minimal ? "" : "max-w-3xl mx-auto w-full min-w-0"}>
       <form
         onSubmit={(e) => {
           e.preventDefault();
           submit(input);
         }}
-        className="glass rounded-2xl sm:rounded-3xl p-2 pl-3 sm:pl-5 pr-2 flex items-end gap-1.5 sm:gap-2 w-full"
+        className="glass rounded-2xl sm:rounded-3xl p-2 pl-3 sm:pl-5 pr-2 flex items-end gap-1.5 sm:gap-2 w-full min-w-0 box-border"
       >
         <textarea
           ref={inputRef}
@@ -92,10 +126,20 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
             }
           }}
           placeholder="Tell me what you want — landscape, mood, food, budget, vibe…"
-          className="flex-1 min-w-0 bg-transparent outline-none resize-none py-3 text-sm sm:text-base placeholder:text-faint w-full"
+          className="flex-1 min-w-0 bg-transparent outline-none resize-none py-3 text-sm sm:text-base placeholder:text-faint break-words"
         />
         <div className="flex items-end gap-1.5 pb-1.5 shrink-0">
           <MicButton onTranscript={(t) => { setInput((prev) => prev + t); }} />
+          {phase === "results" && (
+            <button
+              type="button"
+              onClick={clearSearch}
+              className="h-10 sm:h-11 px-3 sm:px-4 rounded-xl sm:rounded-2xl bg-ink-800 hover:bg-ink-700 border border-hairline text-muted hover:text-foreground text-sm transition-colors shrink-0"
+              title="Clear and start fresh"
+            >
+              Clear
+            </button>
+          )}
           <button
             type="submit"
             disabled={phase === "thinking"}
@@ -241,6 +285,7 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
   const [supported, setSupported] = useState(false);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const recognitionRef = useRef<any>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -248,10 +293,24 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
     setSupported(!!(w.SpeechRecognition || w.webkitSpeechRecognition));
   }, []);
 
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      recognitionRef.current?.abort();
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
+  function stopListening() {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    try { recognitionRef.current?.stop(); } catch {}
+    recognitionRef.current = null;
+    setListening(false);
+  }
+
   function toggle() {
     if (listening) {
-      recognitionRef.current?.stop();
-      setListening(false);
+      stopListening();
       return;
     }
 
@@ -263,20 +322,25 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
     const recognition = new SpeechRecognition();
     recognition.lang = "en-IN";
     recognition.interimResults = false;
+    // continuous: false means it auto-stops after user pauses speaking
     recognition.continuous = false;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     recognition.onresult = (event: any) => {
       const transcript: string = event?.results?.[0]?.[0]?.transcript || "";
       if (transcript) onTranscript(transcript);
-      setListening(false);
     };
-    recognition.onerror = () => setListening(false);
-    recognition.onend = () => setListening(false);
+    recognition.onerror = () => stopListening();
+    recognition.onend = () => stopListening();
 
     recognitionRef.current = recognition;
     recognition.start();
     setListening(true);
+
+    // Safety timeout: force stop after 30 seconds max
+    timeoutRef.current = setTimeout(() => {
+      stopListening();
+    }, 30000);
   }
 
   if (!supported) return null;
