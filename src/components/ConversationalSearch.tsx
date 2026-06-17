@@ -126,7 +126,7 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
             }
           }}
           placeholder="Describe what you want…"
-          className="flex-1 min-w-0 bg-transparent outline-none resize-none py-3 text-sm sm:text-base placeholder:text-faint break-words"
+          className="flex-1 min-w-0 bg-transparent outline-none resize-none py-3 text-base placeholder:text-faint break-words"
         />
         <div className="flex items-end gap-1 sm:gap-1.5 pb-1.5 shrink-0">
           <MicButton onTranscript={(t) => { setInput((prev) => prev + t); }} />
