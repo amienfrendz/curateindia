@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function SearchPage() {
   return (
-    <main className="min-h-screen px-4 sm:px-8 py-10 sm:py-16 w-full max-w-[100vw]">
+    <main className="min-h-screen px-4 sm:px-8 py-10 sm:py-16">
       <div className="max-w-5xl mx-auto w-full min-w-0">
         <Link href="/" className="text-xs uppercase tracking-[0.3em] text-spice-400 mb-6 inline-block">
           ← Home

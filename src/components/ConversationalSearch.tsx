@@ -151,7 +151,7 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
       </form>
 
       {phase === "idle" && !minimal && (
-        <div className="mt-4 flex flex-wrap gap-2 justify-center">
+        <div className="mt-4 flex flex-wrap gap-2 justify-center max-w-full">
           {SUGGESTIONS.slice(0, 4).map((s) => (
             <button
               key={s}
@@ -159,7 +159,7 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
                 setInput(s);
                 submit(s);
               }}
-              className="text-xs px-3 py-1.5 rounded-full border border-hairline text-muted hover:text-foreground hover:border-ink-300/30 transition-colors text-left"
+              className="text-xs px-3 py-1.5 rounded-2xl sm:rounded-full border border-hairline text-muted hover:text-foreground hover:border-ink-300/30 transition-colors text-left max-w-full break-words"
             >
               {s}
             </button>
@@ -174,7 +174,7 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
                     setInput(s);
                     submit(s);
                   }}
-                  className="text-xs px-3 py-1.5 rounded-full border border-hairline text-muted hover:text-foreground hover:border-ink-300/30 transition-colors text-left"
+                  className="text-xs px-3 py-1.5 rounded-2xl sm:rounded-full border border-hairline text-muted hover:text-foreground hover:border-ink-300/30 transition-colors text-left max-w-full break-words"
                 >
                   {s}
                 </button>

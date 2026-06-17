@@ -25,8 +25,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className="dark">
       <body className={`${display.variable} ${sans.variable} font-sans antialiased min-h-screen`}>
-        <Header />
-        {children}
+        <div className="w-full overflow-x-hidden">
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );
