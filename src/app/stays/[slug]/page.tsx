@@ -47,7 +47,7 @@ export default async function StayPage({ params }: { params: { slug: string } })
   return (
     <main className="min-h-screen pb-20">
       {/* HERO */}
-      <section className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] min-h-[350px] sm:min-h-[450px] overflow-hidden">
+      <section className="relative h-[40vh] sm:h-[55vh] lg:h-[70vh] min-h-[280px] sm:min-h-[400px] overflow-hidden">
         <PropertyImage
           imageUrl={property.imageUrl}
           website={property.website}
@@ -57,9 +57,9 @@ export default async function StayPage({ params }: { params: { slug: string } })
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/40 to-transparent" />
 
-        <div className="absolute inset-x-0 bottom-0 px-5 sm:px-8 pb-12">
+        <div className="absolute inset-x-0 bottom-0 px-4 sm:px-8 pb-6 sm:pb-12">
           <div className="max-w-6xl mx-auto">
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
               {property.clusters.map((slug) => {
                 const c = getCluster(slug);
                 if (!c) return null;
@@ -67,33 +67,33 @@ export default async function StayPage({ params }: { params: { slug: string } })
                   <Link
                     key={slug}
                     href={`/clusters/${slug}`}
-                    className="text-xs uppercase tracking-wider px-3 py-1.5 rounded-full glass hover:bg-ink-700 transition-colors"
+                    className="text-[10px] sm:text-xs uppercase tracking-wider px-2 sm:px-3 py-1 sm:py-1.5 rounded-full glass hover:bg-ink-700 transition-colors"
                   >
                     {c.icon} {c.shortName}
                   </Link>
                 );
               })}
             </div>
-            <h1 className="font-display text-3xl sm:text-5xl lg:text-7xl text-balance leading-[1.05] max-w-4xl">
+            <h1 className="font-display text-2xl sm:text-5xl lg:text-7xl text-balance leading-[1.1] max-w-4xl">
               {property.name}
             </h1>
-            <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
-              <span className="text-sm sm:text-base text-foreground/80">
+            <div className="mt-2 sm:mt-3 flex flex-wrap items-center gap-x-2 sm:gap-x-3 gap-y-2">
+              <span className="text-xs sm:text-base text-foreground/80">
                 {property.location} · {property.state} ·{" "}
                 <span className="text-spice-400">{property.priceTier}</span>
               </span>
               {/* Action buttons: Share + Directions */}
-              <span className="inline-flex items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 sm:gap-2">
                 <ShareButton name={property.name} slug={property.slug} />
                 {mapsUrl && (
                   <a
                     href={mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs px-3 py-2 rounded-lg bg-ink-800 hover:bg-ink-700 border border-hairline transition-colors"
+                    className="inline-flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-ink-800 hover:bg-ink-700 border border-hairline transition-colors"
                     title="Get directions"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
                       <circle cx="12" cy="9" r="2.5"/>
                     </svg>
@@ -107,10 +107,10 @@ export default async function StayPage({ params }: { params: { slug: string } })
       </section>
 
       {/* BODY */}
-      <section className="px-5 sm:px-8 py-12">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr,360px] gap-10">
+      <section className="px-4 sm:px-8 py-8 sm:py-12">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr,360px] gap-8 sm:gap-10">
           {/* LEFT */}
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             {/* Quick facts */}
             <div className="flex flex-wrap gap-2 sm:gap-3">
               <Fact label="Type" value={property.type} />
@@ -126,7 +126,7 @@ export default async function StayPage({ params }: { params: { slug: string } })
             </div>
 
             {/* Blurb */}
-            <p className="font-display text-2xl sm:text-3xl text-balance leading-snug">
+            <p className="font-display text-xl sm:text-2xl lg:text-3xl text-balance leading-snug">
               {property.blurb}
             </p>
 
@@ -139,7 +139,7 @@ export default async function StayPage({ params }: { params: { slug: string } })
                 {property.signatureExperiences.map((exp, i) => (
                   <li
                     key={i}
-                    className="flex gap-4 text-base leading-relaxed animate-slide-up"
+                    className="flex gap-3 sm:gap-4 text-sm sm:text-base leading-relaxed animate-slide-up"
                     style={{ animationDelay: `${i * 80}ms` }}
                   >
                     <span className="text-sand-400 font-display text-2xl leading-none mt-0.5">
@@ -157,7 +157,7 @@ export default async function StayPage({ params }: { params: { slug: string } })
                 <div className="text-xs uppercase tracking-[0.3em] text-spice-400 mb-3">
                   At the table
                 </div>
-                <p className="text-lg leading-relaxed text-foreground/90 max-w-2xl">
+                <p className="text-base sm:text-lg leading-relaxed text-foreground/90 max-w-2xl">
                   {property.food}
                 </p>
               </div>
@@ -169,7 +169,7 @@ export default async function StayPage({ params }: { params: { slug: string } })
                 <div className="text-xs uppercase tracking-[0.3em] text-spice-400 mb-3">
                   Hosted by
                 </div>
-                <p className="text-lg leading-relaxed text-foreground/90 max-w-2xl font-display italic">
+                <p className="text-base sm:text-lg leading-relaxed text-foreground/90 max-w-2xl font-display italic">
                   {property.host}
                 </p>
               </div>
@@ -193,13 +193,13 @@ export default async function StayPage({ params }: { params: { slug: string } })
 
       {/* RELATED */}
       {related.length > 0 && (
-        <section className="px-5 sm:px-8 py-16 border-t border-hairline">
+        <section className="px-4 sm:px-8 py-10 sm:py-16 border-t border-hairline">
           <div className="max-w-6xl mx-auto">
             <div className="text-xs uppercase tracking-[0.3em] text-spice-400 mb-2">
               You might also love
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl mb-8">Similar curations</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl mb-6 sm:mb-8">Similar curations</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
               {related.map((p) => (
                 <PropertyCard key={p.id} property={p} />
               ))}
@@ -213,9 +213,9 @@ export default async function StayPage({ params }: { params: { slug: string } })
 
 function Fact({ label, value }: { label: string; value: string }) {
   return (
-    <div className="px-4 py-2 rounded-xl border border-hairline bg-ink-800/50">
-      <div className="text-[10px] uppercase tracking-wider text-faint">{label}</div>
-      <div className="text-sm capitalize">{value}</div>
+    <div className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl border border-hairline bg-ink-800/50">
+      <div className="text-[9px] sm:text-[10px] uppercase tracking-wider text-faint">{label}</div>
+      <div className="text-xs sm:text-sm capitalize">{value}</div>
     </div>
   );
 }
