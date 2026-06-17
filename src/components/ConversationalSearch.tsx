@@ -32,6 +32,15 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
   const [error, setError] = useState<string>("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
+  // Auto-resize textarea whenever input changes (handles sessionStorage restore, mic, paste, etc.)
+  useEffect(() => {
+    const el = inputRef.current;
+    if (el) {
+      el.style.height = "auto";
+      el.style.height = Math.min(el.scrollHeight, 150) + "px";
+    }
+  }, [input]);
+
   // Restore last search from sessionStorage on mount
   useEffect(() => {
     try {
