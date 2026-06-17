@@ -67,13 +67,13 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
   }
 
   return (
-    <div className={minimal ? "" : "max-w-3xl mx-auto w-full"}>
+    <div className={minimal ? "" : "max-w-3xl mx-auto w-full overflow-hidden"}>
       <form
         onSubmit={(e) => {
           e.preventDefault();
           submit(input);
         }}
-        className="glass rounded-2xl sm:rounded-3xl p-2 pl-4 sm:pl-5 pr-2 flex items-end gap-1.5 sm:gap-2"
+        className="glass rounded-2xl sm:rounded-3xl p-2 pl-3 sm:pl-5 pr-2 flex items-end gap-1.5 sm:gap-2 w-full"
       >
         <textarea
           ref={inputRef}
@@ -83,7 +83,7 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
           onInput={(e) => {
             const el = e.currentTarget;
             el.style.height = "auto";
-            el.style.height = Math.min(el.scrollHeight, 200) + "px";
+            el.style.height = Math.min(el.scrollHeight, 150) + "px";
           }}
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {
@@ -92,7 +92,7 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
             }
           }}
           placeholder="Tell me what you want — landscape, mood, food, budget, vibe…"
-          className="flex-1 min-w-0 bg-transparent outline-none resize-none py-3 text-sm sm:text-base placeholder:text-faint"
+          className="flex-1 min-w-0 bg-transparent outline-none resize-none py-3 text-sm sm:text-base placeholder:text-faint w-full"
         />
         <div className="flex items-end gap-1.5 pb-1.5 shrink-0">
           <MicButton onTranscript={(t) => { setInput((prev) => prev + t); }} />
@@ -178,13 +178,13 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
       )}
 
       {phase === "results" && (
-        <div className="mt-10 animate-slide-up">
+        <div className="mt-8 sm:mt-10 animate-slide-up">
           {intent && (
-            <div className="glass rounded-2xl p-5 mb-8">
+            <div className="glass rounded-xl sm:rounded-2xl p-4 sm:p-5 mb-6 sm:mb-8">
               <div className="text-xs uppercase tracking-wider text-spice-400 mb-2">
                 What I heard
               </div>
-              <div className="text-base text-foreground/90">{intent}</div>
+              <div className="text-sm sm:text-base text-foreground/90">{intent}</div>
             </div>
           )}
 
@@ -193,7 +193,7 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
               No matches in our 50+ curated set. Try widening — e.g. drop a budget or add a state.
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
               {hits.map((h) => (
                 <ResultCard key={h.propertyId} hit={h} />
               ))}
@@ -209,8 +209,8 @@ function ResultCard({ hit }: { hit: SearchHit & { property: Property } }) {
   const p = hit.property;
   const cluster = getCluster(p.clusters[0]);
   return (
-    <Link href={`/stays/${p.slug}`} className="block group">
-      <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border-hairline border">
+    <Link href={`/stays/${p.slug}`} className="block group min-w-0">
+      <div className="relative aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden border-hairline border">
         <PropertyImage
           imageUrl={p.imageUrl}
           website={p.website}
@@ -219,17 +219,17 @@ function ResultCard({ hit }: { hit: SearchHit & { property: Property } }) {
           className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-transparent to-transparent" />
-        <div className="absolute top-3 left-3 text-[10px] uppercase tracking-wider px-2 py-1 rounded-full glass">
+        <div className="absolute top-2 left-2 sm:top-3 sm:left-3 text-[9px] sm:text-[10px] uppercase tracking-wider px-2 py-1 rounded-full glass">
           {p.type}
         </div>
-        <div className="absolute bottom-0 inset-x-0 p-4">
-          <div className="text-xs text-muted mb-1">
+        <div className="absolute bottom-0 inset-x-0 p-3 sm:p-4">
+          <div className="text-[10px] sm:text-xs text-muted mb-1 truncate">
             {cluster?.icon} {p.location} · {p.state}
           </div>
-          <div className="font-display text-xl leading-tight text-balance">{p.name}</div>
+          <div className="font-display text-base sm:text-xl leading-tight text-balance">{p.name}</div>
         </div>
       </div>
-      <div className="text-xs text-sand-400 italic mt-2 leading-relaxed">
+      <div className="text-[11px] sm:text-xs text-sand-400 italic mt-2 leading-relaxed">
         {hit.reason}
       </div>
     </Link>
