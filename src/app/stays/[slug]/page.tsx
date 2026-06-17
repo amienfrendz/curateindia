@@ -2,13 +2,14 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPropertyBySlug, getAllProperties } from "@/lib/repo";
 import { getCluster } from "@/data/clusters";
-import { buildBookingLinks } from "@/lib/bookingLinks";
+import { buildBookingLinks, getGoogleMapsUrl } from "@/lib/bookingLinks";
 import PropertyImage from "@/components/PropertyImage";
 import PropertyCard from "@/components/PropertyCard";
 import ReviewsPanel from "@/components/ReviewsPanel";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
 import ShareButton from "@/components/ShareButton";
 import pricingData from "@/data/property-pricing.json";
+import reviewsData from "@/data/property-reviews.json";
 
 export async function generateStaticParams() {
   const all = await getAllProperties();
@@ -29,6 +30,7 @@ export default async function StayPage({ params }: { params: { slug: string } })
   if (!property) notFound();
 
   const links = buildBookingLinks(property);
+  const mapsUrl = getGoogleMapsUrl(property);
   const all = await getAllProperties();
   const related = all
     .filter(
@@ -37,6 +39,10 @@ export default async function StayPage({ params }: { params: { slug: string } })
         p.clusters.some((c) => property.clusters.includes(c))
     )
     .slice(0, 4);
+
+  const reviewEntry = (reviewsData as Record<string, { rating: number | null; ratingCount: number }>)[property.slug];
+  const rating = reviewEntry?.rating;
+  const ratingCount = reviewEntry?.ratingCount;
 
   return (
     <main className="min-h-screen pb-20">
@@ -71,12 +77,30 @@ export default async function StayPage({ params }: { params: { slug: string } })
             <h1 className="font-display text-3xl sm:text-5xl lg:text-7xl text-balance leading-[1.05] max-w-4xl">
               {property.name}
             </h1>
-            <div className="mt-3 flex flex-wrap items-center gap-2 sm:gap-4">
+            <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
               <span className="text-sm sm:text-base text-foreground/80">
                 {property.location} · {property.state} ·{" "}
                 <span className="text-spice-400">{property.priceTier}</span>
               </span>
-              <ShareButton name={property.name} slug={property.slug} />
+              {/* Action buttons: Share + Directions */}
+              <span className="inline-flex items-center gap-2">
+                <ShareButton name={property.name} slug={property.slug} />
+                {mapsUrl && (
+                  <a
+                    href={mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs px-3 py-2 rounded-lg bg-ink-800 hover:bg-ink-700 border border-hairline transition-colors"
+                    title="Get directions"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                      <circle cx="12" cy="9" r="2.5"/>
+                    </svg>
+                    Directions
+                  </a>
+                )}
+              </span>
             </div>
           </div>
         </div>
@@ -92,7 +116,9 @@ export default async function StayPage({ params }: { params: { slug: string } })
               <Fact label="Type" value={property.type} />
               {property.rooms && <Fact label="Rooms" value={`${property.rooms}`} />}
               <Fact label="Region" value={property.region} />
-              {property.host && <Fact label="Host" value={property.host} />}
+              {rating && (
+                <Fact label="Rating" value={`★ ${rating}${ratingCount ? ` (${ratingCount.toLocaleString()})` : ""}`} />
+              )}
               <Fact label="Approx. rate" value={getPriceRange(property.slug, property.priceTier)} />
               {getPriceIncludes(property.slug) && (
                 <Fact label="Includes" value={getPriceIncludes(property.slug)!} />

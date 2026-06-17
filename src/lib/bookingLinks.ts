@@ -4,12 +4,21 @@ import bookingLinksData from "@/data/booking-links.json";
 type LinkEntry = { name: string; label: string; url: string; verified: boolean };
 const ALL_LINKS = bookingLinksData as Record<string, LinkEntry[]>;
 
+/** Extract Google Maps URL for a property (used by Directions button in hero) */
+export function getGoogleMapsUrl(p: Property): string | null {
+  const cached = ALL_LINKS[p.slug];
+  const mapsLink = cached?.find((l) => l.name === "google-maps");
+  if (mapsLink) return mapsLink.url;
+  // Fallback: Google Maps search
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${p.name} ${p.location} ${p.state}`)}`;
+}
+
 export function buildBookingLinks(p: Property) {
   const cached = ALL_LINKS[p.slug];
   if (cached && cached.length > 0) {
-    // Filter out unverified host sites, keep everything else
+    // Filter out unverified host sites AND Google Maps (now shown in hero)
     return cached
-      .filter((l) => l.verified || l.name !== "direct")
+      .filter((l) => (l.verified || l.name !== "direct") && l.name !== "google-maps")
       .map(({ name, label, url }) => ({ name, label, url }));
   }
 

@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import reviewsData from "@/data/property-reviews.json";
 
 type ReviewEntry = {
@@ -10,6 +11,25 @@ type ReviewEntry = {
 };
 
 const allReviews = reviewsData as Record<string, ReviewEntry>;
+
+function ExpandableReview({ text }: { text: string }) {
+  const [expanded, setExpanded] = useState(false);
+  const isLong = text.length > 300;
+
+  return (
+    <span>
+      {isLong && !expanded ? text.slice(0, 300) + "…" : text}
+      {isLong && (
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="text-spice-400 hover:text-spice-300 ml-1 text-xs font-medium transition-colors"
+        >
+          {expanded ? "Show less" : "Read more"}
+        </button>
+      )}
+    </span>
+  );
+}
 
 export default function ReviewsPanel({ propertySlug }: { propertySlug: string }) {
   const data = allReviews[propertySlug];
@@ -47,7 +67,7 @@ export default function ReviewsPanel({ propertySlug }: { propertySlug: string })
         </p>
       )}
 
-      {/* Top quotes */}
+      {/* Top quotes — full text with expand/collapse */}
       {data.reviews.length > 0 && (
         <div className="space-y-5">
           {data.reviews.slice(0, 3).map((rv, i) => (
@@ -56,8 +76,8 @@ export default function ReviewsPanel({ propertySlug }: { propertySlug: string })
               className="border-l-2 border-spice-500/40 pl-5 animate-slide-up"
               style={{ animationDelay: `${i * 80}ms` }}
             >
-              <blockquote className="text-sm leading-relaxed text-balance">
-                &ldquo;{rv.text.length > 200 ? rv.text.slice(0, 200) + "…" : rv.text}&rdquo;
+              <blockquote className="text-sm leading-relaxed">
+                &ldquo;<ExpandableReview text={rv.text} />&rdquo;
               </blockquote>
               <figcaption className="text-xs text-muted mt-2">
                 — {rv.author} · {"★".repeat(rv.rating)} · {rv.time}
