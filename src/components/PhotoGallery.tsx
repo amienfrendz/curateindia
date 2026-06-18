@@ -20,9 +20,9 @@ type Props = {
 export default function PhotoGallery({ photos, propertyName, hero = false }: Props) {
   const [current, setCurrent] = useState(0);
   const [lightbox, setLightbox] = useState(false);
-  const touchStartRef = useRef<number | null>(null);
-  const touchDeltaRef = useRef(0);
-  const [dragging, setDragging] = useState(false);
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
+  const [dragOffset, setDragOffset] = useState(0);
+  const [swiping, setSwiping] = useState(false);
 
   const total = photos.length;
   if (!total) return null;
@@ -34,26 +34,37 @@ export default function PhotoGallery({ photos, propertyName, hero = false }: Pro
       <div className={`relative overflow-hidden bg-ink-900 select-none ${hero ? "w-full h-full" : "rounded-xl sm:rounded-2xl"}`}>
         <div
           className={`relative overflow-hidden ${hero ? "h-full" : "aspect-[4/3]"}`}
+          style={{ touchAction: "pan-y pinch-zoom" }}
           onTouchStart={(e) => {
-            touchStartRef.current = e.touches[0].clientX;
-            touchDeltaRef.current = 0;
-            setDragging(true);
+            touchStartRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+            setDragOffset(0);
+            setSwiping(false);
           }}
           onTouchMove={(e) => {
-            if (touchStartRef.current === null) return;
-            touchDeltaRef.current = e.touches[0].clientX - touchStartRef.current;
+            if (!touchStartRef.current) return;
+            const dx = e.touches[0].clientX - touchStartRef.current.x;
+            const dy = e.touches[0].clientY - touchStartRef.current.y;
+            // Lock to horizontal once we detect a horizontal swipe
+            if (!swiping && Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 8) {
+              setSwiping(true);
+            }
+            if (swiping) {
+              setDragOffset(dx);
+            }
           }}
           onTouchEnd={() => {
-            setDragging(false);
-            if (touchDeltaRef.current > 50 && current > 0) goTo(current - 1);
-            else if (touchDeltaRef.current < -50 && current < total - 1) goTo(current + 1);
+            if (swiping) {
+              if (dragOffset > 60 && current > 0) goTo(current - 1);
+              else if (dragOffset < -60 && current < total - 1) goTo(current + 1);
+            }
             touchStartRef.current = null;
-            touchDeltaRef.current = 0;
+            setDragOffset(0);
+            setSwiping(false);
           }}
         >
           <div
-            className={`flex h-full ${dragging ? "" : "transition-transform duration-300 ease-out"}`}
-            style={{ transform: `translateX(-${current * 100}%)` }}
+            className={swiping ? "flex h-full will-change-transform" : "flex h-full will-change-transform transition-transform duration-300 ease-out"}
+            style={{ transform: `translateX(calc(-${current * 100}% + ${swiping ? dragOffset : 0}px))` }}
           >
             {photos.map((photo, i) => (
               <div key={photo.file} className="shrink-0 w-full h-full relative cursor-pointer" onClick={() => setLightbox(true)}>
