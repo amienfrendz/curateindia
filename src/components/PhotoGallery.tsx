@@ -163,10 +163,10 @@ function Lightbox({ photos, propertyName, initial, onClose }: {
       </div>
 
       <div className="flex-1 flex items-center justify-center px-4 sm:px-16 pb-4 min-h-0 relative">
-        <button onClick={(e) => { e.stopPropagation(); goPrev(); }} className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full bg-ink-800/80 hover:bg-ink-700 border border-hairline transition-colors z-10" aria-label="Previous">
+        <button onClick={(e) => { e.stopPropagation(); goPrev(); }} className="flex absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-ink-800/80 hover:bg-ink-700 border border-hairline transition-colors z-10" aria-label="Previous">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
         </button>
-        <button onClick={(e) => { e.stopPropagation(); goNext(); }} className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full bg-ink-800/80 hover:bg-ink-700 border border-hairline transition-colors z-10" aria-label="Next">
+        <button onClick={(e) => { e.stopPropagation(); goNext(); }} className="flex absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-ink-800/80 hover:bg-ink-700 border border-hairline transition-colors z-10" aria-label="Next">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
         </button>
         <div className="relative w-full h-full max-w-5xl mx-auto" onClick={(e) => e.stopPropagation()}>
