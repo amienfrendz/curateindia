@@ -8,8 +8,14 @@ import PropertyCard from "@/components/PropertyCard";
 import ReviewsPanel from "@/components/ReviewsPanel";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
 import ShareButton from "@/components/ShareButton";
+import PhotoGallery from "@/components/PhotoGallery";
+import type { GalleryPhoto } from "@/components/PhotoGallery";
 import pricingData from "@/data/property-pricing.json";
 import reviewsData from "@/data/property-reviews.json";
+import galleryData from "@/data/property-gallery.json";
+
+// Set DISABLE_GALLERY=true in .env.local to turn off gallery
+const GALLERY_ENABLED = process.env.DISABLE_GALLERY !== "true";
 
 export async function generateStaticParams() {
   const all = await getAllProperties();
@@ -44,64 +50,76 @@ export default async function StayPage({ params }: { params: { slug: string } })
   const rating = reviewEntry?.rating;
   const ratingCount = reviewEntry?.ratingCount;
 
+  const galleryEntry = (galleryData as Record<string, { photos: GalleryPhoto[] }>)[property.slug];
+  // Order: rooms → common areas → dining/food → experiences → exterior → uncategorized
+  const CATEGORY_ORDER: Record<string, number> = { ROOM: 0, COMMON: 1, DINING: 2, EXPERIENCE: 3, EXTERIOR: 4 };
+  const galleryPhotos = (galleryEntry?.photos || [])
+    .slice()
+    .sort((a, b) => (CATEGORY_ORDER[a.category || ""] ?? 5) - (CATEGORY_ORDER[b.category || ""] ?? 5));
+
   return (
     <main className="min-h-screen pb-20">
-      {/* HERO */}
-      <section className="relative h-[40vh] sm:h-[55vh] lg:h-[70vh] min-h-[280px] sm:min-h-[400px] overflow-hidden">
-        <PropertyImage
-          imageUrl={property.imageUrl}
-          website={property.website}
-          query={`${property.name} ${property.location} ${property.type}`}
-          alt={property.name}
-          className="absolute inset-0"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/40 to-transparent" />
+      {/* GALLERY HERO — single carousel, 16:9 desktop / 3:2 mobile */}
+      {GALLERY_ENABLED && galleryPhotos.length > 0 ? (
+        <section className="w-full aspect-[3/2] sm:aspect-[16/9]">
+          <PhotoGallery photos={galleryPhotos} propertyName={property.name} hero />
+        </section>
+      ) : (
+        <section className="relative w-full aspect-[3/2] sm:aspect-[16/9] overflow-hidden">
+          <PropertyImage
+            imageUrl={property.imageUrl}
+            website={property.website}
+            query={`${property.name} ${property.location} ${property.type}`}
+            alt={property.name}
+            className="absolute inset-0"
+          />
+        </section>
+      )}
 
-        <div className="absolute inset-x-0 bottom-0 px-4 sm:px-8 pb-6 sm:pb-12">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
-              {property.clusters.map((slug) => {
-                const c = getCluster(slug);
-                if (!c) return null;
-                return (
-                  <Link
-                    key={slug}
-                    href={`/clusters/${slug}`}
-                    className="text-[10px] sm:text-xs uppercase tracking-wider px-2 sm:px-3 py-1 sm:py-1.5 rounded-full glass hover:bg-ink-700 transition-colors"
-                  >
-                    {c.icon} {c.shortName}
-                  </Link>
-                );
-              })}
-            </div>
-            <h1 className="font-display text-2xl sm:text-5xl lg:text-7xl text-balance leading-[1.1] max-w-4xl">
-              {property.name}
-            </h1>
-            <div className="mt-2 sm:mt-3 flex flex-wrap items-center gap-x-2 sm:gap-x-3 gap-y-2">
-              <span className="text-xs sm:text-base text-foreground/80">
-                {property.location} · {property.state} ·{" "}
-                <span className="text-spice-400">{property.priceTier}</span>
-              </span>
-              {/* Action buttons: Share + Directions */}
-              <span className="inline-flex items-center gap-1.5 sm:gap-2">
-                <ShareButton name={property.name} slug={property.slug} />
-                {mapsUrl && (
-                  <a
-                    href={mapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-ink-800 hover:bg-ink-700 border border-hairline transition-colors"
-                    title="Get directions"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-                      <circle cx="12" cy="9" r="2.5"/>
-                    </svg>
-                    Directions
-                  </a>
-                )}
-              </span>
-            </div>
+      {/* PROPERTY INFO — below the gallery fold */}
+      <section className="px-4 sm:px-8 pt-6 sm:pt-8 pb-2">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+            {property.clusters.map((slug) => {
+              const c = getCluster(slug);
+              if (!c) return null;
+              return (
+                <Link
+                  key={slug}
+                  href={`/clusters/${slug}`}
+                  className="text-[10px] sm:text-xs uppercase tracking-wider px-2 sm:px-3 py-1 sm:py-1.5 rounded-full glass hover:bg-ink-700 transition-colors"
+                >
+                  {c.icon} {c.shortName}
+                </Link>
+              );
+            })}
+          </div>
+          <h1 className="font-display text-2xl sm:text-5xl lg:text-7xl text-balance leading-[1.1] max-w-4xl">
+            {property.name}
+          </h1>
+          <div className="mt-2 sm:mt-3 flex flex-wrap items-center gap-x-2 sm:gap-x-3 gap-y-2">
+            <span className="text-xs sm:text-base text-foreground/80">
+              {property.location} · {property.state} ·{" "}
+              <span className="text-spice-400">{property.priceTier}</span>
+            </span>
+            <span className="inline-flex items-center gap-1.5 sm:gap-2">
+              <ShareButton name={property.name} slug={property.slug} />
+              {mapsUrl && (
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-ink-800 hover:bg-ink-700 border border-hairline transition-colors"
+                  title="Get directions"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                    <circle cx="12" cy="9" r="2.5"/>
+                  </svg>
+                  Directions
+                </a>
+              )}
+            </span>
           </div>
         </div>
       </section>

@@ -28,6 +28,8 @@ body {
   .scrollbar-thin::-webkit-scrollbar { height: 8px; width: 8px; }
   .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
   .scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 4px; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
   .skeleton {
     background: linear-gradient(
       90deg,
