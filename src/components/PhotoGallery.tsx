@@ -74,12 +74,12 @@ export default function PhotoGallery({ photos, propertyName, hero = false }: Pro
         </div>
 
         {current > 0 && (
-          <button onClick={() => goTo(current - 1)} className="hidden sm:flex absolute left-3 top-1/2 -translate-y-1/2 h-9 w-9 items-center justify-center rounded-full bg-ink-900/70 hover:bg-ink-900/90 backdrop-blur-sm border border-hairline transition-colors z-10" aria-label="Previous photo">
+          <button onClick={() => goTo(current - 1)} className="flex absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-ink-900/70 hover:bg-ink-900/90 backdrop-blur-sm border border-hairline transition-colors z-10" aria-label="Previous photo">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
           </button>
         )}
         {current < total - 1 && (
-          <button onClick={() => goTo(current + 1)} className="hidden sm:flex absolute right-3 top-1/2 -translate-y-1/2 h-9 w-9 items-center justify-center rounded-full bg-ink-900/70 hover:bg-ink-900/90 backdrop-blur-sm border border-hairline transition-colors z-10" aria-label="Next photo">
+          <button onClick={() => goTo(current + 1)} className="flex absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-ink-900/70 hover:bg-ink-900/90 backdrop-blur-sm border border-hairline transition-colors z-10" aria-label="Next photo">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
           </button>
         )}
