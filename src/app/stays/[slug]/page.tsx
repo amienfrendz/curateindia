@@ -59,13 +59,13 @@ export default async function StayPage({ params }: { params: { slug: string } })
 
   return (
     <main className="min-h-screen pb-20">
-      {/* GALLERY HERO — single carousel, 16:9 desktop / 3:2 mobile */}
+      {/* GALLERY — capped height so title/details visible on load */}
       {GALLERY_ENABLED && galleryPhotos.length > 0 ? (
-        <section className="w-full aspect-[3/2] sm:aspect-[16/9]">
+        <section className="w-full h-[40vh] sm:h-[50vh]">
           <PhotoGallery photos={galleryPhotos} propertyName={property.name} hero />
         </section>
       ) : (
-        <section className="relative w-full aspect-[3/2] sm:aspect-[16/9] overflow-hidden">
+        <section className="relative w-full h-[40vh] sm:h-[50vh] overflow-hidden">
           <PropertyImage
             imageUrl={property.imageUrl}
             website={property.website}
