@@ -179,8 +179,24 @@ function Lightbox({ photos, propertyName, initial, onClose }: {
       else if (e.key === "ArrowRight") goNext();
     };
     document.addEventListener("keydown", onKey);
+
+    // Lock background scroll (iOS Safari needs position:fixed on body)
+    const scrollY = window.scrollY;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
     document.body.style.overflow = "hidden";
-    return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = ""; };
+
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+      document.body.style.overflow = "";
+      window.scrollTo(0, scrollY);
+    };
   }, [onClose, goPrev, goNext]);
 
   const photo = photos[idx];

@@ -19,7 +19,7 @@ export default function PropertyCard({
     >
       <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border-hairline border">
         <PropertyImage
-          imageUrl={property.imageUrl}
+          imageUrl={`/photos/${property.slug}/1.jpg`}
           website={property.website}
           query={`${property.name} ${property.location} ${property.type}`}
           alt={property.name}

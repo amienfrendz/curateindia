@@ -265,7 +265,7 @@ function ResultCard({ hit }: { hit: SearchHit & { property: Property } }) {
     <Link href={`/stays/${p.slug}`} className="block group min-w-0">
       <div className="relative aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden border-hairline border">
         <PropertyImage
-          imageUrl={p.imageUrl}
+          imageUrl={`/photos/${p.slug}/1.jpg`}
           website={p.website}
           query={`${p.name} ${p.location} ${p.type}`}
           alt={p.name}
