@@ -65,7 +65,7 @@ export default function PhotoGallery({ photos, propertyName, hero = false }: Pro
                     sizes={hero ? "100vw" : "(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 50vw"}
                     className="object-cover"
                     priority={i === 0}
-                    quality={85}
+                    unoptimized
                   />
                 )}
               </div>
@@ -165,8 +165,8 @@ function Lightbox({ photos, propertyName, initial, onClose }: {
             fill
             sizes="100vw"
             className="object-contain"
-            quality={90}
             priority
+            unoptimized
           />
         </div>
       </div>
