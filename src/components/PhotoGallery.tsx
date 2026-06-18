@@ -20,55 +20,102 @@ type Props = {
 export default function PhotoGallery({ photos, propertyName, hero = false }: Props) {
   const [current, setCurrent] = useState(0);
   const [lightbox, setLightbox] = useState(false);
-  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
-  const [dragOffset, setDragOffset] = useState(0);
-  const [swiping, setSwiping] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const currentRef = useRef(0);
+
+  // Touch state — refs to avoid re-renders during drag
+  const touchState = useRef({ startX: 0, startY: 0, dx: 0, locked: false as boolean | null });
 
   const total = photos.length;
   if (!total) return null;
 
-  const goTo = (i: number) => setCurrent(Math.max(0, Math.min(i, total - 1)));
+  const goTo = (i: number) => {
+    const next = Math.max(0, Math.min(i, total - 1));
+    currentRef.current = next;
+    setCurrent(next);
+    // Animate snap
+    const track = trackRef.current;
+    if (track) {
+      track.style.transition = "transform 300ms cubic-bezier(.25,.1,.25,1)";
+      track.style.transform = `translateX(-${next * 100}%)`;
+    }
+  };
+
+  // Native touch listeners with { passive: false } so preventDefault works
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    function onTouchStart(e: TouchEvent) {
+      const t = e.touches[0];
+      touchState.current = { startX: t.clientX, startY: t.clientY, dx: 0, locked: null };
+      const track = trackRef.current;
+      if (track) track.style.transition = "none";
+    }
+
+    function onTouchMove(e: TouchEvent) {
+      const ts = touchState.current;
+      const t = e.touches[0];
+      const dx = t.clientX - ts.startX;
+      const dy = t.clientY - ts.startY;
+
+      // First significant move — decide horizontal or vertical
+      if (ts.locked === null && (Math.abs(dx) > 8 || Math.abs(dy) > 8)) {
+        ts.locked = Math.abs(dx) > Math.abs(dy); // true = horizontal
+      }
+
+      if (ts.locked === true) {
+        // Horizontal swipe — prevent page scroll/bounce
+        e.preventDefault();
+        ts.dx = dx;
+        const track = trackRef.current;
+        if (track) {
+          track.style.transform = `translateX(calc(-${currentRef.current * 100}% + ${dx}px))`;
+        }
+      }
+      // If locked === false (vertical), do nothing — browser handles scroll
+    }
+
+    function onTouchEnd() {
+      const ts = touchState.current;
+      if (ts.locked === true) {
+        const cur = currentRef.current;
+        if (ts.dx > 60 && cur > 0) goTo(cur - 1);
+        else if (ts.dx < -60 && cur < total - 1) goTo(cur + 1);
+        else goTo(cur); // snap back
+      }
+      touchState.current = { startX: 0, startY: 0, dx: 0, locked: null };
+    }
+
+    el.addEventListener("touchstart", onTouchStart, { passive: true });
+    el.addEventListener("touchmove", onTouchMove, { passive: false });
+    el.addEventListener("touchend", onTouchEnd, { passive: true });
+    return () => {
+      el.removeEventListener("touchstart", onTouchStart);
+      el.removeEventListener("touchmove", onTouchMove);
+      el.removeEventListener("touchend", onTouchEnd);
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [total]);
 
   return (
     <>
       <div className={`relative overflow-hidden bg-ink-900 select-none ${hero ? "w-full h-full" : "rounded-xl sm:rounded-2xl"}`}>
         <div
+          ref={containerRef}
           className={`relative overflow-hidden ${hero ? "h-full" : "aspect-[4/3]"}`}
           style={{ touchAction: "pan-y pinch-zoom" }}
-          onTouchStart={(e) => {
-            touchStartRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-            setDragOffset(0);
-            setSwiping(false);
-          }}
-          onTouchMove={(e) => {
-            if (!touchStartRef.current) return;
-            const dx = e.touches[0].clientX - touchStartRef.current.x;
-            const dy = e.touches[0].clientY - touchStartRef.current.y;
-            // Lock to horizontal once we detect a horizontal swipe
-            if (!swiping && Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 8) {
-              setSwiping(true);
-            }
-            if (swiping) {
-              setDragOffset(dx);
-            }
-          }}
-          onTouchEnd={() => {
-            if (swiping) {
-              if (dragOffset > 60 && current > 0) goTo(current - 1);
-              else if (dragOffset < -60 && current < total - 1) goTo(current + 1);
-            }
-            touchStartRef.current = null;
-            setDragOffset(0);
-            setSwiping(false);
-          }}
         >
           <div
-            className={swiping ? "flex h-full will-change-transform" : "flex h-full will-change-transform transition-transform duration-300 ease-out"}
-            style={{ transform: `translateX(calc(-${current * 100}% + ${swiping ? dragOffset : 0}px))` }}
+            ref={trackRef}
+            className="flex h-full will-change-transform"
+            style={{ transform: `translateX(-${current * 100}%)` }}
           >
             {photos.map((photo, i) => (
               <div key={photo.file} className="shrink-0 w-full h-full relative cursor-pointer" onClick={() => setLightbox(true)}>
-                {Math.abs(i - current) <= 1 && (
+                {Math.abs(i - current) <= 2 && (
                   <Image
                     src={photo.file}
                     alt={`${propertyName} — ${photo.author}`}
