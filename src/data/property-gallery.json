@@ -7352,6 +7352,8 @@
       {
         "file": "/photos/reiek-heritage-village-mizoram/1.jpg",
         "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 5,
         "author": "Black Burn",
         "widthPx": 960,
         "heightPx": 567
@@ -7359,34 +7361,44 @@
       {
         "file": "/photos/reiek-heritage-village-mizoram/2.jpg",
         "type": "guest",
-        "author": "bipin kumar",
-        "widthPx": 4000,
-        "heightPx": 3000
-      },
-      {
-        "file": "/photos/reiek-heritage-village-mizoram/3.jpg",
-        "type": "guest",
-        "author": "Sujit Nath",
-        "widthPx": 4000,
-        "heightPx": 3000
-      },
-      {
-        "file": "/photos/reiek-heritage-village-mizoram/4.jpg",
-        "type": "guest",
-        "author": "Pratyush Srivastava",
-        "widthPx": 2268,
-        "heightPx": 4032
-      },
-      {
-        "file": "/photos/reiek-heritage-village-mizoram/5.jpg",
-        "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 5,
         "author": "Rupjyoti Talukdar",
         "widthPx": 3024,
         "heightPx": 4032
       },
       {
+        "file": "/photos/reiek-heritage-village-mizoram/3.jpg",
+        "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 4,
+        "author": "Pratyush Srivastava",
+        "widthPx": 2268,
+        "heightPx": 4032
+      },
+      {
+        "file": "/photos/reiek-heritage-village-mizoram/4.jpg",
+        "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 5,
+        "author": "Jr Ralte",
+        "widthPx": 1200,
+        "heightPx": 1600
+      },
+      {
+        "file": "/photos/reiek-heritage-village-mizoram/5.jpg",
+        "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 4,
+        "author": "bipin kumar",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
         "file": "/photos/reiek-heritage-village-mizoram/6.jpg",
         "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 4,
         "author": "Haidan Kaye",
         "widthPx": 4032,
         "heightPx": 3024
@@ -7394,6 +7406,8 @@
       {
         "file": "/photos/reiek-heritage-village-mizoram/7.jpg",
         "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 4,
         "author": "Jotish",
         "widthPx": 4800,
         "heightPx": 3604
@@ -7401,91 +7415,119 @@
       {
         "file": "/photos/reiek-heritage-village-mizoram/8.jpg",
         "type": "guest",
-        "author": "Jr Ralte",
-        "widthPx": 1200,
-        "heightPx": 1600
-      },
-      {
-        "file": "/photos/reiek-heritage-village-mizoram/9.jpg",
-        "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 4,
         "author": "Kaustubh Mani",
         "widthPx": 3000,
         "heightPx": 4000
       },
       {
-        "file": "/photos/reiek-heritage-village-mizoram/10.jpg",
+        "file": "/photos/reiek-heritage-village-mizoram/9.jpg",
         "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 4,
         "author": "Lalit Kumar",
         "widthPx": 1080,
         "heightPx": 1080
+      },
+      {
+        "file": "/photos/reiek-heritage-village-mizoram/10.jpg",
+        "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 3,
+        "author": "Sujit Nath",
+        "widthPx": 4000,
+        "heightPx": 3000
       }
     ],
     "totalAvailable": 10,
     "hostCount": 0,
     "guestCount": 10,
-    "fetchedAt": "2026-06-17T17:27:46.831Z"
+    "categories": {
+      "EXPERIENCE": 9,
+      "EXTERIOR": 1
+    },
+    "fetchedAt": "2026-06-18T03:36:38.504Z"
   },
   "netarhat-bungalow": {
     "photos": [
       {
         "file": "/photos/netarhat-bungalow/1.jpg",
         "type": "host",
-        "author": "Dak Bungalow",
-        "widthPx": 1152,
-        "heightPx": 576
-      },
-      {
-        "file": "/photos/netarhat-bungalow/2.jpg",
-        "type": "host",
+        "category": "ROOM",
+        "quality": 3,
         "author": "Dak Bungalow",
         "widthPx": 4160,
         "heightPx": 3120
       },
       {
-        "file": "/photos/netarhat-bungalow/3.jpg",
+        "file": "/photos/netarhat-bungalow/2.jpg",
         "type": "host",
-        "author": "Dak Bungalow",
-        "widthPx": 4000,
-        "heightPx": 3000
-      },
-      {
-        "file": "/photos/netarhat-bungalow/4.jpg",
-        "type": "host",
-        "author": "Dak Bungalow",
-        "widthPx": 4000,
-        "heightPx": 3000
-      },
-      {
-        "file": "/photos/netarhat-bungalow/5.jpg",
-        "type": "host",
+        "category": "ROOM",
+        "quality": 3,
         "author": "Dak Bungalow",
         "widthPx": 3120,
         "heightPx": 4160
       },
       {
-        "file": "/photos/netarhat-bungalow/6.jpg",
+        "file": "/photos/netarhat-bungalow/3.jpg",
         "type": "host",
+        "category": "ROOM",
+        "quality": 3,
         "author": "Dak Bungalow",
         "widthPx": 4160,
         "heightPx": 3120
       },
       {
-        "file": "/photos/netarhat-bungalow/7.jpg",
+        "file": "/photos/netarhat-bungalow/4.jpg",
         "type": "guest",
+        "category": "ROOM",
+        "quality": 4,
         "author": "chandan roy",
         "widthPx": 4608,
         "heightPx": 3456
       },
       {
-        "file": "/photos/netarhat-bungalow/8.jpg",
+        "file": "/photos/netarhat-bungalow/5.jpg",
+        "type": "host",
+        "category": "EXTERIOR",
+        "quality": 4,
+        "author": "Dak Bungalow",
+        "widthPx": 1152,
+        "heightPx": 576
+      },
+      {
+        "file": "/photos/netarhat-bungalow/6.jpg",
+        "type": "host",
+        "category": "EXTERIOR",
+        "quality": 4,
+        "author": "Dak Bungalow",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
+        "file": "/photos/netarhat-bungalow/7.jpg",
         "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 5,
         "author": "Ayush Shivam Shrivastava",
         "widthPx": 1036,
         "heightPx": 1180
       },
       {
+        "file": "/photos/netarhat-bungalow/8.jpg",
+        "type": "host",
+        "category": "EXTERIOR",
+        "quality": 4,
+        "author": "Dak Bungalow",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
         "file": "/photos/netarhat-bungalow/9.jpg",
         "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 4,
         "author": "Suman Dutta",
         "widthPx": 3264,
         "heightPx": 2448
@@ -7493,6 +7535,8 @@
       {
         "file": "/photos/netarhat-bungalow/10.jpg",
         "type": "guest",
+        "category": "ROOM",
+        "quality": 4,
         "author": "Chandranil Mandal",
         "widthPx": 4080,
         "heightPx": 3072
@@ -7501,211 +7545,214 @@
     "totalAvailable": 10,
     "hostCount": 6,
     "guestCount": 4,
-    "fetchedAt": "2026-06-17T17:27:56.471Z"
+    "categories": {
+      "ROOM": 5,
+      "EXTERIOR": 5
+    },
+    "fetchedAt": "2026-06-18T03:36:56.175Z"
   },
   "palamu-forest-lodge": {
     "photos": [
       {
         "file": "/photos/palamu-forest-lodge/1.jpg",
         "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 5,
+        "author": "PANKAJ KUMAR",
+        "widthPx": 1438,
+        "heightPx": 960
+      },
+      {
+        "file": "/photos/palamu-forest-lodge/2.jpg",
+        "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 5,
+        "author": "PANKAJ KUMAR",
+        "widthPx": 1438,
+        "heightPx": 960
+      },
+      {
+        "file": "/photos/palamu-forest-lodge/3.jpg",
+        "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 4,
         "author": "PANKAJ KUMAR",
         "widthPx": 1084,
         "heightPx": 720
       },
       {
-        "file": "/photos/palamu-forest-lodge/2.jpg",
+        "file": "/photos/palamu-forest-lodge/4.jpg",
         "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 3,
         "author": "Rohit Thapa",
         "widthPx": 1440,
         "heightPx": 2560
       },
       {
-        "file": "/photos/palamu-forest-lodge/3.jpg",
-        "type": "guest",
-        "author": "PANKAJ KUMAR",
-        "widthPx": 1438,
-        "heightPx": 960
-      },
-      {
-        "file": "/photos/palamu-forest-lodge/4.jpg",
-        "type": "guest",
-        "author": "Mon Patel",
-        "widthPx": 4000,
-        "heightPx": 3000
-      },
-      {
         "file": "/photos/palamu-forest-lodge/5.jpg",
         "type": "guest",
-        "author": "Mr. Kuntal Mondal",
-        "widthPx": 1080,
-        "heightPx": 1367
-      },
-      {
-        "file": "/photos/palamu-forest-lodge/6.jpg",
-        "type": "guest",
-        "author": "PANKAJ KUMAR",
-        "widthPx": 1438,
-        "heightPx": 960
-      },
-      {
-        "file": "/photos/palamu-forest-lodge/7.jpg",
-        "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 5,
         "author": "Susnata Chattopadhyay",
         "widthPx": 1333,
         "heightPx": 2000
       },
       {
-        "file": "/photos/palamu-forest-lodge/8.jpg",
+        "file": "/photos/palamu-forest-lodge/6.jpg",
         "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 5,
         "author": "C Badaik",
         "widthPx": 720,
         "heightPx": 480
       },
       {
-        "file": "/photos/palamu-forest-lodge/9.jpg",
+        "file": "/photos/palamu-forest-lodge/7.jpg",
         "type": "guest",
-        "author": "C Badaik",
-        "widthPx": 378,
-        "heightPx": 438
-      },
-      {
-        "file": "/photos/palamu-forest-lodge/10.jpg",
-        "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 4,
         "author": "Mon Patel",
-        "widthPx": 3000,
-        "heightPx": 4000
+        "widthPx": 4000,
+        "heightPx": 3000
       }
     ],
     "totalAvailable": 10,
     "hostCount": 0,
-    "guestCount": 10,
-    "fetchedAt": "2026-06-17T17:28:05.508Z"
+    "guestCount": 7,
+    "categories": {
+      "EXPERIENCE": 5,
+      "EXTERIOR": 2
+    },
+    "fetchedAt": "2026-06-18T03:37:23.598Z"
   },
   "makaibari-tea-estate": {
     "photos": [
       {
         "file": "/photos/makaibari-tea-estate/1.jpg",
         "type": "guest",
+        "category": "COMMON",
+        "quality": 4,
+        "author": "Arundhati Saha",
+        "widthPx": 1536,
+        "heightPx": 2048
+      },
+      {
+        "file": "/photos/makaibari-tea-estate/2.jpg",
+        "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 4,
         "author": "Anand Nadkarni",
         "widthPx": 4032,
         "heightPx": 3024
       },
       {
-        "file": "/photos/makaibari-tea-estate/2.jpg",
+        "file": "/photos/makaibari-tea-estate/3.jpg",
         "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 4,
         "author": "Jhilik Roy Chowdhury",
         "widthPx": 3000,
         "heightPx": 4000
       },
       {
-        "file": "/photos/makaibari-tea-estate/3.jpg",
+        "file": "/photos/makaibari-tea-estate/4.jpg",
         "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 4,
         "author": "LET'S DO THIS BRO",
         "widthPx": 4096,
         "heightPx": 3072
       },
       {
-        "file": "/photos/makaibari-tea-estate/4.jpg",
+        "file": "/photos/makaibari-tea-estate/5.jpg",
         "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 4,
         "author": "Ashikur Rahaman",
         "widthPx": 3468,
         "heightPx": 3468
       },
       {
-        "file": "/photos/makaibari-tea-estate/5.jpg",
+        "file": "/photos/makaibari-tea-estate/6.jpg",
         "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 4,
         "author": "Dibyendu Karmakar",
         "widthPx": 3000,
         "heightPx": 4000
-      },
-      {
-        "file": "/photos/makaibari-tea-estate/6.jpg",
-        "type": "guest",
-        "author": "Arundhati Saha",
-        "widthPx": 2048,
-        "heightPx": 1536
-      },
-      {
-        "file": "/photos/makaibari-tea-estate/7.jpg",
-        "type": "guest",
-        "author": "Karma Munda",
-        "widthPx": 4160,
-        "heightPx": 3120
-      },
-      {
-        "file": "/photos/makaibari-tea-estate/8.jpg",
-        "type": "guest",
-        "author": "Anjan Hazra",
-        "widthPx": 4000,
-        "heightPx": 3000
-      },
-      {
-        "file": "/photos/makaibari-tea-estate/9.jpg",
-        "type": "guest",
-        "author": "Baidiki Das",
-        "widthPx": 4800,
-        "heightPx": 3200
-      },
-      {
-        "file": "/photos/makaibari-tea-estate/10.jpg",
-        "type": "guest",
-        "author": "Arundhati Saha",
-        "widthPx": 1536,
-        "heightPx": 2048
       }
     ],
     "totalAvailable": 10,
     "hostCount": 0,
-    "guestCount": 10,
-    "fetchedAt": "2026-06-17T17:28:12.643Z"
+    "guestCount": 6,
+    "categories": {
+      "COMMON": 1,
+      "EXTERIOR": 5
+    },
+    "fetchedAt": "2026-06-18T03:37:43.643Z"
   },
   "bansbari-lodge-manas": {
     "photos": [
       {
         "file": "/photos/bansbari-lodge-manas/1.jpg",
         "type": "guest",
-        "author": "Pradeep Kr Baishya",
-        "widthPx": 4000,
-        "heightPx": 1800
-      },
-      {
-        "file": "/photos/bansbari-lodge-manas/2.jpg",
-        "type": "guest",
+        "category": "ROOM",
+        "quality": 4,
         "author": "Naman Goyal",
         "widthPx": 4160,
         "heightPx": 2340
       },
       {
+        "file": "/photos/bansbari-lodge-manas/2.jpg",
+        "type": "guest",
+        "category": "ROOM",
+        "quality": 4,
+        "author": "Abhishek Gupta",
+        "widthPx": 3120,
+        "heightPx": 4160
+      },
+      {
         "file": "/photos/bansbari-lodge-manas/3.jpg",
         "type": "guest",
-        "author": "Abhishek Gupta",
-        "widthPx": 4160,
-        "heightPx": 3120
-      },
-      {
-        "file": "/photos/bansbari-lodge-manas/4.jpg",
-        "type": "guest",
-        "author": "Assam Rhino Travels",
-        "widthPx": 4160,
-        "heightPx": 3120
-      },
-      {
-        "file": "/photos/bansbari-lodge-manas/5.jpg",
-        "type": "guest",
+        "category": "COMMON",
+        "quality": 4,
         "author": "Amit Awekar",
         "widthPx": 4000,
         "heightPx": 3000
       },
       {
+        "file": "/photos/bansbari-lodge-manas/4.jpg",
+        "type": "guest",
+        "category": "COMMON",
+        "quality": 4,
+        "author": "Jinia Chakrabarty",
+        "widthPx": 4160,
+        "heightPx": 2340
+      },
+      {
+        "file": "/photos/bansbari-lodge-manas/5.jpg",
+        "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 4,
+        "author": "Pradeep Kr Baishya",
+        "widthPx": 4000,
+        "heightPx": 1800
+      },
+      {
         "file": "/photos/bansbari-lodge-manas/6.jpg",
         "type": "guest",
-        "author": "Dr. Dipankar Mandal",
-        "widthPx": 4128,
-        "heightPx": 3096
+        "category": "EXTERIOR",
+        "quality": 4,
+        "author": "Assam Rhino Travels",
+        "widthPx": 4160,
+        "heightPx": 3120
       },
       {
         "file": "/photos/bansbari-lodge-manas/7.jpg",
         "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 3,
         "author": "Srivatsan Jayaraman Sridharan",
         "widthPx": 4032,
         "heightPx": 3024
@@ -7713,113 +7760,107 @@
       {
         "file": "/photos/bansbari-lodge-manas/8.jpg",
         "type": "guest",
-        "author": "Jinia Chakrabarty",
-        "widthPx": 4160,
-        "heightPx": 2340
-      },
-      {
-        "file": "/photos/bansbari-lodge-manas/9.jpg",
-        "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 3,
         "author": "Pritam Sadhukhan",
         "widthPx": 4160,
         "heightPx": 2336
-      },
-      {
-        "file": "/photos/bansbari-lodge-manas/10.jpg",
-        "type": "guest",
-        "author": "Abhishek Gupta",
-        "widthPx": 3120,
-        "heightPx": 4160
       }
     ],
     "totalAvailable": 10,
     "hostCount": 0,
-    "guestCount": 10,
-    "fetchedAt": "2026-06-17T17:28:24.929Z"
+    "guestCount": 8,
+    "categories": {
+      "ROOM": 2,
+      "COMMON": 2,
+      "EXTERIOR": 4
+    },
+    "fetchedAt": "2026-06-18T03:38:06.112Z"
   },
   "lepakshi-heritage-homestay": {
     "photos": [
       {
         "file": "/photos/lepakshi-heritage-homestay/1.jpg",
-        "type": "host",
-        "author": "venkateswaratirupati homestay",
+        "type": "guest",
+        "category": "ROOM",
+        "quality": 3,
+        "author": "Ruchit Patel",
         "widthPx": 3264,
         "heightPx": 2448
       },
       {
         "file": "/photos/lepakshi-heritage-homestay/2.jpg",
-        "type": "host",
-        "author": "venkateswaratirupati homestay",
-        "widthPx": 2448,
-        "heightPx": 3264
+        "type": "guest",
+        "category": "ROOM",
+        "quality": 3,
+        "author": "Sivakumar V",
+        "widthPx": 4032,
+        "heightPx": 3024
       },
       {
         "file": "/photos/lepakshi-heritage-homestay/3.jpg",
         "type": "guest",
-        "author": "Prabhakar Rao",
-        "widthPx": 1836,
-        "heightPx": 4096
+        "category": "DINING",
+        "quality": 3,
+        "author": "mridula shingne",
+        "widthPx": 3000,
+        "heightPx": 4000
       },
       {
         "file": "/photos/lepakshi-heritage-homestay/4.jpg",
         "type": "guest",
-        "author": "ranjith vlogs",
-        "widthPx": 1920,
-        "heightPx": 1080
+        "category": "COMMON",
+        "quality": 4,
+        "author": "Srinivas Reddy Yarragudi",
+        "widthPx": 4608,
+        "heightPx": 2592
       },
       {
         "file": "/photos/lepakshi-heritage-homestay/5.jpg",
         "type": "guest",
-        "author": "Lakshmi Sisira",
-        "widthPx": 3456,
-        "heightPx": 4608
+        "category": "EXTERIOR",
+        "quality": 4,
+        "author": "Col G I Balakrishnan Iyer",
+        "widthPx": 4032,
+        "heightPx": 3024
       },
       {
         "file": "/photos/lepakshi-heritage-homestay/6.jpg",
         "type": "guest",
-        "author": "ranjith vlogs",
-        "widthPx": 1920,
-        "heightPx": 1080
+        "category": "EXTERIOR",
+        "quality": 4,
+        "author": "milind srikantamurthy",
+        "widthPx": 4032,
+        "heightPx": 3024
       },
       {
         "file": "/photos/lepakshi-heritage-homestay/7.jpg",
         "type": "guest",
-        "author": "Lakshmi Sisira",
-        "widthPx": 3456,
-        "heightPx": 4608
-      },
-      {
-        "file": "/photos/lepakshi-heritage-homestay/8.jpg",
-        "type": "guest",
-        "author": "ranjith vlogs",
-        "widthPx": 1920,
-        "heightPx": 1080
-      },
-      {
-        "file": "/photos/lepakshi-heritage-homestay/9.jpg",
-        "type": "guest",
-        "author": "ranjith vlogs",
-        "widthPx": 1920,
-        "heightPx": 1080
-      },
-      {
-        "file": "/photos/lepakshi-heritage-homestay/10.jpg",
-        "type": "guest",
-        "author": "Prabhakar Rao",
-        "widthPx": 4096,
-        "heightPx": 1836
+        "category": "EXTERIOR",
+        "quality": 3,
+        "author": "Travel Notes by Prasad",
+        "widthPx": 4032,
+        "heightPx": 3024
       }
     ],
     "totalAvailable": 10,
-    "hostCount": 2,
-    "guestCount": 8,
-    "fetchedAt": "2026-06-17T17:28:33.404Z"
+    "hostCount": 0,
+    "guestCount": 7,
+    "categories": {
+      "ROOM": 2,
+      "DINING": 1,
+      "COMMON": 1,
+      "EXTERIOR": 3
+    },
+    "fetchedAt": "2026-06-18T03:38:29.332Z"
   },
   "tirthan-valley-homestay": {
     "photos": [
       {
         "file": "/photos/tirthan-valley-homestay/1.jpg",
         "type": "host",
+        "category": "ROOM",
+        "quality": 4,
         "author": "Tirthan Riverview Homestay.",
         "widthPx": 1508,
         "heightPx": 1005
@@ -7827,27 +7868,35 @@
       {
         "file": "/photos/tirthan-valley-homestay/2.jpg",
         "type": "host",
-        "author": "Tirthan Riverview Homestay.",
-        "widthPx": 1508,
-        "heightPx": 1005
-      },
-      {
-        "file": "/photos/tirthan-valley-homestay/3.jpg",
-        "type": "host",
-        "author": "Tirthan Riverview Homestay.",
-        "widthPx": 1024,
-        "heightPx": 678
-      },
-      {
-        "file": "/photos/tirthan-valley-homestay/4.jpg",
-        "type": "host",
+        "category": "ROOM",
+        "quality": 4,
         "author": "Tirthan Riverview Homestay.",
         "widthPx": 4160,
         "heightPx": 3120
       },
       {
+        "file": "/photos/tirthan-valley-homestay/3.jpg",
+        "type": "host",
+        "category": "ROOM",
+        "quality": 4,
+        "author": "Tirthan Riverview Homestay.",
+        "widthPx": 3120,
+        "heightPx": 4160
+      },
+      {
+        "file": "/photos/tirthan-valley-homestay/4.jpg",
+        "type": "host",
+        "category": "ROOM",
+        "quality": 3,
+        "author": "Tirthan Riverview Homestay.",
+        "widthPx": 1024,
+        "heightPx": 678
+      },
+      {
         "file": "/photos/tirthan-valley-homestay/5.jpg",
         "type": "host",
+        "category": "DINING",
+        "quality": 4,
         "author": "Tirthan Riverview Homestay.",
         "widthPx": 4160,
         "heightPx": 3120
@@ -7855,6 +7904,8 @@
       {
         "file": "/photos/tirthan-valley-homestay/6.jpg",
         "type": "host",
+        "category": "EXPERIENCE",
+        "quality": 5,
         "author": "Tirthan Riverview Homestay.",
         "widthPx": 1280,
         "heightPx": 960
@@ -7862,13 +7913,17 @@
       {
         "file": "/photos/tirthan-valley-homestay/7.jpg",
         "type": "host",
+        "category": "EXTERIOR",
+        "quality": 4,
         "author": "Tirthan Riverview Homestay.",
-        "widthPx": 4160,
-        "heightPx": 3120
+        "widthPx": 1508,
+        "heightPx": 1005
       },
       {
         "file": "/photos/tirthan-valley-homestay/8.jpg",
         "type": "host",
+        "category": "EXTERIOR",
+        "quality": 4,
         "author": "Tirthan Riverview Homestay.",
         "widthPx": 4160,
         "heightPx": 3120
@@ -7876,70 +7931,85 @@
       {
         "file": "/photos/tirthan-valley-homestay/9.jpg",
         "type": "host",
+        "category": "EXTERIOR",
+        "quality": 4,
         "author": "Tirthan Riverview Homestay.",
-        "widthPx": 581,
-        "heightPx": 710
-      },
-      {
-        "file": "/photos/tirthan-valley-homestay/10.jpg",
-        "type": "host",
-        "author": "Tirthan Riverview Homestay.",
-        "widthPx": 3120,
-        "heightPx": 4160
+        "widthPx": 4160,
+        "heightPx": 3120
       }
     ],
     "totalAvailable": 10,
-    "hostCount": 10,
+    "hostCount": 9,
     "guestCount": 0,
-    "fetchedAt": "2026-06-17T17:28:42.798Z"
+    "categories": {
+      "ROOM": 4,
+      "DINING": 1,
+      "EXPERIENCE": 1,
+      "EXTERIOR": 3
+    },
+    "fetchedAt": "2026-06-18T03:38:47.498Z"
   },
   "kanger-valley-nature-camp": {
     "photos": [
       {
         "file": "/photos/kanger-valley-nature-camp/1.jpg",
         "type": "guest",
-        "author": "Babulu Panda",
-        "widthPx": 1920,
-        "heightPx": 1080
-      },
-      {
-        "file": "/photos/kanger-valley-nature-camp/2.jpg",
-        "type": "guest",
-        "author": "Manish Singh",
-        "widthPx": 4080,
-        "heightPx": 3072
-      },
-      {
-        "file": "/photos/kanger-valley-nature-camp/3.jpg",
-        "type": "guest",
-        "author": "Raju Sagi",
-        "widthPx": 4800,
-        "heightPx": 2700
-      },
-      {
-        "file": "/photos/kanger-valley-nature-camp/4.jpg",
-        "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 5,
         "author": "Bhaskar Tripathi",
         "widthPx": 706,
         "heightPx": 528
       },
       {
-        "file": "/photos/kanger-valley-nature-camp/5.jpg",
+        "file": "/photos/kanger-valley-nature-camp/2.jpg",
         "type": "guest",
-        "author": "Narsimha Dharma",
-        "widthPx": 3024,
-        "heightPx": 3780
-      },
-      {
-        "file": "/photos/kanger-valley-nature-camp/6.jpg",
-        "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 5,
         "author": "Chaman Thakur",
         "widthPx": 4032,
         "heightPx": 2268
       },
       {
+        "file": "/photos/kanger-valley-nature-camp/3.jpg",
+        "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 4,
+        "author": "Manish Singh",
+        "widthPx": 4080,
+        "heightPx": 3072
+      },
+      {
+        "file": "/photos/kanger-valley-nature-camp/4.jpg",
+        "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 4,
+        "author": "Raju Sagi",
+        "widthPx": 4800,
+        "heightPx": 2700
+      },
+      {
+        "file": "/photos/kanger-valley-nature-camp/5.jpg",
+        "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 4,
+        "author": "Babulu Panda",
+        "widthPx": 1920,
+        "heightPx": 1080
+      },
+      {
+        "file": "/photos/kanger-valley-nature-camp/6.jpg",
+        "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 4,
+        "author": "Narsimha Dharma",
+        "widthPx": 3024,
+        "heightPx": 3780
+      },
+      {
         "file": "/photos/kanger-valley-nature-camp/7.jpg",
         "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 4,
         "author": "Rushikumar Joshi",
         "widthPx": 1080,
         "heightPx": 1080
@@ -7947,6 +8017,8 @@
       {
         "file": "/photos/kanger-valley-nature-camp/8.jpg",
         "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 4,
         "author": "Shiv kumar Gupta",
         "widthPx": 4624,
         "heightPx": 3472
@@ -7954,6 +8026,8 @@
       {
         "file": "/photos/kanger-valley-nature-camp/9.jpg",
         "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 4,
         "author": "MR SIKU",
         "widthPx": 4160,
         "heightPx": 2774
@@ -7961,6 +8035,8 @@
       {
         "file": "/photos/kanger-valley-nature-camp/10.jpg",
         "type": "guest",
+        "category": "EXPERIENCE",
+        "quality": 4,
         "author": "veeru villu",
         "widthPx": 1512,
         "heightPx": 2016
@@ -7969,84 +8045,104 @@
     "totalAvailable": 10,
     "hostCount": 0,
     "guestCount": 10,
-    "fetchedAt": "2026-06-17T17:28:51.286Z"
+    "categories": {
+      "EXPERIENCE": 6,
+      "EXTERIOR": 4
+    },
+    "fetchedAt": "2026-06-18T03:39:08.531Z"
   },
   "tharu-heritage-eco-lodge": {
     "photos": [
       {
         "file": "/photos/tharu-heritage-eco-lodge/1.jpg",
         "type": "host",
-        "author": "Jungle Heritage Resort",
-        "widthPx": 1024,
-        "heightPx": 576
-      },
-      {
-        "file": "/photos/tharu-heritage-eco-lodge/2.jpg",
-        "type": "host",
+        "category": "ROOM",
+        "quality": 4,
         "author": "Jungle Heritage Resort",
         "widthPx": 1040,
         "heightPx": 780
       },
       {
-        "file": "/photos/tharu-heritage-eco-lodge/3.jpg",
-        "type": "host",
-        "author": "Jungle Heritage Resort",
-        "widthPx": 1920,
-        "heightPx": 827
-      },
-      {
-        "file": "/photos/tharu-heritage-eco-lodge/4.jpg",
-        "type": "host",
-        "author": "Jungle Heritage Resort",
-        "widthPx": 590,
-        "heightPx": 450
-      },
-      {
-        "file": "/photos/tharu-heritage-eco-lodge/5.jpg",
+        "file": "/photos/tharu-heritage-eco-lodge/2.jpg",
         "type": "guest",
+        "category": "ROOM",
+        "quality": 5,
+        "author": "Deepak Sharma",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
+        "file": "/photos/tharu-heritage-eco-lodge/3.jpg",
+        "type": "guest",
+        "category": "COMMON",
+        "quality": 4,
         "author": "Bhanu Pratap Singh",
         "widthPx": 4032,
         "heightPx": 3024
       },
       {
-        "file": "/photos/tharu-heritage-eco-lodge/6.jpg",
+        "file": "/photos/tharu-heritage-eco-lodge/4.jpg",
         "type": "guest",
+        "category": "COMMON",
+        "quality": 3,
         "author": "chandra pal Singh",
         "widthPx": 2238,
         "heightPx": 4800
       },
       {
-        "file": "/photos/tharu-heritage-eco-lodge/7.jpg",
+        "file": "/photos/tharu-heritage-eco-lodge/5.jpg",
         "type": "guest",
-        "author": "Deepak Sharma",
-        "widthPx": 4000,
-        "heightPx": 3000
-      },
-      {
-        "file": "/photos/tharu-heritage-eco-lodge/8.jpg",
-        "type": "guest",
+        "category": "COMMON",
+        "quality": 3,
         "author": "Sandeep Sharma",
         "widthPx": 3264,
         "heightPx": 2448
       },
       {
-        "file": "/photos/tharu-heritage-eco-lodge/9.jpg",
+        "file": "/photos/tharu-heritage-eco-lodge/6.jpg",
+        "type": "host",
+        "category": "EXTERIOR",
+        "quality": 5,
+        "author": "Jungle Heritage Resort",
+        "widthPx": 1024,
+        "heightPx": 576
+      },
+      {
+        "file": "/photos/tharu-heritage-eco-lodge/7.jpg",
+        "type": "host",
+        "category": "EXTERIOR",
+        "quality": 4,
+        "author": "Jungle Heritage Resort",
+        "widthPx": 590,
+        "heightPx": 450
+      },
+      {
+        "file": "/photos/tharu-heritage-eco-lodge/8.jpg",
         "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 5,
         "author": "Deepak Sharma",
         "widthPx": 4000,
         "heightPx": 3000
       },
       {
-        "file": "/photos/tharu-heritage-eco-lodge/10.jpg",
+        "file": "/photos/tharu-heritage-eco-lodge/9.jpg",
         "type": "guest",
+        "category": "EXTERIOR",
+        "quality": 4,
         "author": "Deepak Sharma",
         "widthPx": 4000,
         "heightPx": 3000
       }
     ],
     "totalAvailable": 10,
-    "hostCount": 4,
+    "hostCount": 3,
     "guestCount": 6,
-    "fetchedAt": "2026-06-17T17:29:01.861Z"
+    "categories": {
+      "ROOM": 2,
+      "COMMON": 3,
+      "EXTERIOR": 4
+    },
+    "fetchedAt": "2026-06-18T03:39:29.114Z"
   }
 }
