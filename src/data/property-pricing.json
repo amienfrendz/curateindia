@@ -383,12 +383,6 @@
     "basis": "per room",
     "includes": "breakfast, heritage walk, and access to rooftop restaurant"
   },
-  "dhordo-dark-sky-camp": {
-    "lowINR": 3000,
-    "highINR": 5000,
-    "basis": "per person",
-    "includes": "all meals, stargazing, and desert safari"
-  },
   "bundi-vilas": {
     "lowINR": 8000,
     "highINR": 12000,
@@ -418,12 +412,6 @@
     "highINR": 7000,
     "basis": "per room",
     "includes": "breakfast and dinner; guided treks in Ananthagiri Hills"
-  },
-  "eagle-nest-wildlife-camp": {
-    "lowINR": 15000,
-    "highINR": 25000,
-    "basis": "per room",
-    "includes": "breakfast, lunch, and dinner; guided wildlife treks and birdwatching"
   },
   "neermahal-palace-hotel": {
     "lowINR": 4000,
@@ -467,22 +455,10 @@
     "basis": "per room",
     "includes": "breakfast, lunch, and dinner, tribal dance performance, guided trek"
   },
-  "tirthan-valley-homestay": {
-    "lowINR": 4000,
-    "highINR": 8000,
-    "basis": "per room",
-    "includes": "breakfast and dinner; trekking and fishing activities in Tirthan Valley"
-  },
   "the-machan-lonavala": {
     "lowINR": 25000,
     "highINR": 50000,
     "basis": "per room",
     "includes": "all meals; private deck with valley view, and guided nature walk"
-  },
-  "tharu-heritage-eco-lodge": {
-    "lowINR": 4500,
-    "highINR": 7000,
-    "basis": "per room",
-    "includes": "breakfast, lunch, and dinner; guided jungle safari and Tharu village tour"
   }
 }

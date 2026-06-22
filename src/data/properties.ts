@@ -676,39 +676,6 @@ export const PROPERTIES: Property[] = [
   },
 
   // ── Northeast tribal stays ──────────────────────────────────────────────────
-  {
-    id: "konyak-chiefs-house-longwa",
-    slug: "konyak-chiefs-house-longwa",
-    name: "Konyak Chief's House",
-    type: "homestay",
-    location: "Longwa Village",
-    state: "Nagaland",
-    region: "Northeast",
-    rooms: 4,
-    clusters: ["tribal-village-life", "heritage-cultural"],
-    signatureExperiences: ["Stay with the Angh's family", "Indo-Myanmar border walk", "Konyak warrior heritage"],
-    food: "Naga community cooking, smoked pork & bamboo shoot",
-    host: "The Angh of Longwa's family",
-    priceTier: "₹",
-    blurb: "Sleep in the headman's longhouse — the kitchen straddles the India-Myanmar border.",
-    unsplashId: "1518291344630-4857135fb581",
-  },
-  {
-    id: "khonoma-village-eco-stay",
-    slug: "khonoma-village-eco-stay",
-    name: "Khonoma Village Eco-Stay",
-    type: "homestay",
-    location: "Khonoma",
-    state: "Nagaland",
-    region: "Northeast",
-    rooms: 5,
-    clusters: ["tribal-village-life", "slow-living-sustainability", "wildlife-birding-photography"],
-    signatureExperiences: ["Asia's first green village", "Blyth's tragopan tracking", "Angami terrace farming"],
-    food: "Angami Naga organic — millet, smoked meats, axone",
-    priceTier: "₹",
-    blurb: "Asia's first green village — every household runs a homestay.",
-    unsplashId: "1502082553048-f009c37129b9",
-  },
   // ── Research backlog (added 2026-06-15) — 12 candidates from the cloud ──
   // research agent's named tail. Metadata is best-effort and needs editorial
   // verification before publish. Some properties may be merged or dropped.
@@ -890,30 +857,6 @@ export const PROPERTIES: Property[] = [
     unsplashId: "", batch: "jun-2026"
   },
   {
-    id: "dhordo-dark-sky-camp",
-    slug: "dhordo-dark-sky-camp",
-    name: "Dhordo Dark Sky Camp",
-    type: "hut",
-    location: "Dhordo, Great Rann of Kutch",
-    state: "Gujarat",
-    region: "West",
-    rooms: 10,
-    clusters: ["astronomy-stargazing", "tribal-village-life", "festivals-seasonal"],
-    signatureExperiences: [
-      "Guided astronomy session with telescope under one of India's darkest skies — Milky Way overhead",
-      "Sunrise camel cart ride out onto the White Rann salt flat for the golden hour",
-      "Rogan art workshop — this near-extinct Kutchi embroidery technique taught by a Khatri artisan",
-      "Traditional Kutchi folk music and dance performance around a bonfire",
-      "Visit to Dhordo's Harijan artisan colony for tie-and-dye and mirror work"
-    ],
-    food: "Kutchi tribal cooking of millet flatbreads, mustard-laced chutneys, wild berry pickles and buttermilk — eaten on a charpai beneath a sky of stars.",
-    host: undefined,
-    priceTier: "₹₹",
-    blurb: "In the deepest dark of the Great Rann, where the salt flats dissolve into the night sky and the Milky Way arcs unbroken — this small eco-camp offers the rawest astronomy experience in India.",
-    website: undefined,
-    unsplashId: "", batch: "jun-2026"
-  },
-  {
     id: "bundi-vilas",
     slug: "bundi-vilas",
     name: "Bundi Vilas",
@@ -962,30 +905,6 @@ export const PROPERTIES: Property[] = [
     unsplashId: "", batch: "jun-2026"
   },
   {
-    id: "eagle-nest-wildlife-camp",
-    slug: "eagle-nest-wildlife-camp",
-    name: "Eagle Nest Wilderness Camp",
-    type: "cottage",
-    location: "Eaglenest Wildlife Sanctuary, West Kameng",
-    state: "Arunachal Pradesh",
-    region: "Northeast",
-    rooms: 8,
-    clusters: ["wildlife-birding-photography", "trekking-adventure", "tribal-village-life"],
-    signatureExperiences: [
-      "Pre-dawn bird walk for the Bugun Liocichla — found in just one location on earth",
-      "Full-day birding transect in cloud forest (450+ species recorded in the sanctuary)",
-      "Meeting the Bugun tribal community, guardians of the sanctuary",
-      "Photography workshop in the mountain forest for rare Eastern Himalayas species",
-      "Trek through rhododendron forest to high-altitude meadows above 2500 m"
-    ],
-    food: "Warming camp meals of dal rice, vegetable curries and fresh ginger chai — simple provisions for serious birders who are up before dawn and back after dusk.",
-    host: undefined,
-    priceTier: "₹₹₹",
-    blurb: "The most important birding destination in the Eastern Himalayas — where the one-of-a-kind Bugun Liocichla was discovered in 2006, and 450 other species await before the sun rises each morning.",
-    website: undefined,
-    unsplashId: "", batch: "jun-2026"
-  },
-  {
     id: "makaibari-tea-estate",
     slug: "makaibari-tea-estate",
     name: "Makaibari Tea Estate",
@@ -1007,54 +926,6 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹",
     blurb: "Sleep in the tea pluckers' homes at the world's most celebrated biodynamic estate — where the first-flush muscatel is prized at auction and the Lepcha community forest is as important as the tea itself.",
     website: "https://makaibari.com",
-    unsplashId: "", batch: "jun-2026"
-  },
-  {
-    id: "tirthan-valley-homestay",
-    slug: "tirthan-valley-homestay",
-    name: "Tirthan Valley Riverside Homestay",
-    type: "homestay",
-    location: "Gushaini, Tirthan Valley, Kullu",
-    state: "Himachal Pradesh",
-    region: "Himalayas",
-    rooms: 6,
-    clusters: ["trekking-adventure", "astronomy-stargazing", "wildlife-birding-photography"],
-    signatureExperiences: [
-      "Trout fishing in the crystal-clear Tirthan River with local tackle",
-      "Day trek into the Great Himalayan National Park (UNESCO World Heritage — no vehicles, pristine)",
-      "Night sky observation from the river bank — Tirthan Valley has barely any artificial light",
-      "Village walk through Gushaini meeting water mill operators and apple farmers",
-      "Western Tragopan tracking walk in the oak-rhododendron forest above the treeline"
-    ],
-    food: "Himachali home cooking of siddu (steamed wheat dumplings), dal makhani, wild foraged nettle soup and fresh trout from the same river you fished in the morning.",
-    host: undefined,
-    priceTier: "₹₹",
-    blurb: "A pristine river valley carved deep into the Kullu mountains, where crystal-clear water, snow-fed trout fishing, dark night skies and direct access to a UNESCO wilderness park make this HP's best-kept secret.",
-    website: undefined,
-    unsplashId: "", batch: "jun-2026"
-  },
-  {
-    id: "tharu-heritage-eco-lodge",
-    slug: "tharu-heritage-eco-lodge",
-    name: "Tharu Heritage Eco Lodge",
-    type: "homestay",
-    location: "Dudhwa buffer zone, Lakhimpur Kheri",
-    state: "Uttar Pradesh",
-    region: "North",
-    rooms: 8,
-    clusters: ["tribal-village-life", "wildlife-birding-photography", "slow-living-sustainability"],
-    signatureExperiences: [
-      "Tharu folk dance performance — the community's distinctive folk art of the Terai",
-      "Night safari in Dudhwa National Park for Bengal tigers, swamp deer and hispid hare",
-      "Morning boat ride on the Girwa River in Kishanpur for crocodile and river birds",
-      "Traditional Tharu home visit — bamboo murals, earthen floors, sacred tulsi courtyards",
-      "Walk through the Dudhwa buffer zone with a Tharu tracker to see one-horned rhino"
-    ],
-    food: "Tharu tribal cooking of dhikri (rice flour steamed cake), raktaura (dal preparation), fish curry from the Girwa River and seasonal forest greens eaten in the family's bamboo home.",
-    host: undefined,
-    priceTier: "₹₹",
-    blurb: "At the edge of Dudhwa's jungle — one of India's least-visited tiger reserves — the Tharu tribal community opens their homes and their forest knowledge to travellers willing to go where no tourist buses go.",
-    website: undefined,
     unsplashId: "", batch: "jun-2026"
   },
 ];

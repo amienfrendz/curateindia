@@ -3001,44 +3001,6 @@
       "verified": true
     }
   ],
-  "dhordo-dark-sky-camp": [
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Dhordo%20Dark%20Sky%20Camp%20Dhordo%2C%20Great%20Rann%20of%20Kutch",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Dhordo%20Dark%20Sky%20Camp%20Dhordo%2C%20Great%20Rann%20of%20Kutch",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Dhordo%20Dark%20Sky%20Camp%20Dhordo%2C%20Great%20Rann%20of%20Kutch",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Dhordo%20Dark%20Sky%20Camp%20Dhordo%2C%20Great%20Rann%20of%20Kutch/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Dhordo%2C%20Great%20Rann%20of%20Kutch%20Gujarat&q=Dhordo%20Dark%20Sky%20Camp",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Dhordo%20Dark%20Sky%20Camp%20Dhordo%2C%20Great%20Rann%20of%20Kutch",
-      "verified": true
-    }
-  ],
   "bundi-vilas": [
     {
       "name": "google-hotels",
@@ -3226,44 +3188,6 @@
       "name": "tripadvisor",
       "label": "TripAdvisor",
       "url": "https://www.tripadvisor.in/Search?q=Ananthagiri%20Hills%20Heritage%20Stay%20Ananthagiri%20Hills%2C%20Vikarabad",
-      "verified": true
-    }
-  ],
-  "eagle-nest-wildlife-camp": [
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Eagle%20Nest%20Wilderness%20Camp%20Eaglenest%20Wildlife%20Sanctuary%2C%20West%20Kameng",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Eagle%20Nest%20Wilderness%20Camp%20Eaglenest%20Wildlife%20Sanctuary%2C%20West%20Kameng",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Eagle%20Nest%20Wilderness%20Camp%20Eaglenest%20Wildlife%20Sanctuary%2C%20West%20Kameng",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Eagle%20Nest%20Wilderness%20Camp%20Eaglenest%20Wildlife%20Sanctuary%2C%20West%20Kameng/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Eaglenest%20Wildlife%20Sanctuary%2C%20West%20Kameng%20Arunachal%20Pradesh&q=Eagle%20Nest%20Wilderness%20Camp",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Eagle%20Nest%20Wilderness%20Camp%20Eaglenest%20Wildlife%20Sanctuary%2C%20West%20Kameng",
       "verified": true
     }
   ],
@@ -3533,44 +3457,6 @@
       "verified": true
     }
   ],
-  "tirthan-valley-homestay": [
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Tirthan%20Valley%20Riverside%20Homestay%20Gushaini%2C%20Tirthan%20Valley%2C%20Kullu",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Tirthan%20Valley%20Riverside%20Homestay%20Gushaini%2C%20Tirthan%20Valley%2C%20Kullu",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Tirthan%20Valley%20Riverside%20Homestay%20Gushaini%2C%20Tirthan%20Valley%2C%20Kullu",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Tirthan%20Valley%20Riverside%20Homestay%20Gushaini%2C%20Tirthan%20Valley%2C%20Kullu/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Gushaini%2C%20Tirthan%20Valley%2C%20Kullu%20Himachal%20Pradesh&q=Tirthan%20Valley%20Riverside%20Homestay",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Tirthan%20Valley%20Riverside%20Homestay%20Gushaini%2C%20Tirthan%20Valley%2C%20Kullu",
-      "verified": true
-    }
-  ],
   "the-machan-lonavala": [
     {
       "name": "google-hotels",
@@ -3606,44 +3492,6 @@
       "name": "tripadvisor",
       "label": "TripAdvisor",
       "url": "https://www.tripadvisor.in/Search?q=The%20Machan%20Lonavala%2C%20Sahyadri%20Hills",
-      "verified": true
-    }
-  ],
-  "tharu-heritage-eco-lodge": [
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Tharu%20Heritage%20Eco%20Lodge%20Dudhwa%20buffer%20zone%2C%20Lakhimpur%20Kheri",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Tharu%20Heritage%20Eco%20Lodge%20Dudhwa%20buffer%20zone%2C%20Lakhimpur%20Kheri",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Tharu%20Heritage%20Eco%20Lodge%20Dudhwa%20buffer%20zone%2C%20Lakhimpur%20Kheri",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Tharu%20Heritage%20Eco%20Lodge%20Dudhwa%20buffer%20zone%2C%20Lakhimpur%20Kheri/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Dudhwa%20buffer%20zone%2C%20Lakhimpur%20Kheri%20Uttar%20Pradesh&q=Tharu%20Heritage%20Eco%20Lodge",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Tharu%20Heritage%20Eco%20Lodge%20Dudhwa%20buffer%20zone%2C%20Lakhimpur%20Kheri",
       "verified": true
     }
   ]
