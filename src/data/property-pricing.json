@@ -65,21 +65,9 @@
     "basis": "per room",
     "includes": "breakfast, lunch, dinner, tea tasting, and estate walks"
   },
-  "wild-mahseer": {
-    "lowINR": 10000,
-    "highINR": 15000,
-    "basis": "per room",
-    "includes": "breakfast, lunch, dinner, and tea estate activities"
-  },
   "the-lodge-at-wah": {
     "lowINR": 12000,
     "highINR": 20000,
-    "basis": "per room",
-    "includes": "breakfast, lunch, dinner, and tea estate activities"
-  },
-  "briar-tea-bungalows": {
-    "lowINR": 10000,
-    "highINR": 15000,
     "basis": "per room",
     "includes": "breakfast, lunch, dinner, and tea estate activities"
   },
@@ -94,12 +82,6 @@
     "highINR": 50000,
     "basis": "per room",
     "includes": "breakfast, lunch, dinner, and jungle safari activities"
-  },
-  "tree-house-coorg": {
-    "lowINR": 4000,
-    "highINR": 8000,
-    "basis": "per room",
-    "includes": "breakfast and dinner"
   },
   "1914-tea-farms": {
     "lowINR": 8000,
@@ -148,12 +130,6 @@
     "highINR": 15000,
     "basis": "per room",
     "includes": "breakfast, lunch, and dinner, guided tours of Chettinad, and cultural performances"
-  },
-  "maison-perumal": {
-    "lowINR": 12000,
-    "highINR": 25000,
-    "basis": "per room",
-    "includes": "breakfast, lunch, and dinner, guided walks, and access to a rooftop pool"
   },
   "shahpura-haveli": {
     "lowINR": 15000,
@@ -275,12 +251,6 @@
     "basis": "per room",
     "includes": "breakfast, dinner, and access to common areas"
   },
-  "bordi-homestay": {
-    "lowINR": 4000,
-    "highINR": 7000,
-    "basis": "per room",
-    "includes": "breakfast, lunch, dinner, and guided village walks"
-  },
   "windermere-river-house": {
     "lowINR": 3000,
     "highINR": 5500,
@@ -305,12 +275,6 @@
     "basis": "per person",
     "includes": "breakfast and dinner; traditional Assamese lunch; guided tour of the satra and surrounding areas"
   },
-  "pushkar-tented-camp": {
-    "lowINR": 2500,
-    "highINR": 4500,
-    "basis": "per person",
-    "includes": "breakfast and dinner; camel safari; guided tour of the Pushkar Camel Fair grounds (seasonal)"
-  },
   "kolukkumalai-tea-bungalow": {
     "lowINR": 3500,
     "highINR": 6000,
@@ -328,12 +292,6 @@
     "highINR": 1500,
     "basis": "per person",
     "includes": "dormitory accommodation, vegetarian meals, yoga and meditation sessions"
-  },
-  "harivihar-heritage-homestead": {
-    "lowINR": 10000,
-    "highINR": 20000,
-    "basis": "per room",
-    "includes": "breakfast, lunch, and dinner, Ayurvedic massage, access to homestead facilities"
   },
   "tranquil-resort-wayanad": {
     "lowINR": 12000,
@@ -365,12 +323,6 @@
     "basis": "per person",
     "includes": "all meals, yoga, meditation, and farm activities"
   },
-  "old-kent-estate-chikmagalur": {
-    "lowINR": 12000,
-    "highINR": 25000,
-    "basis": "per room",
-    "includes": "breakfast, lunch, and dinner, and guided estate walks"
-  },
   "siolim-house-goa": {
     "lowINR": 15000,
     "highINR": 30000,
@@ -382,18 +334,6 @@
     "highINR": 15000,
     "basis": "per room",
     "includes": "breakfast, heritage walk, and access to rooftop restaurant"
-  },
-  "bundi-vilas": {
-    "lowINR": 8000,
-    "highINR": 12000,
-    "basis": "per room",
-    "includes": "breakfast, heritage walk, and access to rooftop restaurant with views of Bundi fort"
-  },
-  "apani-dhani-nawalgarh": {
-    "lowINR": 4000,
-    "highINR": 7000,
-    "basis": "per room",
-    "includes": "breakfast, lunch, and dinner; farm activities like cow milking and vegetable picking"
   },
   "rohet-garh-jodhpur": {
     "lowINR": 12000,

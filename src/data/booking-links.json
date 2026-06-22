@@ -549,56 +549,6 @@
       "verified": true
     }
   ],
-  "wild-mahseer": [
-    {
-      "name": "direct",
-      "label": "Host’s site",
-      "url": "http://www.wildmahseer.com/",
-      "verified": false
-    },
-    {
-      "name": "google-maps",
-      "label": "Google Maps",
-      "url": "https://maps.google.com/?cid=4602988677235325756&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "verified": true
-    },
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Wild%20Mahseer%20Addabarie%20Tea%20Estate",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Wild%20Mahseer%20Addabarie%20Tea%20Estate",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Wild%20Mahseer%20Addabarie%20Tea%20Estate",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Wild%20Mahseer%20Addabarie%20Tea%20Estate/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Addabarie%20Tea%20Estate%20Assam&q=Wild%20Mahseer",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Wild%20Mahseer%20Addabarie%20Tea%20Estate",
-      "verified": true
-    }
-  ],
   "the-lodge-at-wah": [
     {
       "name": "direct",
@@ -646,50 +596,6 @@
       "name": "tripadvisor",
       "label": "TripAdvisor",
       "url": "https://www.tripadvisor.in/Search?q=The%20Lodge%20at%20Wah%20Wah%20Tea%20Estate%2C%20Palampur",
-      "verified": true
-    }
-  ],
-  "briar-tea-bungalows": [
-    {
-      "name": "google-maps",
-      "label": "Google Maps",
-      "url": "https://maps.google.com/?cid=15957286570134714876&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "verified": true
-    },
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Briar%20Tea%20Bungalows%20Valparai",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Briar%20Tea%20Bungalows%20Valparai",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Briar%20Tea%20Bungalows%20Valparai",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Briar%20Tea%20Bungalows%20Valparai/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Valparai%20Tamil%20Nadu&q=Briar%20Tea%20Bungalows",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Briar%20Tea%20Bungalows%20Valparai",
       "verified": true
     }
   ],
@@ -790,50 +696,6 @@
       "name": "tripadvisor",
       "label": "TripAdvisor",
       "url": "https://www.tripadvisor.in/Search?q=Singinawa%20Jungle%20Lodge%20Mukki%20Gate%2C%20Kanha",
-      "verified": true
-    }
-  ],
-  "tree-house-coorg": [
-    {
-      "name": "google-maps",
-      "label": "Google Maps",
-      "url": "https://maps.google.com/?cid=9419507239684837578&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "verified": true
-    },
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=The%20Tree%20House%20Madikeri%2C%20Coorg",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=The%20Tree%20House%20Madikeri%2C%20Coorg",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=The%20Tree%20House%20Madikeri%2C%20Coorg",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/The%20Tree%20House%20Madikeri%2C%20Coorg/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Madikeri%2C%20Coorg%20Karnataka&q=The%20Tree%20House",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=The%20Tree%20House%20Madikeri%2C%20Coorg",
       "verified": true
     }
   ],
@@ -1228,56 +1090,6 @@
       "name": "tripadvisor",
       "label": "TripAdvisor",
       "url": "https://www.tripadvisor.in/Search?q=Saratha%20Vilas%20Kothamangalam%2C%20Chettinad",
-      "verified": true
-    }
-  ],
-  "maison-perumal": [
-    {
-      "name": "direct",
-      "label": "Host’s site",
-      "url": "https://www.cghearth.com/maison-perumal",
-      "verified": true
-    },
-    {
-      "name": "google-maps",
-      "label": "Google Maps",
-      "url": "https://maps.google.com/?cid=11353973177948947220&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "verified": true
-    },
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Maison%20Perumal%20Tamil%20Quarter%2C%20Pondicherry",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Maison%20Perumal%20Tamil%20Quarter%2C%20Pondicherry",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Maison%20Perumal%20Tamil%20Quarter%2C%20Pondicherry",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Maison%20Perumal%20Tamil%20Quarter%2C%20Pondicherry/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Tamil%20Quarter%2C%20Pondicherry%20Puducherry&q=Maison%20Perumal",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Maison%20Perumal%20Tamil%20Quarter%2C%20Pondicherry",
       "verified": true
     }
   ],
@@ -2263,50 +2075,6 @@
       "verified": true
     }
   ],
-  "bordi-homestay": [
-    {
-      "name": "google-maps",
-      "label": "Google Maps",
-      "url": "https://maps.google.com/?cid=1463299949740723348&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "verified": true
-    },
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Bordi%20Homestay%20Bordi%2C%20Palghar",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Bordi%20Homestay%20Bordi%2C%20Palghar",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Bordi%20Homestay%20Bordi%2C%20Palghar",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Bordi%20Homestay%20Bordi%2C%20Palghar/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Bordi%2C%20Palghar%20Maharashtra&q=Bordi%20Homestay",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Bordi%20Homestay%20Bordi%2C%20Palghar",
-      "verified": true
-    }
-  ],
   "windermere-river-house": [
     {
       "name": "direct",
@@ -2495,50 +2263,6 @@
       "verified": true
     }
   ],
-  "pushkar-tented-camp": [
-    {
-      "name": "google-maps",
-      "label": "Google Maps",
-      "url": "https://maps.google.com/?cid=9961082248962193132&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "verified": true
-    },
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Pushkar%20Camel%20Fair%20Camp%20Pushkar",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Pushkar%20Camel%20Fair%20Camp%20Pushkar",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Pushkar%20Camel%20Fair%20Camp%20Pushkar",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Pushkar%20Camel%20Fair%20Camp%20Pushkar/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Pushkar%20Rajasthan&q=Pushkar%20Camel%20Fair%20Camp",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Pushkar%20Camel%20Fair%20Camp%20Pushkar",
-      "verified": true
-    }
-  ],
   "kolukkumalai-tea-bungalow": [
     {
       "name": "google-maps",
@@ -2656,44 +2380,6 @@
       "name": "tripadvisor",
       "label": "TripAdvisor",
       "url": "https://www.tripadvisor.in/Search?q=Sadhana%20Forest%20Auroville%2C%20Bommayapalayam",
-      "verified": true
-    }
-  ],
-  "harivihar-heritage-homestead": [
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Harivihar%20Heritage%20Homestead%20Calicut%20(Kozhikode)",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Harivihar%20Heritage%20Homestead%20Calicut%20(Kozhikode)",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Harivihar%20Heritage%20Homestead%20Calicut%20(Kozhikode)",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Harivihar%20Heritage%20Homestead%20Calicut%20(Kozhikode)/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Calicut%20(Kozhikode)%20Kerala&q=Harivihar%20Heritage%20Homestead",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Harivihar%20Heritage%20Homestead%20Calicut%20(Kozhikode)",
       "verified": true
     }
   ],
@@ -2887,44 +2573,6 @@
       "verified": true
     }
   ],
-  "old-kent-estate-chikmagalur": [
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Old%20Kent%20Estate%20Chikmagalur%2C%20Western%20Ghats",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Old%20Kent%20Estate%20Chikmagalur%2C%20Western%20Ghats",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Old%20Kent%20Estate%20Chikmagalur%2C%20Western%20Ghats",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Old%20Kent%20Estate%20Chikmagalur%2C%20Western%20Ghats/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Chikmagalur%2C%20Western%20Ghats%20Karnataka&q=Old%20Kent%20Estate",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Old%20Kent%20Estate%20Chikmagalur%2C%20Western%20Ghats",
-      "verified": true
-    }
-  ],
   "siolim-house-goa": [
     {
       "name": "google-hotels",
@@ -2998,82 +2646,6 @@
       "name": "tripadvisor",
       "label": "TripAdvisor",
       "url": "https://www.tripadvisor.in/Search?q=House%20of%20MG%20Old%20Ahmedabad%2C%20Lal%20Darwaja",
-      "verified": true
-    }
-  ],
-  "bundi-vilas": [
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Bundi%20Vilas%20Bundi%20old%20city",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Bundi%20Vilas%20Bundi%20old%20city",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Bundi%20Vilas%20Bundi%20old%20city",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Bundi%20Vilas%20Bundi%20old%20city/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Bundi%20old%20city%20Rajasthan&q=Bundi%20Vilas",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Bundi%20Vilas%20Bundi%20old%20city",
-      "verified": true
-    }
-  ],
-  "apani-dhani-nawalgarh": [
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Apani%20Dhani%20Eco%20Lodge%20Nawalgarh%2C%20Shekhawati",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Apani%20Dhani%20Eco%20Lodge%20Nawalgarh%2C%20Shekhawati",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Apani%20Dhani%20Eco%20Lodge%20Nawalgarh%2C%20Shekhawati",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Apani%20Dhani%20Eco%20Lodge%20Nawalgarh%2C%20Shekhawati/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Nawalgarh%2C%20Shekhawati%20Rajasthan&q=Apani%20Dhani%20Eco%20Lodge",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Apani%20Dhani%20Eco%20Lodge%20Nawalgarh%2C%20Shekhawati",
       "verified": true
     }
   ],
