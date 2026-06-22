@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stay Page — Layout Prototype</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0f0e0a; color: #ece9e0; font-family: system-ui, -apple-system, sans-serif; }
+  
+  /* ── OPTION A: Full-width carousel, 16:9 desktop / 4:3 mobile ── */
+  .gallery-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #1a1915;
+    overflow: hidden;
+  }
+  @media (max-width: 640px) {
+    .gallery-wrap { aspect-ratio: 4/3; }
+  }
+  .gallery-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* Subtle bottom gradient for counter visibility */
+  .gallery-wrap::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 60px;
+    background: linear-gradient(to top, rgba(15,14,10,0.5), transparent);
+    pointer-events: none;
+  }
+  .gallery-counter {
+    position: absolute;
+    bottom: 12px; right: 16px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+    background: rgba(15,14,10,0.6);
+    padding: 4px 10px;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    z-index: 2;
+  }
+  .gallery-arrows {
+    position: absolute;
+    top: 50%; left: 0; right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .gallery-arrows button {
+    pointer-events: all;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(15,14,10,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+  }
+
+  /* ── Info section below gallery ── */
+  .info-section {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 24px 16px;
+  }
+  @media (min-width: 640px) { .info-section { padding: 32px 32px; } }
+  
+  .clusters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .cluster-tag {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.07);
+    color: rgba(236,233,224,0.7);
+  }
+  
+  .property-name {
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 8px;
+    max-width: 800px;
+  }
+  
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    margin-bottom: 20px;
+  }
+  .meta-text {
+    font-size: 14px;
+    color: rgba(236,233,224,0.7);
+  }
+  .meta-text .price { color: #c46a2c; }
+  
+  .cta-row {
+    display: flex;
+    gap: 8px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 12px;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(30,28,22,0.8);
+    color: rgba(236,233,224,0.8);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  /* ── Comparison labels ── */
+  .label {
+    position: absolute;
+    top: 12px; left: 12px;
+    background: #c46a2c;
+    color: #0f0e0a;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 6px;
+    z-index: 5;
+  }
+
+  /* ── Layout body ── */
+  .body-grid {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 0 16px 80px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  @media (min-width: 1024px) {
+    .body-grid { grid-template-columns: 1fr 360px; padding: 0 32px 80px; }
+  }
+  
+  .section-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: #c46a2c;
+    margin-bottom: 12px;
+  }
+  .fact-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .fact-chip {
+    padding: 8px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(30,28,22,0.5);
+  }
+  .fact-chip small { font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(236,233,224,0.4); display: block; }
+  .fact-chip span { font-size: 13px; }
+  
+  .blurb {
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    line-height: 1.5;
+    font-weight: 300;
+    max-width: 680px;
+    color: rgba(236,233,224,0.9);
+    margin-bottom: 32px;
+  }
+
+  .placeholder-block {
+    background: rgba(255,255,255,0.03);
+    border: 1px dashed rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 24px;
+    color: rgba(236,233,224,0.4);
+    font-size: 13px;
+    text-align: center;
+  }
+  
+  .divider { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 24px 0; }
+
+  /* Aspect ratio comparison */
+  .comparison { 
+    max-width: 900px; 
+    margin: 40px auto; 
+    padding: 0 16px;
+  }
+  .comparison h2 { font-size: 14px; color: #c46a2c; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.2em; }
+  .ratio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 640px) { .ratio-grid { grid-template-columns: 1fr; } }
+  .ratio-box {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    background: #1a1915;
+  }
+  .ratio-box img { width: 100%; height: 100%; object-fit: cover; }
+  .ratio-box .tag {
+    position: absolute;
+    top: 8px; left: 8px;
+    background: rgba(15,14,10,0.8);
+    color: white;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- ASPECT RATIO COMPARISON -->
+<!-- ════════════════════════════════════════════════ -->
+<div class="comparison">
+  <h2>Aspect Ratio Options (using velanga-orchard photo 1)</h2>
+  <div class="ratio-grid">
+    <div class="ratio-box" style="aspect-ratio: 16/9;">
+      <img src="/photos/velanga-orchard/1.jpg" alt="16:9">
+      <span class="tag">16:9 — cinematic, desktop-optimized</span>
+    </div>
+    <div class="ratio-box" style="aspect-ratio: 3/2;">
+      <img src="/photos/velanga-orchard/1.jpg" alt="3:2">
+      <span class="tag">3:2 — balanced (Airbnb-style)</span>
+    </div>
+    <div class="ratio-box" style="aspect-ratio: 4/3;">
+      <img src="/photos/velanga-orchard/1.jpg" alt="4:3">
+      <span class="tag">4:3 — taller, mobile-friendly</span>
+    </div>
+    <div class="ratio-box" style="aspect-ratio: 1/1;">
+      <img src="/photos/velanga-orchard/1.jpg" alt="1:1">
+      <span class="tag">1:1 — square (Instagram-style)</span>
+    </div>
+  </div>
+  <p style="margin-top: 16px; font-size: 12px; color: rgba(236,233,224,0.5);">
+    Recommendation: <strong style="color:#c46a2c;">16:9 on desktop, 3:2 on mobile</strong> — gives cinematic feel on wide screens 
+    without excessive cropping on phones. Most hotel photos are landscape (4:3 or 3:2 source ratio).
+  </p>
+</div>
+
+<hr class="divider" style="max-width:900px; margin: 40px auto;">
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- PROPOSED LAYOUT: Gallery on top, info below -->
+<!-- ════════════════════════════════════════════════ -->
+<div style="max-width:900px; margin: 20px auto; padding: 0 16px;">
+  <h2 style="font-size:14px; color:#c46a2c; text-transform:uppercase; letter-spacing:0.2em; margin-bottom:20px;">
+    Proposed Layout — Single Gallery Hero
+  </h2>
+</div>
+
+<div class="gallery-wrap">
+  <span class="label">PROTOTYPE</span>
+  <img src="/photos/velanga-orchard/1.jpg" alt="Velanga Orchard">
+  <div class="gallery-arrows">
+    <button>‹</button>
+    <button>›</button>
+  </div>
+  <span class="gallery-counter">1 / 10 · Host</span>
+</div>
+
+<!-- Info section immediately below gallery -->
+<div class="info-section">
+  <div class="clusters">
+    <span class="cluster-tag">🌿 Plantation</span>
+    <span class="cluster-tag">🍳 Farm-to-Table</span>
+  </div>
+  
+  <h1 class="property-name">Velanga Orchard</h1>
+  
+  <div class="meta-row">
+    <span class="meta-text">Sakleshpur · Karnataka · <span class="price">₹₹</span></span>
+  </div>
+  
+  <div class="cta-row">
+    <a class="btn" href="#">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+      Share
+    </a>
+    <a class="btn" href="#">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      Directions
+    </a>
+  </div>
+</div>
+
+<!-- Body content -->
+<div class="body-grid">
+  <div>
+    <!-- Quick facts -->
+    <div class="fact-chips">
+      <div class="fact-chip"><small>Type</small><span>Plantation stay</span></div>
+      <div class="fact-chip"><small>Rooms</small><span>4</span></div>
+      <div class="fact-chip"><small>Region</small><span>Western Ghats</span></div>
+      <div class="fact-chip"><small>Rating</small><span>★ 4.6 (142)</span></div>
+      <div class="fact-chip"><small>Approx. rate</small><span>₹3k–₹6k/night</span></div>
+    </div>
+
+    <!-- Blurb -->
+    <p class="blurb">
+      A working coffee and spice orchard where you wake to the sound of Malabar hornbills,
+      pick pepper with the family, and eat meals cooked with ingredients from 50 metres away.
+    </p>
+
+    <hr class="divider">
+
+    <div class="section-label">Signature experiences</div>
+    <div class="placeholder-block">Experience list renders here</div>
+    
+    <hr class="divider">
+    
+    <div class="section-label">At the table</div>
+    <div class="placeholder-block">Food description renders here</div>
+    
+    <hr class="divider">
+    
+    <div class="section-label">What guests say</div>
+    <div class="placeholder-block">Reviews render here</div>
+  </div>
+  
+  <!-- Sidebar -->
+  <div>
+    <div class="placeholder-block" style="position:sticky; top:24px;">
+      Booking sidebar<br><br>
+      (Check availability, booking links)
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

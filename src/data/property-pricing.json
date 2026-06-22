@@ -11,12 +11,6 @@
     "basis": "per room",
     "includes": "all meals, and a guided tour of Khajuraho temples"
   },
-  "bompu-camp": {
-    "lowINR": 3000,
-    "highINR": 5000,
-    "basis": "per person",
-    "includes": "all meals, and guided treks in Eaglenest Wildlife Sanctuary"
-  },
   "bera-safari-lodge": {
     "lowINR": 15000,
     "highINR": 25000,
@@ -227,18 +221,6 @@
     "basis": "per room",
     "includes": "breakfast and dinner, along with trekking and village exploration activities"
   },
-  "anand-prakash-ashram": {
-    "lowINR": 800,
-    "highINR": 2000,
-    "basis": "per person",
-    "includes": "shared accommodation, all meals, yoga classes, and meditation sessions"
-  },
-  "mudh-homestay": {
-    "lowINR": 1500,
-    "highINR": 3000,
-    "basis": "per room",
-    "includes": "breakfast and dinner, along with guided treks and village exploration activities"
-  },
   "the-doksa-spiti": {
     "lowINR": 12000,
     "highINR": 18000,
@@ -262,18 +244,6 @@
     "highINR": 4000,
     "basis": "per room",
     "includes": "breakfast and dinner; local guides for forest treks"
-  },
-  "keibul-homestay": {
-    "lowINR": 500,
-    "highINR": 1000,
-    "basis": "per person",
-    "includes": "traditional meals and boat rides on Loktak Lake"
-  },
-  "lagay-village-homestay": {
-    "lowINR": 600,
-    "highINR": 1200,
-    "basis": "per person",
-    "includes": "local cuisine and participation in village activities"
   },
   "mawroh-shillong": {
     "lowINR": 3000,
@@ -317,23 +287,11 @@
     "basis": "per room",
     "includes": "breakfast, and access to river-facing deck"
   },
-  "konyak-chiefs-house-longwa": {
-    "lowINR": 1500,
-    "highINR": 2500,
-    "basis": "per person",
-    "includes": "meals, and interaction with the local Konyak community"
-  },
   "bishnoi-village-stay": {
     "lowINR": 1200,
     "highINR": 2000,
     "basis": "per person",
     "includes": "meals, and guided village tours"
-  },
-  "khonoma-village-eco-stay": {
-    "lowINR": 1800,
-    "highINR": 2800,
-    "basis": "per person",
-    "includes": "meals, and access to community-run eco-tourism activities"
   },
   "ayisha-manzil-thalassery": {
     "lowINR": 12000,
@@ -341,41 +299,11 @@
     "basis": "per room",
     "includes": "breakfast, lunch, dinner, and access to private beach"
   },
-  "naga-kitchen-homestay": {
-    "lowINR": 1000,
-    "highINR": 1800,
-    "basis": "per person",
-    "includes": "meals, and cooking demonstrations"
-  },
-  "suryauday-haveli-varanasi": {
-    "lowINR": 8000,
-    "highINR": 15000,
-    "basis": "per room",
-    "includes": "breakfast, and guided tours of Varanasi"
-  },
-  "agatti-island-homestay": {
-    "lowINR": 5000,
-    "highINR": 9000,
-    "basis": "per room",
-    "includes": "breakfast, lunch, dinner, and access to private beach"
-  },
-  "chilika-floating-cottage": {
-    "lowINR": 4000,
-    "highINR": 7000,
-    "basis": "per room",
-    "includes": "breakfast, lunch, and dinner; boat transfers to and from the cottage; guided birdwatching tour"
-  },
   "majuli-satra-guesthouse": {
     "lowINR": 1500,
     "highINR": 2500,
     "basis": "per person",
     "includes": "breakfast and dinner; traditional Assamese lunch; guided tour of the satra and surrounding areas"
-  },
-  "hornbill-kisama-homestay": {
-    "lowINR": 3000,
-    "highINR": 5500,
-    "basis": "per room",
-    "includes": "breakfast; traditional Naga lunch and dinner; guided tour of the nearby Hornbill Festival grounds (seasonal)"
   },
   "pushkar-tented-camp": {
     "lowINR": 2500,
@@ -395,18 +323,6 @@
     "basis": "per room",
     "includes": "breakfast, lunch, and dinner, access to estate facilities"
   },
-  "visalam-chettinad": {
-    "lowINR": 15000,
-    "highINR": 25000,
-    "basis": "per room",
-    "includes": "breakfast, lunch, and dinner, guided Chettinad heritage tour"
-  },
-  "villa-retreat-kodaikanal": {
-    "lowINR": 4000,
-    "highINR": 8000,
-    "basis": "per room",
-    "includes": "breakfast, access to bungalow facilities, guided trekking"
-  },
   "sadhana-forest-auroville": {
     "lowINR": 800,
     "highINR": 1500,
@@ -424,18 +340,6 @@
     "highINR": 25000,
     "basis": "per room",
     "includes": "breakfast, lunch, and dinner, guided forest treks, and yoga sessions"
-  },
-  "kairali-ayurvedic-healing-village": {
-    "lowINR": 15000,
-    "highINR": 30000,
-    "basis": "per person",
-    "includes": "Ayurvedic treatments, yoga, meditation, and all meals"
-  },
-  "malabar-house-fort-kochi": {
-    "lowINR": 18000,
-    "highINR": 35000,
-    "basis": "per room",
-    "includes": "breakfast, complimentary sunset cruise, and access to the hotel's pool and gym"
   },
   "kalari-rasayana-paravur": {
     "lowINR": 10000,
@@ -467,29 +371,11 @@
     "basis": "per room",
     "includes": "breakfast, lunch, and dinner, and guided estate walks"
   },
-  "nrityagram-dance-village": {
-    "lowINR": 3000,
-    "highINR": 6000,
-    "basis": "per person",
-    "includes": "breakfast, lunch, and dinner, and dance classes"
-  },
   "siolim-house-goa": {
     "lowINR": 15000,
     "highINR": 30000,
     "basis": "per room",
     "includes": "breakfast, and access to the hotel's pool and gym"
-  },
-  "bhakti-kutir-palolem": {
-    "lowINR": 3500,
-    "highINR": 6000,
-    "basis": "per room",
-    "includes": "breakfast, yoga classes, and access to private beach"
-  },
-  "yoga-magic-anjuna": {
-    "lowINR": 8000,
-    "highINR": 12000,
-    "basis": "per person",
-    "includes": "all meals, yoga classes, and meditation sessions"
   },
   "house-of-mg-ahmedabad": {
     "lowINR": 9000,
@@ -497,41 +383,11 @@
     "basis": "per room",
     "includes": "breakfast, heritage walk, and access to rooftop restaurant"
   },
-  "bhujodi-weavers-village": {
-    "lowINR": 2500,
-    "highINR": 4000,
-    "basis": "per room",
-    "includes": "all meals, village tour, and interaction with local weavers"
-  },
   "dhordo-dark-sky-camp": {
     "lowINR": 3000,
     "highINR": 5000,
     "basis": "per person",
     "includes": "all meals, stargazing, and desert safari"
-  },
-  "ken-river-lodge": {
-    "lowINR": 8000,
-    "highINR": 12000,
-    "basis": "per room",
-    "includes": "all meals, jungle safari, and boat ride on Ken River"
-  },
-  "forsyth-lodge-satpura": {
-    "lowINR": 20000,
-    "highINR": 30000,
-    "basis": "per room",
-    "includes": "all meals, jungle safari, and boat ride on Denwa River"
-  },
-  "ahilya-fort-maheshwar": {
-    "lowINR": 25000,
-    "highINR": 40000,
-    "basis": "per room",
-    "includes": "all meals, heritage walk, and access to private ghats on Narmada River"
-  },
-  "bagh-block-print-stay": {
-    "lowINR": 1500,
-    "highINR": 2500,
-    "basis": "per room",
-    "includes": "all meals, block printing workshop, and village tour"
   },
   "bundi-vilas": {
     "lowINR": 8000,
@@ -551,29 +407,11 @@
     "basis": "per room",
     "includes": "breakfast; guided village tours and horse riding"
   },
-  "raghurajpur-pattachitra-village": {
-    "lowINR": 800,
-    "highINR": 1500,
-    "basis": "per person",
-    "includes": "breakfast and lunch; pattachitra art workshops"
-  },
   "simlipal-jungle-lodge": {
     "lowINR": 3500,
     "highINR": 6000,
     "basis": "per room",
     "includes": "breakfast and dinner; guided jungle treks"
-  },
-  "chilika-eco-retreat": {
-    "lowINR": 3000,
-    "highINR": 5500,
-    "basis": "per room",
-    "includes": "breakfast; boat cruises on Chilika Lake"
-  },
-  "pochampally-ikat-homestay": {
-    "lowINR": 600,
-    "highINR": 1200,
-    "basis": "per person",
-    "includes": "breakfast and lunch; ikat weaving workshops"
   },
   "ananthagiri-hills-retreat": {
     "lowINR": 4000,
@@ -581,41 +419,17 @@
     "basis": "per room",
     "includes": "breakfast and dinner; guided treks in Ananthagiri Hills"
   },
-  "ziro-apatani-homestay": {
-    "lowINR": 500,
-    "highINR": 1000,
-    "basis": "per person",
-    "includes": "breakfast and lunch; Apatani tribal culture experiences"
-  },
   "eagle-nest-wildlife-camp": {
     "lowINR": 15000,
     "highINR": 25000,
     "basis": "per room",
     "includes": "breakfast, lunch, and dinner; guided wildlife treks and birdwatching"
   },
-  "reiek-heritage-village-mizoram": {
-    "lowINR": 2500,
-    "highINR": 4500,
-    "basis": "per room",
-    "includes": "breakfast; guided tours of Reiek village and surrounding hills"
-  },
   "neermahal-palace-hotel": {
     "lowINR": 4000,
     "highINR": 7000,
     "basis": "per room",
     "includes": "breakfast, lunch, and dinner, boat ride on Rudrasagar Lake"
-  },
-  "netarhat-bungalow": {
-    "lowINR": 3500,
-    "highINR": 6000,
-    "basis": "per room",
-    "includes": "breakfast, guided forest trek, bonfire"
-  },
-  "palamu-forest-lodge": {
-    "lowINR": 3000,
-    "highINR": 5500,
-    "basis": "per room",
-    "includes": "breakfast, lunch, and dinner, jungle safari"
   },
   "root-institute-guesthouse": {
     "lowINR": 800,
@@ -647,35 +461,17 @@
     "basis": "per room",
     "includes": "breakfast, lunch, and dinner, tea tasting, estate tour"
   },
-  "bansbari-lodge-manas": {
-    "lowINR": 12000,
-    "highINR": 20000,
-    "basis": "per room",
-    "includes": "breakfast, lunch, and dinner, jungle safari, guided tour"
-  },
   "araku-valley-tribal-eco-lodge": {
     "lowINR": 3000,
     "highINR": 5500,
     "basis": "per room",
     "includes": "breakfast, lunch, and dinner, tribal dance performance, guided trek"
   },
-  "lepakshi-heritage-homestay": {
-    "lowINR": 3500,
-    "highINR": 6000,
-    "basis": "per room",
-    "includes": "breakfast, lunch, and dinner; guided tour of Lepakshi temple and surrounding areas"
-  },
   "tirthan-valley-homestay": {
     "lowINR": 4000,
     "highINR": 8000,
     "basis": "per room",
     "includes": "breakfast and dinner; trekking and fishing activities in Tirthan Valley"
-  },
-  "kanger-valley-nature-camp": {
-    "lowINR": 3000,
-    "highINR": 5500,
-    "basis": "per person",
-    "includes": "all meals; guided jungle trek and visit to Tirathgarh waterfall"
   },
   "the-machan-lonavala": {
     "lowINR": 25000,

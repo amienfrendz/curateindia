@@ -1,0 +1,354 @@
+{
+  "mary-budden-estate": {
+    "status": "done",
+    "count": 9
+  },
+  "sarai-at-toria": {
+    "status": "done",
+    "count": 10
+  },
+  "bompu-camp": {
+    "status": "done",
+    "count": 8
+  },
+  "bera-safari-lodge": {
+    "status": "done",
+    "count": 10
+  },
+  "snow-leopard-lodge": {
+    "status": "done",
+    "count": 7
+  },
+  "velanga-orchard": {
+    "status": "done",
+    "count": 10
+  },
+  "parijaat-goa": {
+    "status": "done",
+    "count": 10
+  },
+  "devpur-homestay": {
+    "status": "done",
+    "count": 10
+  },
+  "laalee-jaipur": {
+    "status": "done",
+    "count": 8
+  },
+  "sinna-dorai-valparai": {
+    "status": "done",
+    "count": 10
+  },
+  "glenburn-tea-estate": {
+    "status": "done",
+    "count": 10
+  },
+  "wild-mahseer": {
+    "status": "done",
+    "count": 10
+  },
+  "the-lodge-at-wah": {
+    "status": "done",
+    "count": 10
+  },
+  "briar-tea-bungalows": {
+    "status": "done",
+    "count": 8
+  },
+  "khem-villas": {
+    "status": "done",
+    "count": 9
+  },
+  "singinawa": {
+    "status": "done",
+    "count": 10
+  },
+  "tree-house-coorg": {
+    "status": "done",
+    "count": 10
+  },
+  "1914-tea-farms": {
+    "status": "done",
+    "count": 10
+  },
+  "shaam-e-sarhad": {
+    "status": "done",
+    "count": 9
+  },
+  "pepper-trail-wayanad": {
+    "status": "done",
+    "count": 10
+  },
+  "philipkuttys-farm": {
+    "status": "done",
+    "count": 10
+  },
+  "yangsum-heritage-farm": {
+    "status": "done",
+    "count": 10
+  },
+  "chadiara-heritage": {
+    "status": "done",
+    "count": 10
+  },
+  "saratha-vilas": {
+    "status": "done",
+    "count": 9
+  },
+  "maison-perumal": {
+    "status": "done",
+    "count": 9
+  },
+  "shahpura-haveli": {
+    "status": "done",
+    "count": 9
+  },
+  "ancient-glory-kurseong": {
+    "status": "done",
+    "count": 9
+  },
+  "nimmu-house-ladakh": {
+    "status": "done",
+    "count": 9
+  },
+  "ahilya-by-the-sea": {
+    "status": "done",
+    "count": 10
+  },
+  "thehraav-by-the-river": {
+    "status": "done",
+    "count": 10
+  },
+  "shakti-kumaon": {
+    "status": "done",
+    "count": 9
+  },
+  "sunkiya-homestay": {
+    "status": "done",
+    "count": 8
+  },
+  "anand-prakash-ashram": {
+    "status": "done",
+    "count": 8
+  },
+  "mudh-homestay": {
+    "status": "done",
+    "count": 10
+  },
+  "the-doksa-spiti": {
+    "status": "done",
+    "count": 10
+  },
+  "lchang-nang-retreat": {
+    "status": "done",
+    "count": 9
+  },
+  "keibul-homestay": {
+    "status": "done",
+    "count": 7
+  },
+  "lagay-village-homestay": {
+    "status": "done",
+    "count": 10
+  },
+  "sukoon-houseboat": {
+    "status": "done",
+    "count": 8
+  },
+  "coco-shambhala": {
+    "status": "done",
+    "count": 10
+  },
+  "song-of-the-sea": {
+    "status": "done",
+    "count": 8
+  },
+  "river-symphony-goa": {
+    "status": "done",
+    "count": 9
+  },
+  "bordi-homestay": {
+    "status": "done",
+    "count": 8
+  },
+  "windermere-river-house": {
+    "status": "done",
+    "count": 10
+  },
+  "konyak-chiefs-house-longwa": {
+    "status": "failed",
+    "reason": "Vision API 400: {\n  \"error\": {\n    \"message\": \"Your input image may contain content that is not allowed by our content safety system.\",\n    \"type\": \"invalid_request_e"
+  },
+  "khonoma-village-eco-stay": {
+    "status": "done",
+    "count": 10
+  },
+  "naga-kitchen-homestay": {
+    "status": "done",
+    "count": 9
+  },
+  "suryauday-haveli-varanasi": {
+    "status": "done",
+    "count": 9
+  },
+  "agatti-island-homestay": {
+    "status": "done",
+    "count": 10
+  },
+  "chilika-floating-cottage": {
+    "status": "done",
+    "count": 8
+  },
+  "hornbill-kisama-homestay": {
+    "status": "done",
+    "count": 10
+  },
+  "pushkar-tented-camp": {
+    "status": "done",
+    "count": 8
+  },
+  "kolukkumalai-tea-bungalow": {
+    "status": "done",
+    "count": 10
+  },
+  "visalam-chettinad": {
+    "status": "done",
+    "count": 9
+  },
+  "villa-retreat-kodaikanal": {
+    "status": "done",
+    "count": 10
+  },
+  "harivihar-heritage-homestead": {
+    "status": "done",
+    "count": 9
+  },
+  "tranquil-resort-wayanad": {
+    "status": "done",
+    "count": 9
+  },
+  "kairali-ayurvedic-healing-village": {
+    "status": "done",
+    "count": 9
+  },
+  "malabar-house-fort-kochi": {
+    "status": "done",
+    "count": 8
+  },
+  "honey-valley-estate": {
+    "status": "done",
+    "count": 10
+  },
+  "shreyas-retreat-bengaluru": {
+    "status": "done",
+    "count": 9
+  },
+  "old-kent-estate-chikmagalur": {
+    "status": "done",
+    "count": 7
+  },
+  "nrityagram-dance-village": {
+    "status": "done",
+    "count": 9
+  },
+  "siolim-house-goa": {
+    "status": "done",
+    "count": 10
+  },
+  "bhakti-kutir-palolem": {
+    "status": "failed",
+    "reason": "Vision API 400: {\n  \"error\": {\n    \"message\": \"Your input image may contain content that is not allowed by our content safety system.\",\n    \"type\": \"invalid_request_e"
+  },
+  "yoga-magic-anjuna": {
+    "status": "done",
+    "count": 10
+  },
+  "bhujodi-weavers-village": {
+    "status": "done",
+    "count": 6
+  },
+  "dhordo-dark-sky-camp": {
+    "status": "done",
+    "count": 10
+  },
+  "ken-river-lodge": {
+    "status": "done",
+    "count": 9
+  },
+  "forsyth-lodge-satpura": {
+    "status": "done",
+    "count": 7
+  },
+  "ahilya-fort-maheshwar": {
+    "status": "done",
+    "count": 10
+  },
+  "bagh-block-print-stay": {
+    "status": "done",
+    "count": 0
+  },
+  "bundi-vilas": {
+    "status": "done",
+    "count": 10
+  },
+  "apani-dhani-nawalgarh": {
+    "status": "done",
+    "count": 10
+  },
+  "raghurajpur-pattachitra-village": {
+    "status": "done",
+    "count": 9
+  },
+  "chilika-eco-retreat": {
+    "status": "done",
+    "count": 9
+  },
+  "pochampally-ikat-homestay": {
+    "status": "done",
+    "count": 0
+  },
+  "ziro-apatani-homestay": {
+    "status": "done",
+    "count": 9
+  },
+  "eagle-nest-wildlife-camp": {
+    "status": "done",
+    "count": 5
+  },
+  "reiek-heritage-village-mizoram": {
+    "status": "done",
+    "count": 10
+  },
+  "netarhat-bungalow": {
+    "status": "done",
+    "count": 10
+  },
+  "palamu-forest-lodge": {
+    "status": "done",
+    "count": 7
+  },
+  "makaibari-tea-estate": {
+    "status": "done",
+    "count": 6
+  },
+  "bansbari-lodge-manas": {
+    "status": "done",
+    "count": 8
+  },
+  "lepakshi-heritage-homestay": {
+    "status": "done",
+    "count": 7
+  },
+  "tirthan-valley-homestay": {
+    "status": "done",
+    "count": 9
+  },
+  "kanger-valley-nature-camp": {
+    "status": "done",
+    "count": 10
+  },
+  "tharu-heritage-eco-lodge": {
+    "status": "done",
+    "count": 9
+  }
+}
