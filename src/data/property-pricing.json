@@ -29,12 +29,6 @@
     "basis": "per room",
     "includes": "all meals, and a guided jungle walk"
   },
-  "velanga-orchard": {
-    "lowINR": 2500,
-    "highINR": 4000,
-    "basis": "per room",
-    "includes": "all meals, and a farm tour"
-  },
   "parijaat-goa": {
     "lowINR": 3500,
     "highINR": 6000,
@@ -245,12 +239,6 @@
     "basis": "per room",
     "includes": "breakfast; access to private beach and water sports"
   },
-  "river-symphony-goa": {
-    "lowINR": 3500,
-    "highINR": 6000,
-    "basis": "per room",
-    "includes": "breakfast, dinner, and access to common areas"
-  },
   "windermere-river-house": {
     "lowINR": 3000,
     "highINR": 5500,
@@ -274,12 +262,6 @@
     "highINR": 2500,
     "basis": "per person",
     "includes": "breakfast and dinner; traditional Assamese lunch; guided tour of the satra and surrounding areas"
-  },
-  "kolukkumalai-tea-bungalow": {
-    "lowINR": 3500,
-    "highINR": 6000,
-    "basis": "per room",
-    "includes": "breakfast; tea plantation tour; guided trek to the nearby scenic viewpoints"
   },
   "the-bangala": {
     "lowINR": 12000,
@@ -382,12 +364,6 @@
     "highINR": 3500,
     "basis": "per room",
     "includes": "breakfast, lunch, and dinner, yoga classes, rafting"
-  },
-  "makaibari-tea-estate": {
-    "lowINR": 4000,
-    "highINR": 7000,
-    "basis": "per room",
-    "includes": "breakfast, lunch, and dinner, tea tasting, estate tour"
   },
   "araku-valley-tribal-eco-lodge": {
     "lowINR": 3000,

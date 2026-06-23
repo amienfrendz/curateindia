@@ -249,56 +249,6 @@
       "verified": true
     }
   ],
-  "velanga-orchard": [
-    {
-      "name": "direct",
-      "label": "Host’s site",
-      "url": "http://www.slowpottery.com/",
-      "verified": true
-    },
-    {
-      "name": "google-maps",
-      "label": "Google Maps",
-      "url": "https://maps.google.com/?cid=14483603137731025541&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "verified": true
-    },
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Velanga%20Orchard%20Anantapur",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Velanga%20Orchard%20Anantapur",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Velanga%20Orchard%20Anantapur",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Velanga%20Orchard%20Anantapur/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Anantapur%20Andhra%20Pradesh&q=Velanga%20Orchard",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Velanga%20Orchard%20Anantapur",
-      "verified": true
-    }
-  ],
   "parijaat-goa": [
     {
       "name": "direct",
@@ -2031,50 +1981,6 @@
       "verified": true
     }
   ],
-  "river-symphony-goa": [
-    {
-      "name": "google-maps",
-      "label": "Google Maps",
-      "url": "https://maps.google.com/?cid=123215211047688566&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "verified": true
-    },
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=River%20Symphony%20Homestay%20Bicholim%2C%20North%20Goa",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=River%20Symphony%20Homestay%20Bicholim%2C%20North%20Goa",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=River%20Symphony%20Homestay%20Bicholim%2C%20North%20Goa",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/River%20Symphony%20Homestay%20Bicholim%2C%20North%20Goa/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Bicholim%2C%20North%20Goa%20Goa&q=River%20Symphony%20Homestay",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=River%20Symphony%20Homestay%20Bicholim%2C%20North%20Goa",
-      "verified": true
-    }
-  ],
   "windermere-river-house": [
     {
       "name": "direct",
@@ -2260,50 +2166,6 @@
       "name": "tripadvisor",
       "label": "TripAdvisor",
       "url": "https://www.tripadvisor.in/Search?q=Majuli%20Satra%20Guesthouse%20Kamalabari%20Satra%2C%20Majuli",
-      "verified": true
-    }
-  ],
-  "kolukkumalai-tea-bungalow": [
-    {
-      "name": "google-maps",
-      "label": "Google Maps",
-      "url": "https://maps.google.com/?cid=14168773812537512427&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-      "verified": true
-    },
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Kolukkumalai%20Tea%20Estate%20Bungalow%20Kolukkumalai%2C%20near%20Munnar",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Kolukkumalai%20Tea%20Estate%20Bungalow%20Kolukkumalai%2C%20near%20Munnar",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Kolukkumalai%20Tea%20Estate%20Bungalow%20Kolukkumalai%2C%20near%20Munnar",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Kolukkumalai%20Tea%20Estate%20Bungalow%20Kolukkumalai%2C%20near%20Munnar/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Kolukkumalai%2C%20near%20Munnar%20Tamil%20Nadu&q=Kolukkumalai%20Tea%20Estate%20Bungalow",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Kolukkumalai%20Tea%20Estate%20Bungalow%20Kolukkumalai%2C%20near%20Munnar",
       "verified": true
     }
   ],
@@ -2950,44 +2812,6 @@
       "name": "tripadvisor",
       "label": "TripAdvisor",
       "url": "https://www.tripadvisor.in/Search?q=Phool%20Chatti%20Ashram%20Shivpuri%2C%20Rishikesh%2C%20Ganges",
-      "verified": true
-    }
-  ],
-  "makaibari-tea-estate": [
-    {
-      "name": "google-hotels",
-      "label": "Google Hotels",
-      "url": "https://www.google.com/travel/hotels/search?q=Makaibari%20Tea%20Estate%20Kurseong%2C%20Darjeeling%20Hills",
-      "verified": true
-    },
-    {
-      "name": "booking",
-      "label": "Booking.com",
-      "url": "https://www.booking.com/searchresults.html?ss=Makaibari%20Tea%20Estate%20Kurseong%2C%20Darjeeling%20Hills",
-      "verified": true
-    },
-    {
-      "name": "makemytrip",
-      "label": "MakeMyTrip",
-      "url": "https://www.makemytrip.com/hotels/hotel-listing/?txtCityHotel=Makaibari%20Tea%20Estate%20Kurseong%2C%20Darjeeling%20Hills",
-      "verified": true
-    },
-    {
-      "name": "airbnb",
-      "label": "Airbnb",
-      "url": "https://www.airbnb.co.in/s/Makaibari%20Tea%20Estate%20Kurseong%2C%20Darjeeling%20Hills/homes",
-      "verified": true
-    },
-    {
-      "name": "agoda",
-      "label": "Agoda",
-      "url": "https://www.agoda.com/search?city=Kurseong%2C%20Darjeeling%20Hills%20West%20Bengal&q=Makaibari%20Tea%20Estate",
-      "verified": true
-    },
-    {
-      "name": "tripadvisor",
-      "label": "TripAdvisor",
-      "url": "https://www.tripadvisor.in/Search?q=Makaibari%20Tea%20Estate%20Kurseong%2C%20Darjeeling%20Hills",
       "verified": true
     }
   ],

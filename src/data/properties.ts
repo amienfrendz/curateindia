@@ -79,22 +79,6 @@ export const PROPERTIES: Property[] = [
     unsplashId: "1483728642387-6c3bdd6c93e5",
   },
   {
-    id: "velanga-orchard",
-    slug: "velanga-orchard",
-    name: "Velanga Orchard",
-    type: "farmstay",
-    location: "Anantapur",
-    state: "Andhra Pradesh",
-    region: "South",
-    rooms: 4,
-    clusters: ["art-craft", "culinary-immersion", "slow-living-sustainability"],
-    signatureExperiences: ["Pottery wheel sessions", "Mango & guava harvest", "Rayalaseema cuisine workshops"],
-    food: "Telugu farm-to-table, jaggery from the orchard",
-    priceTier: "₹₹",
-    blurb: "Throw your own pot on a pre-modern wheel; eat what the orchard gave that morning.",
-    unsplashId: "1565193566173-7a0ee3dbe261",
-  },
-  {
     id: "parijaat-goa",
     slug: "parijaat-goa",
     name: "Parijaat",
@@ -560,22 +544,6 @@ export const PROPERTIES: Property[] = [
     unsplashId: "1559827260-dc66d52bef19",
   },
   {
-    id: "river-symphony-goa",
-    slug: "river-symphony-goa",
-    name: "River Symphony Homestay",
-    type: "homestay",
-    location: "Bicholim, North Goa",
-    state: "Goa",
-    region: "Coast",
-    rooms: 5,
-    clusters: ["marine-water-living", "culinary-immersion", "festivals-seasonal"],
-    signatureExperiences: ["Mhadei river birding", "Saraswat-Catholic kitchens", "Sao Joao monsoon festival"],
-    food: "Goan — xacuti, prawn balchao, sannas",
-    priceTier: "₹₹",
-    blurb: "On the Mhadei river — Goa as the Goans live it.",
-    unsplashId: "1583417319070-4a69db38a482",
-  },
-  {
     id: "windermere-river-house",
     slug: "windermere-river-house",
     name: "Windermere River House",
@@ -596,22 +564,6 @@ export const PROPERTIES: Property[] = [
   // ── Research backlog (added 2026-06-15) — 12 candidates from the cloud ──
   // research agent's named tail. Metadata is best-effort and needs editorial
   // verification before publish. Some properties may be merged or dropped.
-  {
-    id: "kolukkumalai-tea-bungalow",
-    slug: "kolukkumalai-tea-bungalow",
-    name: "Kolukkumalai Tea Estate Bungalow",
-    type: "bungalow",
-    location: "Kolukkumalai, near Munnar",
-    state: "Tamil Nadu",
-    region: "South",
-    rooms: 4,
-    clusters: ["plantation-experiences", "trekking-adventure", "slow-living-sustainability"],
-    signatureExperiences: ["World's highest tea estate (2,160m)", "Sunrise above the cloud-line", "Orthodox tea-tasting"],
-    food: "Tamil estate — kothu parotta, sambar, filter coffee",
-    priceTier: "₹₹",
-    blurb: "Sleep above the clouds at the world's highest organically-grown tea estate.",
-    unsplashId: "1576092768241-dec231879fc3",
-  },
   // ── New properties (June 2026 batch) ──────────────────────────
   {
     id: "tranquil-resort-wayanad",
@@ -707,30 +659,6 @@ export const PROPERTIES: Property[] = [
     priceTier: "₹₹₹",
     blurb: "A restored 300-year-old viceroy's residence in a quiet Goa village, where just seven rooms and a courtyard pool create the most intimate heritage experience in North Goa.",
     website: "https://www.siolimhouse.com",
-    unsplashId: "", batch: "jun-2026"
-  },
-  {
-    id: "makaibari-tea-estate",
-    slug: "makaibari-tea-estate",
-    name: "Makaibari Tea Estate",
-    type: "estate",
-    location: "Kurseong, Darjeeling Hills",
-    state: "West Bengal",
-    region: "East",
-    rooms: 8,
-    clusters: ["plantation-experiences", "slow-living-sustainability", "tribal-village-life"],
-    signatureExperiences: [
-      "Tea plucking alongside the Lepcha tea pickers during the first or second flush",
-      "Guided biodynamic farm walk — the estate is certified by Demeter, the global biodynamic standard",
-      "Village walk through the Lepcha forest community settlements inside the estate",
-      "Tree planting in the primary forest that covers 70% of the estate",
-      "Darjeeling tea tasting and origin pairing with estate-grown muscatel and silver tips"
-    ],
-    food: "Darjeeling hill cooking in the tea workers' homes — simple mustard-spiked vegetables, lentil soup, momos and the estate's own first-flush tea, drunk the way pickers do.",
-    host: "Sanjay Banerjee",
-    priceTier: "₹₹",
-    blurb: "Sleep in the tea pluckers' homes at the world's most celebrated biodynamic estate — where the first-flush muscatel is prized at auction and the Lepcha community forest is as important as the tea itself.",
-    website: "https://makaibari.com",
     unsplashId: "", batch: "jun-2026"
   },
 ];
