@@ -376,5 +376,113 @@
     "highINR": 50000,
     "basis": "per room",
     "includes": "all meals; private deck with valley view, and guided nature walk"
+  },
+  "kayal-island-retreat": {
+    "lowINR": 12000,
+    "highINR": 18000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, kayaking, and fishing activities"
+  },
+  "palighar-kalimpong": {
+    "lowINR": 3500,
+    "highINR": 6000,
+    "basis": "per person",
+    "includes": "breakfast, and guided trekking and village tours"
+  },
+  "vivenda-dos-palhacos": {
+    "lowINR": 15000,
+    "highINR": 25000,
+    "basis": "per villa",
+    "includes": "breakfast, private pool, and access to a private beach"
+  },
+  "chapslee-shimla": {
+    "lowINR": 40000,
+    "highINR": 60000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, guided forest walks, and tea service"
+  },
+  "ahilya-fort-maheshwar": {
+    "lowINR": 25000,
+    "highINR": 50000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, dinner, and select activities like boat rides on the Narmada River"
+  },
+  "jims-jungle-retreat": {
+    "lowINR": 8000,
+    "highINR": 15000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, dinner, and guided jungle treks"
+  },
+  "rajbari-bawali": {
+    "lowINR": 12000,
+    "highINR": 20000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, dinner, and access to the estate's amenities like the pool and gardens"
+  },
+  "premkunj-udaipur": {
+    "lowINR": 10000,
+    "highINR": 18000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, dinner, and a complimentary boat ride on Lake Pichola"
+  },
+  "rakkh-palampur": {
+    "lowINR": 9000,
+    "highINR": 16000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, dinner, and guided hikes in the surrounding tea gardens"
+  },
+  "waterwoods-kabini": {
+    "lowINR": 11000,
+    "highINR": 20000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, dinner, and a guided safari in the Nagarhole National Park"
+  },
+  "amar-mahal-orchha": {
+    "lowINR": 8000,
+    "highINR": 15000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, dinner, and a complimentary guided tour of the Orchha Fort"
+  },
+  "neeleshwar-hermitage": {
+    "lowINR": 20000,
+    "highINR": 40000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, dinner, and select wellness activities like yoga and meditation"
+  },
+  "kluney-manor-ooty": {
+    "lowINR": 9000,
+    "highINR": 16000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, dinner, and access to the estate's amenities like the garden and library"
+  },
+  "astroport-sariska": {
+    "lowINR": 2500,
+    "highINR": 5000,
+    "basis": "per person",
+    "includes": "dinner, stargazing, and a guided trek in the Sariska National Park"
+  },
+  "barefoot-havelock": {
+    "lowINR": 12000,
+    "highINR": 25000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, with access to private beach and water sports activities"
+  },
+  "indeco-swamimalai": {
+    "lowINR": 10000,
+    "highINR": 20000,
+    "basis": "per room",
+    "includes": "breakfast, guided tour of the nearby temple town, and access to in-house cultural performances"
+  },
+  "rann-riders": {
+    "lowINR": 4000,
+    "highINR": 8000,
+    "basis": "per person",
+    "includes": "all meals, desert safari, and guided birdwatching tour"
+  },
+  "spice-village-thekkady": {
+    "lowINR": 15000,
+    "highINR": 30000,
+    "basis": "per room",
+    "includes": "breakfast, lunch, and dinner, with guided trekking and spice plantation tour"
   }
 }

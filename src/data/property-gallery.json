@@ -3538,5 +3538,1409 @@
       "EXTERIOR": 4
     },
     "fetchedAt": "2026-06-18T03:28:33.294Z"
+  },
+  "kayal-island-retreat": {
+    "photos": [
+      {
+        "file": "/photos/kayal-island-retreat/1.jpg",
+        "type": "host",
+        "author": "Kayal Island Retreat",
+        "widthPx": 4800,
+        "heightPx": 3200
+      },
+      {
+        "file": "/photos/kayal-island-retreat/2.jpg",
+        "type": "host",
+        "author": "Kayal Island Retreat",
+        "widthPx": 4800,
+        "heightPx": 3200
+      },
+      {
+        "file": "/photos/kayal-island-retreat/3.jpg",
+        "type": "host",
+        "author": "Kayal Island Retreat",
+        "widthPx": 4800,
+        "heightPx": 3200
+      },
+      {
+        "file": "/photos/kayal-island-retreat/4.jpg",
+        "type": "host",
+        "author": "Kayal Island Retreat",
+        "widthPx": 3200,
+        "heightPx": 4800
+      },
+      {
+        "file": "/photos/kayal-island-retreat/5.jpg",
+        "type": "host",
+        "author": "Kayal Island Retreat",
+        "widthPx": 4800,
+        "heightPx": 3200
+      },
+      {
+        "file": "/photos/kayal-island-retreat/6.jpg",
+        "type": "host",
+        "author": "Kayal Island Retreat",
+        "widthPx": 3200,
+        "heightPx": 4800
+      },
+      {
+        "file": "/photos/kayal-island-retreat/7.jpg",
+        "type": "host",
+        "author": "Kayal Island Retreat",
+        "widthPx": 4800,
+        "heightPx": 3200
+      },
+      {
+        "file": "/photos/kayal-island-retreat/8.jpg",
+        "type": "host",
+        "author": "Kayal Island Retreat",
+        "widthPx": 3200,
+        "heightPx": 4800
+      },
+      {
+        "file": "/photos/kayal-island-retreat/9.jpg",
+        "type": "host",
+        "author": "Kayal Island Retreat",
+        "widthPx": 4800,
+        "heightPx": 3200
+      },
+      {
+        "file": "/photos/kayal-island-retreat/10.jpg",
+        "type": "host",
+        "author": "Kayal Island Retreat",
+        "widthPx": 4800,
+        "heightPx": 3031
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 10,
+    "guestCount": 0,
+    "fetchedAt": "2026-06-23T09:34:49.774Z"
+  },
+  "palighar-kalimpong": {
+    "photos": [
+      {
+        "file": "/photos/palighar-kalimpong/1.jpg",
+        "type": "host",
+        "author": "PaliGhar (Homestay/Farmstay) Kalimpong",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/palighar-kalimpong/2.jpg",
+        "type": "host",
+        "author": "PaliGhar (Homestay/Farmstay) Kalimpong",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/palighar-kalimpong/3.jpg",
+        "type": "host",
+        "author": "PaliGhar (Homestay/Farmstay) Kalimpong",
+        "widthPx": 4800,
+        "heightPx": 3179
+      },
+      {
+        "file": "/photos/palighar-kalimpong/4.jpg",
+        "type": "host",
+        "author": "PaliGhar (Homestay/Farmstay) Kalimpong",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/palighar-kalimpong/5.jpg",
+        "type": "host",
+        "author": "PaliGhar (Homestay/Farmstay) Kalimpong",
+        "widthPx": 3024,
+        "heightPx": 4032
+      },
+      {
+        "file": "/photos/palighar-kalimpong/6.jpg",
+        "type": "host",
+        "author": "PaliGhar (Homestay/Farmstay) Kalimpong",
+        "widthPx": 720,
+        "heightPx": 960
+      },
+      {
+        "file": "/photos/palighar-kalimpong/7.jpg",
+        "type": "host",
+        "author": "PaliGhar (Homestay/Farmstay) Kalimpong",
+        "widthPx": 3024,
+        "heightPx": 4032
+      },
+      {
+        "file": "/photos/palighar-kalimpong/8.jpg",
+        "type": "host",
+        "author": "PaliGhar (Homestay/Farmstay) Kalimpong",
+        "widthPx": 768,
+        "heightPx": 1024
+      },
+      {
+        "file": "/photos/palighar-kalimpong/9.jpg",
+        "type": "host",
+        "author": "PaliGhar (Homestay/Farmstay) Kalimpong",
+        "widthPx": 1440,
+        "heightPx": 810
+      },
+      {
+        "file": "/photos/palighar-kalimpong/10.jpg",
+        "type": "host",
+        "author": "PaliGhar (Homestay/Farmstay) Kalimpong",
+        "widthPx": 1152,
+        "heightPx": 864
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 10,
+    "guestCount": 0,
+    "fetchedAt": "2026-06-23T09:34:59.389Z"
+  },
+  "vivenda-dos-palhacos": {
+    "photos": [
+      {
+        "file": "/photos/vivenda-dos-palhacos/1.jpg",
+        "type": "guest",
+        "author": "Mona Bhattacharya",
+        "widthPx": 4096,
+        "heightPx": 3072
+      },
+      {
+        "file": "/photos/vivenda-dos-palhacos/2.jpg",
+        "type": "guest",
+        "author": "Ruth Stephen",
+        "widthPx": 4000,
+        "heightPx": 1824
+      },
+      {
+        "file": "/photos/vivenda-dos-palhacos/3.jpg",
+        "type": "guest",
+        "author": "Ruth Stephen",
+        "widthPx": 4000,
+        "heightPx": 1824
+      },
+      {
+        "file": "/photos/vivenda-dos-palhacos/4.jpg",
+        "type": "guest",
+        "author": "Nicola Robilliard",
+        "widthPx": 3024,
+        "heightPx": 4032
+      },
+      {
+        "file": "/photos/vivenda-dos-palhacos/5.jpg",
+        "type": "guest",
+        "author": "Sangeeth",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
+        "file": "/photos/vivenda-dos-palhacos/6.jpg",
+        "type": "guest",
+        "author": "Bhaskar Mogili",
+        "widthPx": 4624,
+        "heightPx": 3468
+      },
+      {
+        "file": "/photos/vivenda-dos-palhacos/7.jpg",
+        "type": "guest",
+        "author": "Miraan Punjabi",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/vivenda-dos-palhacos/8.jpg",
+        "type": "guest",
+        "author": "Sangeeth",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
+        "file": "/photos/vivenda-dos-palhacos/9.jpg",
+        "type": "guest",
+        "author": "ashish dangarwala",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/vivenda-dos-palhacos/10.jpg",
+        "type": "guest",
+        "author": "Deepak Bhushan",
+        "widthPx": 4608,
+        "heightPx": 3456
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 0,
+    "guestCount": 10,
+    "fetchedAt": "2026-06-23T09:35:10.695Z"
+  },
+  "chapslee-shimla": {
+    "photos": [
+      {
+        "file": "/photos/chapslee-shimla/1.jpg",
+        "type": "host",
+        "author": "Chapslee",
+        "widthPx": 1200,
+        "heightPx": 673
+      },
+      {
+        "file": "/photos/chapslee-shimla/2.jpg",
+        "type": "host",
+        "author": "Chapslee",
+        "widthPx": 4032,
+        "heightPx": 2268
+      },
+      {
+        "file": "/photos/chapslee-shimla/3.jpg",
+        "type": "host",
+        "author": "Chapslee",
+        "widthPx": 900,
+        "heightPx": 600
+      },
+      {
+        "file": "/photos/chapslee-shimla/4.jpg",
+        "type": "host",
+        "author": "Chapslee",
+        "widthPx": 900,
+        "heightPx": 600
+      },
+      {
+        "file": "/photos/chapslee-shimla/5.jpg",
+        "type": "host",
+        "author": "Chapslee",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/chapslee-shimla/6.jpg",
+        "type": "host",
+        "author": "Chapslee",
+        "widthPx": 900,
+        "heightPx": 600
+      },
+      {
+        "file": "/photos/chapslee-shimla/7.jpg",
+        "type": "host",
+        "author": "Chapslee",
+        "widthPx": 900,
+        "heightPx": 600
+      },
+      {
+        "file": "/photos/chapslee-shimla/8.jpg",
+        "type": "host",
+        "author": "Chapslee",
+        "widthPx": 900,
+        "heightPx": 600
+      },
+      {
+        "file": "/photos/chapslee-shimla/9.jpg",
+        "type": "host",
+        "author": "Chapslee",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/chapslee-shimla/10.jpg",
+        "type": "host",
+        "author": "Chapslee",
+        "widthPx": 4032,
+        "heightPx": 2268
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 10,
+    "guestCount": 0,
+    "fetchedAt": "2026-06-23T09:35:19.790Z"
+  },
+  "ahilya-fort-maheshwar": {
+    "photos": [
+      {
+        "file": "/photos/ahilya-fort-maheshwar/1.jpg",
+        "type": "guest",
+        "author": "ZALASIR THE COMMERCE TEACHER Ahmedabad",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
+        "file": "/photos/ahilya-fort-maheshwar/2.jpg",
+        "type": "guest",
+        "author": "Fly on Wheels",
+        "widthPx": 3999,
+        "heightPx": 2999
+      },
+      {
+        "file": "/photos/ahilya-fort-maheshwar/3.jpg",
+        "type": "guest",
+        "author": "PIYUSH PATEL",
+        "widthPx": 3468,
+        "heightPx": 4624
+      },
+      {
+        "file": "/photos/ahilya-fort-maheshwar/4.jpg",
+        "type": "guest",
+        "author": "Manish Sahu",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
+        "file": "/photos/ahilya-fort-maheshwar/5.jpg",
+        "type": "guest",
+        "author": "Chhagan Dhamale",
+        "widthPx": 4160,
+        "heightPx": 3120
+      },
+      {
+        "file": "/photos/ahilya-fort-maheshwar/6.jpg",
+        "type": "guest",
+        "author": "alok sinha",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/ahilya-fort-maheshwar/7.jpg",
+        "type": "guest",
+        "author": "Bhupesh Yashwantrao",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
+        "file": "/photos/ahilya-fort-maheshwar/8.jpg",
+        "type": "guest",
+        "author": "Aditya Bakwad",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/ahilya-fort-maheshwar/9.jpg",
+        "type": "guest",
+        "author": "amit saraf",
+        "widthPx": 3024,
+        "heightPx": 4032
+      },
+      {
+        "file": "/photos/ahilya-fort-maheshwar/10.jpg",
+        "type": "guest",
+        "author": "Mayank Singh",
+        "widthPx": 2048,
+        "heightPx": 1536
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 0,
+    "guestCount": 10,
+    "fetchedAt": "2026-06-23T09:35:28.758Z"
+  },
+  "jims-jungle-retreat": {
+    "photos": [
+      {
+        "file": "/photos/jims-jungle-retreat/1.jpg",
+        "type": "host",
+        "author": "Jim's Jungle Retreat",
+        "widthPx": 1439,
+        "heightPx": 955
+      },
+      {
+        "file": "/photos/jims-jungle-retreat/2.jpg",
+        "type": "host",
+        "author": "Jim's Jungle Retreat",
+        "widthPx": 1439,
+        "heightPx": 968
+      },
+      {
+        "file": "/photos/jims-jungle-retreat/3.jpg",
+        "type": "host",
+        "author": "Jim's Jungle Retreat",
+        "widthPx": 1476,
+        "heightPx": 936
+      },
+      {
+        "file": "/photos/jims-jungle-retreat/4.jpg",
+        "type": "host",
+        "author": "Jim's Jungle Retreat",
+        "widthPx": 1439,
+        "heightPx": 973
+      },
+      {
+        "file": "/photos/jims-jungle-retreat/5.jpg",
+        "type": "host",
+        "author": "Jim's Jungle Retreat",
+        "widthPx": 1439,
+        "heightPx": 2155
+      },
+      {
+        "file": "/photos/jims-jungle-retreat/6.jpg",
+        "type": "host",
+        "author": "Jim's Jungle Retreat",
+        "widthPx": 480,
+        "heightPx": 928
+      },
+      {
+        "file": "/photos/jims-jungle-retreat/7.jpg",
+        "type": "host",
+        "author": "Jim's Jungle Retreat",
+        "widthPx": 3008,
+        "heightPx": 2000
+      },
+      {
+        "file": "/photos/jims-jungle-retreat/8.jpg",
+        "type": "host",
+        "author": "Jim's Jungle Retreat",
+        "widthPx": 3240,
+        "heightPx": 4320
+      },
+      {
+        "file": "/photos/jims-jungle-retreat/9.jpg",
+        "type": "guest",
+        "author": "Timothy Warren",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/jims-jungle-retreat/10.jpg",
+        "type": "guest",
+        "author": "Schitij Kulshrestha",
+        "widthPx": 3024,
+        "heightPx": 4032
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 8,
+    "guestCount": 2,
+    "fetchedAt": "2026-06-23T09:46:41.887Z"
+  },
+  "rajbari-bawali": {
+    "photos": [
+      {
+        "file": "/photos/rajbari-bawali/1.jpg",
+        "type": "host",
+        "author": "The Rajbari Bawali",
+        "widthPx": 4544,
+        "heightPx": 3010
+      },
+      {
+        "file": "/photos/rajbari-bawali/2.jpg",
+        "type": "host",
+        "author": "The Rajbari Bawali",
+        "widthPx": 1200,
+        "heightPx": 801
+      },
+      {
+        "file": "/photos/rajbari-bawali/3.jpg",
+        "type": "host",
+        "author": "The Rajbari Bawali",
+        "widthPx": 1011,
+        "heightPx": 1024
+      },
+      {
+        "file": "/photos/rajbari-bawali/4.jpg",
+        "type": "host",
+        "author": "The Rajbari Bawali",
+        "widthPx": 1080,
+        "heightPx": 1081
+      },
+      {
+        "file": "/photos/rajbari-bawali/5.jpg",
+        "type": "host",
+        "author": "The Rajbari Bawali",
+        "widthPx": 1342,
+        "heightPx": 1600
+      },
+      {
+        "file": "/photos/rajbari-bawali/6.jpg",
+        "type": "host",
+        "author": "The Rajbari Bawali",
+        "widthPx": 1024,
+        "heightPx": 768
+      },
+      {
+        "file": "/photos/rajbari-bawali/7.jpg",
+        "type": "host",
+        "author": "The Rajbari Bawali",
+        "widthPx": 3024,
+        "heightPx": 4032
+      },
+      {
+        "file": "/photos/rajbari-bawali/8.jpg",
+        "type": "guest",
+        "author": "PIYA BHATTACHARYA",
+        "widthPx": 4000,
+        "heightPx": 1844
+      },
+      {
+        "file": "/photos/rajbari-bawali/9.jpg",
+        "type": "guest",
+        "author": "Amit Arora",
+        "widthPx": 1024,
+        "heightPx": 768
+      },
+      {
+        "file": "/photos/rajbari-bawali/10.jpg",
+        "type": "guest",
+        "author": "emon biswas",
+        "widthPx": 1280,
+        "heightPx": 960
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 7,
+    "guestCount": 3,
+    "fetchedAt": "2026-06-23T09:46:49.351Z"
+  },
+  "premkunj-udaipur": {
+    "photos": [
+      {
+        "file": "/photos/premkunj-udaipur/1.jpg",
+        "type": "guest",
+        "author": "Jenil Patel",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
+        "file": "/photos/premkunj-udaipur/2.jpg",
+        "type": "guest",
+        "author": "The Indian Bucket List",
+        "widthPx": 2048,
+        "heightPx": 1365
+      },
+      {
+        "file": "/photos/premkunj-udaipur/3.jpg",
+        "type": "guest",
+        "author": "Devanshu Gurjar",
+        "widthPx": 1024,
+        "heightPx": 683
+      },
+      {
+        "file": "/photos/premkunj-udaipur/4.jpg",
+        "type": "guest",
+        "author": "Vandana Singh Mishra",
+        "widthPx": 1280,
+        "heightPx": 853
+      },
+      {
+        "file": "/photos/premkunj-udaipur/5.jpg",
+        "type": "guest",
+        "author": "Jenil Patel",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
+        "file": "/photos/premkunj-udaipur/6.jpg",
+        "type": "guest",
+        "author": "Ashit Gandhi",
+        "widthPx": 4624,
+        "heightPx": 3472
+      },
+      {
+        "file": "/photos/premkunj-udaipur/7.jpg",
+        "type": "guest",
+        "author": "Devanshu Gurjar",
+        "widthPx": 1200,
+        "heightPx": 900
+      },
+      {
+        "file": "/photos/premkunj-udaipur/8.jpg",
+        "type": "guest",
+        "author": "Devanshu Gurjar",
+        "widthPx": 1024,
+        "heightPx": 768
+      },
+      {
+        "file": "/photos/premkunj-udaipur/9.jpg",
+        "type": "guest",
+        "author": "Vandana Singh Mishra",
+        "widthPx": 1037,
+        "heightPx": 805
+      },
+      {
+        "file": "/photos/premkunj-udaipur/10.jpg",
+        "type": "guest",
+        "author": "The Indian Bucket List",
+        "widthPx": 1280,
+        "heightPx": 853
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 0,
+    "guestCount": 10,
+    "fetchedAt": "2026-06-23T09:46:56.851Z"
+  },
+  "rakkh-palampur": {
+    "photos": [
+      {
+        "file": "/photos/rakkh-palampur/1.jpg",
+        "type": "host",
+        "author": "Rakkh Resort",
+        "widthPx": 1023,
+        "heightPx": 682
+      },
+      {
+        "file": "/photos/rakkh-palampur/2.jpg",
+        "type": "host",
+        "author": "Rakkh Resort",
+        "widthPx": 1024,
+        "heightPx": 683
+      },
+      {
+        "file": "/photos/rakkh-palampur/3.jpg",
+        "type": "host",
+        "author": "Rakkh Resort",
+        "widthPx": 3840,
+        "heightPx": 2507
+      },
+      {
+        "file": "/photos/rakkh-palampur/4.jpg",
+        "type": "host",
+        "author": "Rakkh Resort",
+        "widthPx": 1024,
+        "heightPx": 683
+      },
+      {
+        "file": "/photos/rakkh-palampur/5.jpg",
+        "type": "host",
+        "author": "Rakkh Resort",
+        "widthPx": 4800,
+        "heightPx": 3230
+      },
+      {
+        "file": "/photos/rakkh-palampur/6.jpg",
+        "type": "host",
+        "author": "Rakkh Resort",
+        "widthPx": 3840,
+        "heightPx": 2880
+      },
+      {
+        "file": "/photos/rakkh-palampur/7.jpg",
+        "type": "host",
+        "author": "Rakkh Resort",
+        "widthPx": 1023,
+        "heightPx": 682
+      },
+      {
+        "file": "/photos/rakkh-palampur/8.jpg",
+        "type": "host",
+        "author": "Rakkh Resort",
+        "widthPx": 3839,
+        "heightPx": 2560
+      },
+      {
+        "file": "/photos/rakkh-palampur/9.jpg",
+        "type": "host",
+        "author": "Rakkh Resort",
+        "widthPx": 1023,
+        "heightPx": 682
+      },
+      {
+        "file": "/photos/rakkh-palampur/10.jpg",
+        "type": "host",
+        "author": "Rakkh Resort",
+        "widthPx": 1024,
+        "heightPx": 683
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 10,
+    "guestCount": 0,
+    "fetchedAt": "2026-06-23T09:47:04.226Z"
+  },
+  "waterwoods-kabini": {
+    "photos": [
+      {
+        "file": "/photos/waterwoods-kabini/1.jpg",
+        "type": "host",
+        "author": "Waterwoods Lodge, Kabini",
+        "widthPx": 1206,
+        "heightPx": 1580
+      },
+      {
+        "file": "/photos/waterwoods-kabini/2.jpg",
+        "type": "host",
+        "author": "Waterwoods Lodge, Kabini",
+        "widthPx": 4800,
+        "heightPx": 3199
+      },
+      {
+        "file": "/photos/waterwoods-kabini/3.jpg",
+        "type": "host",
+        "author": "Waterwoods Lodge, Kabini",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/waterwoods-kabini/4.jpg",
+        "type": "host",
+        "author": "Waterwoods Lodge, Kabini",
+        "widthPx": 1224,
+        "heightPx": 1632
+      },
+      {
+        "file": "/photos/waterwoods-kabini/5.jpg",
+        "type": "guest",
+        "author": "Abhishek Shetye",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
+        "file": "/photos/waterwoods-kabini/6.jpg",
+        "type": "guest",
+        "author": "Arjun Kapoor",
+        "widthPx": 4800,
+        "heightPx": 3200
+      },
+      {
+        "file": "/photos/waterwoods-kabini/7.jpg",
+        "type": "guest",
+        "author": "Sharon Pothen",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
+        "file": "/photos/waterwoods-kabini/8.jpg",
+        "type": "guest",
+        "author": "Sandeep Ramareddy",
+        "widthPx": 4800,
+        "heightPx": 3199
+      },
+      {
+        "file": "/photos/waterwoods-kabini/9.jpg",
+        "type": "guest",
+        "author": "Gagan Somashekar",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/waterwoods-kabini/10.jpg",
+        "type": "guest",
+        "author": "Gagan Somashekar",
+        "widthPx": 4032,
+        "heightPx": 3024
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 4,
+    "guestCount": 6,
+    "fetchedAt": "2026-06-23T09:47:12.582Z"
+  },
+  "amar-mahal-orchha": {
+    "photos": [
+      {
+        "file": "/photos/amar-mahal-orchha/1.jpg",
+        "type": "guest",
+        "author": "The Indian Bucket List",
+        "widthPx": 4032,
+        "heightPx": 2268
+      },
+      {
+        "file": "/photos/amar-mahal-orchha/2.jpg",
+        "type": "guest",
+        "author": "The Indian Bucket List",
+        "widthPx": 3870,
+        "heightPx": 2177
+      },
+      {
+        "file": "/photos/amar-mahal-orchha/3.jpg",
+        "type": "guest",
+        "author": "Khaas Abbas",
+        "widthPx": 4800,
+        "heightPx": 2700
+      },
+      {
+        "file": "/photos/amar-mahal-orchha/4.jpg",
+        "type": "guest",
+        "author": "Aloi Cheng",
+        "widthPx": 3024,
+        "heightPx": 4032
+      },
+      {
+        "file": "/photos/amar-mahal-orchha/5.jpg",
+        "type": "guest",
+        "author": "Pascal Lallement-Fernandez",
+        "widthPx": 4080,
+        "heightPx": 3072
+      },
+      {
+        "file": "/photos/amar-mahal-orchha/6.jpg",
+        "type": "guest",
+        "author": "Gabby Sun",
+        "widthPx": 640,
+        "heightPx": 427
+      },
+      {
+        "file": "/photos/amar-mahal-orchha/7.jpg",
+        "type": "guest",
+        "author": "Apple W",
+        "widthPx": 4032,
+        "heightPx": 2268
+      },
+      {
+        "file": "/photos/amar-mahal-orchha/8.jpg",
+        "type": "guest",
+        "author": "Pascal Lallement-Fernandez",
+        "widthPx": 3072,
+        "heightPx": 4080
+      },
+      {
+        "file": "/photos/amar-mahal-orchha/9.jpg",
+        "type": "guest",
+        "author": "Bianca Machliss",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/amar-mahal-orchha/10.jpg",
+        "type": "guest",
+        "author": "Alex Zoz",
+        "widthPx": 4000,
+        "heightPx": 3000
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 0,
+    "guestCount": 10,
+    "fetchedAt": "2026-06-23T09:47:23.442Z"
+  },
+  "neeleshwar-hermitage": {
+    "photos": [
+      {
+        "file": "/photos/neeleshwar-hermitage/1.jpg",
+        "type": "host",
+        "author": "Neeleshwar Hermitage",
+        "widthPx": 4800,
+        "heightPx": 3203
+      },
+      {
+        "file": "/photos/neeleshwar-hermitage/2.jpg",
+        "type": "host",
+        "author": "Neeleshwar Hermitage",
+        "widthPx": 2048,
+        "heightPx": 1019
+      },
+      {
+        "file": "/photos/neeleshwar-hermitage/3.jpg",
+        "type": "host",
+        "author": "Neeleshwar Hermitage",
+        "widthPx": 4800,
+        "heightPx": 3200
+      },
+      {
+        "file": "/photos/neeleshwar-hermitage/4.jpg",
+        "type": "host",
+        "author": "Neeleshwar Hermitage",
+        "widthPx": 2048,
+        "heightPx": 1204
+      },
+      {
+        "file": "/photos/neeleshwar-hermitage/5.jpg",
+        "type": "host",
+        "author": "Neeleshwar Hermitage",
+        "widthPx": 2048,
+        "heightPx": 1367
+      },
+      {
+        "file": "/photos/neeleshwar-hermitage/6.jpg",
+        "type": "host",
+        "author": "Neeleshwar Hermitage",
+        "widthPx": 2048,
+        "heightPx": 1367
+      },
+      {
+        "file": "/photos/neeleshwar-hermitage/7.jpg",
+        "type": "host",
+        "author": "Neeleshwar Hermitage",
+        "widthPx": 4800,
+        "heightPx": 3200
+      },
+      {
+        "file": "/photos/neeleshwar-hermitage/8.jpg",
+        "type": "host",
+        "author": "Neeleshwar Hermitage",
+        "widthPx": 4800,
+        "heightPx": 3203
+      },
+      {
+        "file": "/photos/neeleshwar-hermitage/9.jpg",
+        "type": "guest",
+        "author": "Groowynd Holidays (Groowynd)",
+        "widthPx": 4800,
+        "heightPx": 3203
+      },
+      {
+        "file": "/photos/neeleshwar-hermitage/10.jpg",
+        "type": "guest",
+        "author": "Jiju Mohan",
+        "widthPx": 3000,
+        "heightPx": 4000
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 8,
+    "guestCount": 2,
+    "fetchedAt": "2026-06-23T09:47:31.734Z"
+  },
+  "kluney-manor-ooty": {
+    "photos": [
+      {
+        "file": "/photos/kluney-manor-ooty/1.jpg",
+        "type": "guest",
+        "author": "Satyajeet Kumar",
+        "widthPx": 4624,
+        "heightPx": 3468
+      },
+      {
+        "file": "/photos/kluney-manor-ooty/2.jpg",
+        "type": "guest",
+        "author": "Virendra Photography",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
+        "file": "/photos/kluney-manor-ooty/3.jpg",
+        "type": "guest",
+        "author": "Aniruddha Sarkar",
+        "widthPx": 4624,
+        "heightPx": 3468
+      },
+      {
+        "file": "/photos/kluney-manor-ooty/4.jpg",
+        "type": "guest",
+        "author": "Srivathsan K",
+        "widthPx": 1024,
+        "heightPx": 768
+      },
+      {
+        "file": "/photos/kluney-manor-ooty/5.jpg",
+        "type": "guest",
+        "author": "Musfar Yoosuf Theyyampattil",
+        "widthPx": 4096,
+        "heightPx": 3072
+      },
+      {
+        "file": "/photos/kluney-manor-ooty/6.jpg",
+        "type": "guest",
+        "author": "Suneita",
+        "widthPx": 4032,
+        "heightPx": 2268
+      },
+      {
+        "file": "/photos/kluney-manor-ooty/7.jpg",
+        "type": "guest",
+        "author": "kumar kanna",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
+        "file": "/photos/kluney-manor-ooty/8.jpg",
+        "type": "guest",
+        "author": "Rajni Chandra",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
+        "file": "/photos/kluney-manor-ooty/9.jpg",
+        "type": "guest",
+        "author": "Shanker Krishnan",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/kluney-manor-ooty/10.jpg",
+        "type": "guest",
+        "author": "Suneita",
+        "widthPx": 4032,
+        "heightPx": 2268
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 0,
+    "guestCount": 10,
+    "fetchedAt": "2026-06-23T09:47:39.887Z"
+  },
+  "astroport-sariska": {
+    "photos": [
+      {
+        "file": "/photos/astroport-sariska/1.jpg",
+        "type": "host",
+        "author": "Astroport Sariska Resort & Spa by Eight Continents",
+        "widthPx": 4800,
+        "heightPx": 3200
+      },
+      {
+        "file": "/photos/astroport-sariska/2.jpg",
+        "type": "host",
+        "author": "Astroport Sariska Resort & Spa by Eight Continents",
+        "widthPx": 1280,
+        "heightPx": 576
+      },
+      {
+        "file": "/photos/astroport-sariska/3.jpg",
+        "type": "host",
+        "author": "Astroport Sariska Resort & Spa by Eight Continents",
+        "widthPx": 1280,
+        "heightPx": 852
+      },
+      {
+        "file": "/photos/astroport-sariska/4.jpg",
+        "type": "host",
+        "author": "Astroport Sariska Resort & Spa by Eight Continents",
+        "widthPx": 4800,
+        "heightPx": 3204
+      },
+      {
+        "file": "/photos/astroport-sariska/5.jpg",
+        "type": "host",
+        "author": "Astroport Sariska Resort & Spa by Eight Continents",
+        "widthPx": 4800,
+        "heightPx": 3200
+      },
+      {
+        "file": "/photos/astroport-sariska/6.jpg",
+        "type": "host",
+        "author": "Astroport Sariska Resort & Spa by Eight Continents",
+        "widthPx": 4800,
+        "heightPx": 3200
+      },
+      {
+        "file": "/photos/astroport-sariska/7.jpg",
+        "type": "host",
+        "author": "Astroport Sariska Resort & Spa by Eight Continents",
+        "widthPx": 4800,
+        "heightPx": 3186
+      },
+      {
+        "file": "/photos/astroport-sariska/8.jpg",
+        "type": "host",
+        "author": "Astroport Sariska Resort & Spa by Eight Continents",
+        "widthPx": 4800,
+        "heightPx": 3204
+      },
+      {
+        "file": "/photos/astroport-sariska/9.jpg",
+        "type": "host",
+        "author": "Astroport Sariska Resort & Spa by Eight Continents",
+        "widthPx": 3204,
+        "heightPx": 4800
+      },
+      {
+        "file": "/photos/astroport-sariska/10.jpg",
+        "type": "guest",
+        "author": "Himal Mangla",
+        "widthPx": 4800,
+        "heightPx": 3600
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 9,
+    "guestCount": 1,
+    "fetchedAt": "2026-06-23T09:47:48.191Z"
+  },
+  "barefoot-havelock": {
+    "photos": [
+      {
+        "file": "/photos/barefoot-havelock/1.jpg",
+        "type": "host",
+        "author": "Barefoot at Havelock",
+        "widthPx": 1125,
+        "heightPx": 800
+      },
+      {
+        "file": "/photos/barefoot-havelock/2.jpg",
+        "type": "host",
+        "author": "Barefoot at Havelock",
+        "widthPx": 1000,
+        "heightPx": 846
+      },
+      {
+        "file": "/photos/barefoot-havelock/3.jpg",
+        "type": "host",
+        "author": "Barefoot at Havelock",
+        "widthPx": 1200,
+        "heightPx": 800
+      },
+      {
+        "file": "/photos/barefoot-havelock/4.jpg",
+        "type": "host",
+        "author": "Barefoot at Havelock",
+        "widthPx": 1173,
+        "heightPx": 800
+      },
+      {
+        "file": "/photos/barefoot-havelock/5.jpg",
+        "type": "host",
+        "author": "Barefoot at Havelock",
+        "widthPx": 1200,
+        "heightPx": 800
+      },
+      {
+        "file": "/photos/barefoot-havelock/6.jpg",
+        "type": "host",
+        "author": "Barefoot at Havelock",
+        "widthPx": 1200,
+        "heightPx": 800
+      },
+      {
+        "file": "/photos/barefoot-havelock/7.jpg",
+        "type": "guest",
+        "author": "Goutham Viswanath Alva",
+        "widthPx": 3024,
+        "heightPx": 4032
+      },
+      {
+        "file": "/photos/barefoot-havelock/8.jpg",
+        "type": "guest",
+        "author": "Arshia Gratiot",
+        "widthPx": 4080,
+        "heightPx": 3072
+      },
+      {
+        "file": "/photos/barefoot-havelock/9.jpg",
+        "type": "guest",
+        "author": "Goutham Viswanath Alva",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/barefoot-havelock/10.jpg",
+        "type": "guest",
+        "author": "Tina Anthoni",
+        "widthPx": 4800,
+        "heightPx": 3599
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 6,
+    "guestCount": 4,
+    "fetchedAt": "2026-06-23T09:47:56.593Z"
+  },
+  "indeco-swamimalai": {
+    "photos": [
+      {
+        "file": "/photos/indeco-swamimalai/1.jpg",
+        "type": "host",
+        "author": "Indeco Hotels Swamimalai",
+        "widthPx": 3872,
+        "heightPx": 2592
+      },
+      {
+        "file": "/photos/indeco-swamimalai/2.jpg",
+        "type": "host",
+        "author": "Indeco Hotels Swamimalai",
+        "widthPx": 2857,
+        "heightPx": 2415
+      },
+      {
+        "file": "/photos/indeco-swamimalai/3.jpg",
+        "type": "host",
+        "author": "Indeco Hotels Swamimalai",
+        "widthPx": 960,
+        "heightPx": 720
+      },
+      {
+        "file": "/photos/indeco-swamimalai/4.jpg",
+        "type": "host",
+        "author": "Indeco Hotels Swamimalai",
+        "widthPx": 1600,
+        "heightPx": 1066
+      },
+      {
+        "file": "/photos/indeco-swamimalai/5.jpg",
+        "type": "host",
+        "author": "Indeco Hotels Swamimalai",
+        "widthPx": 960,
+        "heightPx": 1280
+      },
+      {
+        "file": "/photos/indeco-swamimalai/6.jpg",
+        "type": "guest",
+        "author": "Frank Dietrich",
+        "widthPx": 4800,
+        "heightPx": 3200
+      },
+      {
+        "file": "/photos/indeco-swamimalai/7.jpg",
+        "type": "guest",
+        "author": "Samyuktha Venkat",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/indeco-swamimalai/8.jpg",
+        "type": "guest",
+        "author": "Shanmuga Sundaram M (Vino)",
+        "widthPx": 3456,
+        "heightPx": 4608
+      },
+      {
+        "file": "/photos/indeco-swamimalai/9.jpg",
+        "type": "guest",
+        "author": "Shanmuga Sundaram M (Vino)",
+        "widthPx": 4608,
+        "heightPx": 3456
+      },
+      {
+        "file": "/photos/indeco-swamimalai/10.jpg",
+        "type": "guest",
+        "author": "APPAVU Narayanan",
+        "widthPx": 3264,
+        "heightPx": 2448
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 5,
+    "guestCount": 5,
+    "fetchedAt": "2026-06-23T09:48:05.010Z"
+  },
+  "rann-riders": {
+    "photos": [
+      {
+        "file": "/photos/rann-riders/1.jpg",
+        "type": "host",
+        "author": "Rann Riders Dasada",
+        "widthPx": 4800,
+        "heightPx": 3200
+      },
+      {
+        "file": "/photos/rann-riders/2.jpg",
+        "type": "host",
+        "author": "Rann Riders Dasada",
+        "widthPx": 4800,
+        "heightPx": 3199
+      },
+      {
+        "file": "/photos/rann-riders/3.jpg",
+        "type": "host",
+        "author": "Rann Riders Dasada",
+        "widthPx": 4800,
+        "heightPx": 3195
+      },
+      {
+        "file": "/photos/rann-riders/4.jpg",
+        "type": "host",
+        "author": "Rann Riders Dasada",
+        "widthPx": 4800,
+        "heightPx": 3195
+      },
+      {
+        "file": "/photos/rann-riders/5.jpg",
+        "type": "host",
+        "author": "Rann Riders Dasada",
+        "widthPx": 4800,
+        "heightPx": 3195
+      },
+      {
+        "file": "/photos/rann-riders/6.jpg",
+        "type": "host",
+        "author": "Rann Riders Dasada",
+        "widthPx": 4800,
+        "heightPx": 3195
+      },
+      {
+        "file": "/photos/rann-riders/7.jpg",
+        "type": "host",
+        "author": "Rann Riders Dasada",
+        "widthPx": 4800,
+        "heightPx": 3195
+      },
+      {
+        "file": "/photos/rann-riders/8.jpg",
+        "type": "host",
+        "author": "Rann Riders Dasada",
+        "widthPx": 4800,
+        "heightPx": 3195
+      },
+      {
+        "file": "/photos/rann-riders/9.jpg",
+        "type": "host",
+        "author": "Rann Riders Dasada",
+        "widthPx": 3195,
+        "heightPx": 4800
+      },
+      {
+        "file": "/photos/rann-riders/10.jpg",
+        "type": "host",
+        "author": "Rann Riders Dasada",
+        "widthPx": 2656,
+        "heightPx": 3618
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 10,
+    "guestCount": 0,
+    "fetchedAt": "2026-06-23T09:48:14.477Z"
+  },
+  "spice-village-thekkady": {
+    "photos": [
+      {
+        "file": "/photos/spice-village-thekkady/1.jpg",
+        "type": "host",
+        "author": "Spice Village – CGH Earth Resort",
+        "widthPx": 2048,
+        "heightPx": 1360
+      },
+      {
+        "file": "/photos/spice-village-thekkady/2.jpg",
+        "type": "guest",
+        "author": "thommy thachethu",
+        "widthPx": 4000,
+        "heightPx": 1868
+      },
+      {
+        "file": "/photos/spice-village-thekkady/3.jpg",
+        "type": "guest",
+        "author": "Aravind Deivendran",
+        "widthPx": 3783,
+        "heightPx": 2920
+      },
+      {
+        "file": "/photos/spice-village-thekkady/4.jpg",
+        "type": "guest",
+        "author": "Ankit Rastogi",
+        "widthPx": 4608,
+        "heightPx": 3456
+      },
+      {
+        "file": "/photos/spice-village-thekkady/5.jpg",
+        "type": "guest",
+        "author": "AVNEET KAUR",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/spice-village-thekkady/6.jpg",
+        "type": "guest",
+        "author": "VIMAL",
+        "widthPx": 4096,
+        "heightPx": 2304
+      },
+      {
+        "file": "/photos/spice-village-thekkady/7.jpg",
+        "type": "guest",
+        "author": "Rahul V",
+        "widthPx": 4000,
+        "heightPx": 3000
+      },
+      {
+        "file": "/photos/spice-village-thekkady/8.jpg",
+        "type": "guest",
+        "author": "HISHAM HAFIS",
+        "widthPx": 4608,
+        "heightPx": 3456
+      },
+      {
+        "file": "/photos/spice-village-thekkady/9.jpg",
+        "type": "guest",
+        "author": "AVNEET KAUR",
+        "widthPx": 4032,
+        "heightPx": 3024
+      },
+      {
+        "file": "/photos/spice-village-thekkady/10.jpg",
+        "type": "guest",
+        "author": "Niranjan Reddy Nare",
+        "widthPx": 3024,
+        "heightPx": 4032
+      }
+    ],
+    "totalAvailable": 10,
+    "hostCount": 1,
+    "guestCount": 9,
+    "fetchedAt": "2026-06-23T09:48:22.396Z"
   }
 }
