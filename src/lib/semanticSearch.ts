@@ -10,7 +10,7 @@ import { join } from "path";
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
-type PhotoEmbedding = { slug: string; photo: string; vector: number[] };
+type PhotoEmbedding = { slug: string; photo: string; text?: string; vector: number[] };
 type TextEmbedding = { slug: string; type: string; text: string; vector: number[] };
 
 type SemanticHit = {
@@ -97,13 +97,14 @@ export function searchPhotos(queryVector: number[], topK = 20): { slug: string; 
 
 export function semanticSearch(
   textQueryVector: number[],
-  photoQueryVector?: number[],
+  _photoQueryVector?: number[], // Deprecated: photos now share text embedding space
   opts: { topTextK?: number; topPhotoK?: number; topProperties?: number } = {}
 ): SemanticHit[] {
   const { topTextK = 30, topPhotoK = 20, topProperties = 15 } = opts;
 
   const textHits = searchText(textQueryVector, topTextK);
-  const photoHits = photoQueryVector ? searchPhotos(photoQueryVector, topPhotoK) : [];
+  // Photo embeddings now use the same vector space (text descriptions), search with same query
+  const photoHits = searchPhotos(textQueryVector, topPhotoK);
 
   // Aggregate scores by property
   const propertyScores = new Map<string, { totalScore: number; evidence: SemanticHit["evidence"] }>();
