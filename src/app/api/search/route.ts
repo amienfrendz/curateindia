@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { chatJSON } from "@/lib/githubModels";
 import { getAllProperties } from "@/lib/repo";
+import { semanticSearch, isSemanticSearchEnabled, hasEmbeddings } from "@/lib/semanticSearch";
+import { embedQuery } from "@/lib/embedQuery";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -162,13 +164,50 @@ export async function POST(req: NextRequest) {
     // Stage 1: Extract intent (tiny LLM call — just the query, no catalogue)
     const intent = await extractIntent(query);
 
-    // Stage 2: Score on experience fit, take top 25 candidates
-    const scored = properties.map((p) => ({
-      p,
-      score: scoreProperty(p, intent, queryLower),
-    }));
-    scored.sort((a, b) => b.score - a.score);
-    const subset = scored.slice(0, 25).map(s => s.p);
+    // ── Semantic search path (feature-flagged) ─────────────────────────────
+    let subset: typeof properties;
+    let cachedQueryVector: number[] = [];
+
+    if (isSemanticSearchEnabled() && hasEmbeddings()) {
+      // Use semantic retrieval: embed query → cosine similarity → top properties
+      try {
+        cachedQueryVector = await embedQuery(query);
+      } catch {
+        cachedQueryVector = [];
+      }
+
+      if (cachedQueryVector.length > 0) {
+        const semanticHits = semanticSearch(cachedQueryVector, undefined, { topProperties: 25 });
+        const semanticSlugs = new Set(semanticHits.map(h => h.slug));
+
+        // Merge: semantic results first, then fill with keyword-scored properties
+        const semanticProps = properties.filter(p => semanticSlugs.has(p.slug));
+        const keywordScored = properties
+          .filter(p => !semanticSlugs.has(p.slug))
+          .map(p => ({ p, score: scoreProperty(p, intent, queryLower) }))
+          .sort((a, b) => b.score - a.score)
+          .slice(0, 25 - semanticProps.length)
+          .map(s => s.p);
+
+        subset = [...semanticProps, ...keywordScored].slice(0, 25);
+      } else {
+        // Embedding failed, fall through to keyword scoring
+        const scored = properties.map((p) => ({
+          p,
+          score: scoreProperty(p, intent, queryLower),
+        }));
+        scored.sort((a, b) => b.score - a.score);
+        subset = scored.slice(0, 25).map(s => s.p);
+      }
+    } else {
+      // Original keyword-based pre-filter (semantic search disabled)
+      const scored = properties.map((p) => ({
+        p,
+        score: scoreProperty(p, intent, queryLower),
+      }));
+      scored.sort((a, b) => b.score - a.score);
+      subset = scored.slice(0, 25).map(s => s.p);
+    }
 
     // Stage 3: LLM picks the best matches, reasoning about geography + travel constraints
     const compact = subset.map((p) => (
@@ -179,14 +218,31 @@ export async function POST(req: NextRequest) {
       ? `\n\nTRAVEL CONSTRAINTS (apply these strictly when ranking):\n${intent.travelConstraints}\nUse your knowledge of Indian airports, flight routes, and driving distances to evaluate each property's accessibility.`
       : "";
 
+    // Build semantic evidence context if available (reuse cached vector)
+    let semanticContext = "";
+    if (isSemanticSearchEnabled() && hasEmbeddings() && cachedQueryVector.length > 0) {
+      try {
+        const hits = semanticSearch(cachedQueryVector, undefined, { topProperties: 10 });
+        const evidenceLines = hits.map(h => {
+          const topEvidence = h.evidence.slice(0, 3).map(e => e.text || e.photo || "").join("; ");
+          return `${h.slug}: ${topEvidence}`;
+        }).join("\n");
+        if (evidenceLines) {
+          semanticContext = `\n\nSEMANTIC EVIDENCE (review/description excerpts matching this query):\n${evidenceLines}`;
+        }
+      } catch { /* ignore — semantic is enhancement, not critical */ }
+    }
+
     const system = `You are CurateIndia's concierge — an expert on Indian travel, geography, flight routes, and driving distances.
 
-The user wants: "${intent.intent}"${travelNote}
+The user wants: "${intent.intent}"${travelNote}${semanticContext}
 
 From the shortlisted properties below, pick the ones that BEST match the user's request. Consider:
 1. Experience fit — does the property offer what the user is looking for?
 2. Accessibility — can the user realistically reach it given their travel constraints?
 3. Suitability — is it right for their travel party (elderly, kids, couples, etc.)?
+4. EXCLUSIONS — if the user explicitly says "no X" (no stairs, no pool, no noise, etc.), EXCLUDE any property you know or suspect has X. Use your knowledge of these properties AND the semantic evidence above. When in doubt about exclusion criteria, err on the side of excluding.
+5. SAFETY — for families with infants/toddlers/elderly, exclude properties with known hazards (steep stairs, unfenced pools, remote medical access issues) UNLESS the user explicitly accepts those.
 
 Return ONLY JSON:
 {"intent":"${intent.intent}","hits":[{"propertyId":"exact id","reason":"1 vivid sentence explaining why this fits AND how to get there","matchScore":0.0-1.0}]}
@@ -194,7 +250,8 @@ Return ONLY JSON:
 Rules:
 - Up to 8 hits, desc by matchScore. Quality over quantity — if only 3 fit well, return 3.
 - Only use IDs from the list below. Never invent.
-- In the "reason" field, mention the nearest airport or driving route if travel constraints were specified.`;
+- In the "reason" field, mention the nearest airport or driving route if travel constraints were specified.
+- If excluding a property due to user's "no X" criteria, do NOT include it at all — do not explain why it was excluded.`;
 
     const userMsg = `Shortlist (${subset.length} properties):\n${compact}`;
 
