@@ -222,13 +222,13 @@ export async function POST(req: NextRequest) {
     let semanticContext = "";
     if (isSemanticSearchEnabled() && hasEmbeddings() && cachedQueryVector.length > 0) {
       try {
-        const hits = semanticSearch(cachedQueryVector, undefined, { topProperties: 10 });
+        const hits = semanticSearch(cachedQueryVector, undefined, { topProperties: 15 });
         const evidenceLines = hits.map(h => {
-          const topEvidence = h.evidence.slice(0, 3).map(e => e.text || e.photo || "").join("; ");
+          const topEvidence = h.evidence.slice(0, 5).map(e => e.text || e.photo || "").join("; ");
           return `${h.slug}: ${topEvidence}`;
         }).join("\n");
         if (evidenceLines) {
-          semanticContext = `\n\nSEMANTIC EVIDENCE (review/description excerpts matching this query):\n${evidenceLines}`;
+          semanticContext = `\n\nSEMANTIC EVIDENCE FROM REVIEWS & PHOTOS (use this to EXCLUDE properties that violate user's "no X" criteria):\n${evidenceLines}\n\nIMPORTANT: If evidence mentions stairs, pool, steps, steep access, etc. and the user said "no stairs" or "no pool" — that property MUST be excluded. The evidence PROVES the property has what the user does NOT want.`;
         }
       } catch { /* ignore — semantic is enhancement, not critical */ }
     }
@@ -241,8 +241,13 @@ From the shortlisted properties below, pick the ones that BEST match the user's 
 1. Experience fit — does the property offer what the user is looking for?
 2. Accessibility — can the user realistically reach it given their travel constraints?
 3. Suitability — is it right for their travel party (elderly, kids, couples, etc.)?
-4. EXCLUSIONS — if the user explicitly says "no X" (no stairs, no pool, no noise, etc.), EXCLUDE any property you know or suspect has X. Use your knowledge of these properties AND the semantic evidence above. When in doubt about exclusion criteria, err on the side of excluding.
-5. SAFETY — for families with infants/toddlers/elderly, exclude properties with known hazards (steep stairs, unfenced pools, remote medical access issues) UNLESS the user explicitly accepts those.
+4. EXCLUSIONS (CRITICAL — apply BEFORE ranking):
+   - Parse the user's query for ANY "no X" / "without X" / "not X" criteria
+   - Check the SEMANTIC EVIDENCE above for each property
+   - If evidence mentions the thing the user wants to AVOID (e.g., "swimming pool", "staircase", "steps", "steep"), EXCLUDE that property completely
+   - Also use your own knowledge: if you know a property has pools/stairs/etc. even without explicit evidence, exclude it
+   - When in doubt, EXCLUDE. A false exclusion is better than recommending something unsafe for a family with an infant.
+5. SAFETY — with infants/toddlers: unfenced pools, steep stairs, elevated structures without railings are ALL dealbreakers. Exclude aggressively.
 
 Return ONLY JSON:
 {"intent":"${intent.intent}","hits":[{"propertyId":"exact id","reason":"1 vivid sentence explaining why this fits AND how to get there","matchScore":0.0-1.0}]}
@@ -251,7 +256,8 @@ Rules:
 - Up to 8 hits, desc by matchScore. Quality over quantity — if only 3 fit well, return 3.
 - Only use IDs from the list below. Never invent.
 - In the "reason" field, mention the nearest airport or driving route if travel constraints were specified.
-- If excluding a property due to user's "no X" criteria, do NOT include it at all — do not explain why it was excluded.`;
+- If excluding a property due to user's "no X" criteria, do NOT include it at all — do not explain why it was excluded.
+- DOUBLE CHECK: Before finalizing, re-read the user's exclusion criteria and verify NONE of your recommended properties violate them.`;
 
     const userMsg = `Shortlist (${subset.length} properties):\n${compact}`;
 
