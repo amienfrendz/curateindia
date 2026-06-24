@@ -39,6 +39,12 @@ btn.onclick = async function() {
   r.interimResults = false;
   r.continuous = false;
   
+  // Try on-device processing
+  if ('processLocally' in r) {
+    r.processLocally = true;
+    l('Set processLocally = true');
+  }
+  
   r.onstart = () => l('EVENT: onstart');
   r.onaudiostart = () => l('EVENT: onaudiostart');
   r.onsoundstart = () => l('EVENT: onsoundstart');
