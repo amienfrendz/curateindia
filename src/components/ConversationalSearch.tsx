@@ -292,6 +292,7 @@ function ResultCard({ hit }: { hit: SearchHit & { property: Property } }) {
 function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
   const [listening, setListening] = useState(false);
   const [supported, setSupported] = useState(false);
+  const [error, setError] = useState("");
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const recognitionRef = useRef<any>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -323,6 +324,8 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
       return;
     }
 
+    setError("");
+
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const w = window as any;
     const SpeechRecognition = w.SpeechRecognition || w.webkitSpeechRecognition;
@@ -331,7 +334,6 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
     const recognition = new SpeechRecognition();
     recognition.lang = "en-IN";
     recognition.interimResults = false;
-    // continuous: false means it auto-stops after user pauses speaking
     recognition.continuous = false;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -339,35 +341,65 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
       const transcript: string = event?.results?.[0]?.[0]?.transcript || "";
       if (transcript) onTranscript(transcript);
     };
-    recognition.onerror = () => stopListening();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    recognition.onerror = (e: any) => {
+      const code = e?.error || "unknown";
+      if (code === "not-allowed") {
+        setError("Mic blocked — tap the lock icon in your browser address bar to allow");
+      } else if (code === "network") {
+        setError("Speech service unavailable — check your connection");
+      } else if (code !== "aborted") {
+        setError("Mic error: " + code);
+      }
+      stopListening();
+    };
     recognition.onend = () => stopListening();
 
     recognitionRef.current = recognition;
-    recognition.start();
-    setListening(true);
 
-    // Safety timeout: force stop after 30 seconds max
+    try {
+      recognition.start();
+      setListening(true);
+    } catch {
+      setError("Mic blocked — tap the lock icon in your browser to allow microphone");
+      stopListening();
+    }
+
     timeoutRef.current = setTimeout(() => {
       stopListening();
     }, 30000);
   }
 
+  // Auto-clear error after 5 seconds
+  useEffect(() => {
+    if (!error) return;
+    const t = setTimeout(() => setError(""), 5000);
+    return () => clearTimeout(t);
+  }, [error]);
+
   if (!supported) return null;
 
   return (
-    <button
-      type="button"
-      onClick={toggle}
-      className={`h-9 w-9 sm:h-10 sm:w-10 rounded-lg sm:rounded-xl flex items-center justify-center transition-colors shrink-0 ${
-        listening ? "bg-red-500/20 text-red-400 animate-pulse" : "bg-ink-800 hover:bg-ink-700 text-muted hover:text-foreground"
-      }`}
-      title={listening ? "Stop listening" : "Speak your request"}
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
-        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-        <line x1="12" y1="19" x2="12" y2="22" />
-      </svg>
-    </button>
+    <div className="relative">
+      <button
+        type="button"
+        onClick={toggle}
+        className={`h-9 w-9 sm:h-10 sm:w-10 rounded-lg sm:rounded-xl flex items-center justify-center transition-colors shrink-0 ${
+          listening ? "bg-red-500/20 text-red-400 animate-pulse" : "bg-ink-800 hover:bg-ink-700 text-muted hover:text-foreground"
+        }`}
+        title={listening ? "Stop listening" : "Speak your request"}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+          <line x1="12" y1="19" x2="12" y2="22" />
+        </svg>
+      </button>
+      {error && (
+        <div className="absolute bottom-full right-0 mb-2 w-56 p-2 rounded-lg bg-red-900/90 text-red-200 text-xs leading-snug z-50">
+          {error}
+        </div>
+      )}
+    </div>
   );
 }
