@@ -331,7 +331,7 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
 
     // Try on-device/local recognition first (Edge 150+ and future Chrome)
     // Then fall back to standard cloud recognition
-    modeRef.current = "speech";
+    // speech mode
     const recognition = new SpeechRecognition();
     recognition.lang = "en-IN";
     recognition.interimResults = false;
@@ -372,7 +372,7 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
     };
 
     recognition.onend = () => {
-      if (modeRef.current === "speech") setListening(false);
+      setListening(false);
     };
 
     recognitionRef.current = recognition;
@@ -420,3 +420,4 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
     </div>
   );
 }
+

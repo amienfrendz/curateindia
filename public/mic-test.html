@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html><head><title>Mic Test</title></head>
+<body style="font-family:sans-serif;padding:40px">
+<h2>Speech Recognition Test</h2>
+<button id="btn" style="padding:20px 40px;font-size:18px">🎤 Start</button>
+<pre id="log" style="background:#eee;padding:20px;margin-top:20px;white-space:pre-wrap"></pre>
+<script>
+const log = document.getElementById('log');
+const btn = document.getElementById('btn');
+function l(msg) { log.textContent += msg + '\n'; console.log(msg); }
+
+l('UserAgent: ' + navigator.userAgent);
+l('SpeechRecognition: ' + !!window.SpeechRecognition);
+l('webkitSpeechRecognition: ' + !!window.webkitSpeechRecognition);
+l('Secure context: ' + window.isSecureContext);
+l('Protocol: ' + location.protocol);
+
+btn.onclick = async function() {
+  l('\n--- Click ---');
+  
+  // Test mic permission
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({audio:true});
+    l('getUserMedia: OK');
+    stream.getTracks().forEach(t => t.stop());
+  } catch(e) {
+    l('getUserMedia FAILED: ' + e.message);
+    return;
+  }
+  
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR) { l('No SpeechRecognition API'); return; }
+  
+  const r = new SR();
+  l('Created recognition object');
+  l('processLocally prop exists: ' + ('processLocally' in r));
+  
+  r.lang = 'en-IN';
+  r.interimResults = false;
+  r.continuous = false;
+  
+  r.onstart = () => l('EVENT: onstart');
+  r.onaudiostart = () => l('EVENT: onaudiostart');
+  r.onsoundstart = () => l('EVENT: onsoundstart');
+  r.onspeechstart = () => l('EVENT: onspeechstart');
+  r.onresult = (e) => l('EVENT: onresult -> "' + e.results[0][0].transcript + '"');
+  r.onerror = (e) => l('EVENT: onerror -> code="' + e.error + '" message="' + e.message + '"');
+  r.onend = () => l('EVENT: onend');
+  r.onspeechend = () => l('EVENT: onspeechend');
+  r.onsoundend = () => l('EVENT: onsoundend');
+  r.onaudioend = () => l('EVENT: onaudioend');
+  r.onnomatch = () => l('EVENT: onnomatch');
+  
+  try {
+    r.start();
+    l('start() called OK');
+  } catch(e) {
+    l('start() THREW: ' + e.message);
+  }
+};
+</script>
+</body></html>
