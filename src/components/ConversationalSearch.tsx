@@ -296,6 +296,9 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
   const recognitionRef = useRef<any>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Hide mic entirely on Edge (broken Web Speech API in v134-149)
+  const isEdge = typeof navigator !== "undefined" && navigator.userAgent.includes("Edg/");
+
   function cleanup() {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     try { recognitionRef.current?.abort(); } catch {}
@@ -316,7 +319,7 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
     const SpeechRecognition = w.SpeechRecognition || w.webkitSpeechRecognition;
 
     if (!SpeechRecognition) {
-      setError("Speech not supported — use keyboard dictation (Win+H)");
+      setError("Speech not supported — use keyboard dictation");
       return;
     }
 
@@ -329,18 +332,10 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
       return;
     }
 
-    // Try on-device/local recognition first (Edge 150+ and future Chrome)
-    // Then fall back to standard cloud recognition
-    // speech mode
     const recognition = new SpeechRecognition();
     recognition.lang = "en-IN";
     recognition.interimResults = false;
     recognition.continuous = false;
-
-    // Edge on-device speech: set processLocally if available
-    if ("processLocally" in recognition) {
-      recognition.processLocally = true;
-    }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     recognition.onresult = (event: any) => {
@@ -393,6 +388,8 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, []);
+
+  if (isEdge) return null;
 
   return (
     <div className="relative">
