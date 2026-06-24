@@ -293,42 +293,39 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
   const [listening, setListening] = useState(false);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const recognitionRef = useRef<any>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const usingWhisperRef = useRef(false);
 
-  function stopRecording() {
+  function cleanup() {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    try { recognitionRef.current?.abort(); } catch {}
+    recognitionRef.current = null;
     if (mediaRecorderRef.current?.state === "recording") {
       mediaRecorderRef.current.stop();
     }
     setListening(false);
   }
 
-  async function toggle() {
-    if (listening) {
-      stopRecording();
-      return;
-    }
-
-    setError("");
+  // Whisper fallback: record audio → send to /api/transcribe
+  async function startWhisper() {
+    usingWhisperRef.current = true;
     chunksRef.current = [];
 
-    // Request mic access
     let stream: MediaStream;
     try {
       stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     } catch {
-      setError("Mic blocked — tap the lock icon in your browser to allow");
+      setError("Mic blocked — tap the lock icon to allow");
       return;
     }
 
-    // Use audio/webm if available, fallback to whatever browser supports
     const mimeType = MediaRecorder.isTypeSupported("audio/webm;codecs=opus")
       ? "audio/webm;codecs=opus"
-      : MediaRecorder.isTypeSupported("audio/webm")
-        ? "audio/webm"
-        : "audio/mp4";
+      : MediaRecorder.isTypeSupported("audio/webm") ? "audio/webm" : "audio/mp4";
 
     const recorder = new MediaRecorder(stream, { mimeType });
     mediaRecorderRef.current = recorder;
@@ -338,22 +335,16 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
     };
 
     recorder.onstop = async () => {
-      // Stop all mic tracks
       stream.getTracks().forEach(t => t.stop());
-
       const blob = new Blob(chunksRef.current, { type: mimeType });
-      if (blob.size < 1000) {
-        // Too short — likely accidental tap
-        return;
-      }
+      if (blob.size < 1000) return;
 
-      // Send to our Whisper API
       setProcessing(true);
       try {
         const formData = new FormData();
         formData.append("audio", blob, "audio.webm");
         const res = await fetch("/api/transcribe", { method: "POST", body: formData });
-        if (!res.ok) throw new Error("Transcription failed");
+        if (!res.ok) throw new Error("fail");
         const data = await res.json();
         if (data.text) onTranscript(data.text);
       } catch {
@@ -365,26 +356,73 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
 
     recorder.start();
     setListening(true);
-
-    // Auto-stop after 30 seconds
-    timeoutRef.current = setTimeout(() => stopRecording(), 30000);
+    timeoutRef.current = setTimeout(() => cleanup(), 30000);
   }
 
-  // Auto-clear error
+  // Primary: try Web Speech API first
+  function startSpeechRecognition() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const w = window as any;
+    const SpeechRecognition = w.SpeechRecognition || w.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      startWhisper();
+      return;
+    }
+
+    usingWhisperRef.current = false;
+    const recognition = new SpeechRecognition();
+    recognition.lang = "en-IN";
+    recognition.interimResults = false;
+    recognition.continuous = false;
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    recognition.onresult = (event: any) => {
+      const transcript: string = event?.results?.[0]?.[0]?.transcript || "";
+      if (transcript) onTranscript(transcript);
+    };
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    recognition.onerror = (e: any) => {
+      const code = e?.error || "";
+      cleanup();
+      // On "network" or "not-allowed", fall back to Whisper
+      if (code === "network" || code === "service-not-allowed") {
+        startWhisper();
+      }
+    };
+
+    recognition.onend = () => {
+      if (!usingWhisperRef.current) setListening(false);
+    };
+
+    recognitionRef.current = recognition;
+    try {
+      recognition.start();
+      setListening(true);
+      timeoutRef.current = setTimeout(() => cleanup(), 30000);
+    } catch {
+      startWhisper();
+    }
+  }
+
+  function toggle() {
+    if (listening) {
+      cleanup();
+      return;
+    }
+    setError("");
+    startSpeechRecognition();
+  }
+
   useEffect(() => {
     if (!error) return;
     const t = setTimeout(() => setError(""), 5000);
     return () => clearTimeout(t);
   }, [error]);
 
-  // Cleanup on unmount
   useEffect(() => {
-    return () => {
-      if (mediaRecorderRef.current?.state === "recording") {
-        mediaRecorderRef.current.stop();
-      }
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    };
+    return () => cleanup();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
