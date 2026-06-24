@@ -291,74 +291,16 @@ function ResultCard({ hit }: { hit: SearchHit & { property: Property } }) {
 
 function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
   const [listening, setListening] = useState(false);
-  const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const recognitionRef = useRef<any>(null);
-  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
-  const chunksRef = useRef<Blob[]>([]);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const modeRef = useRef<"speech" | "whisper" | null>(null);
 
   function cleanup() {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     try { recognitionRef.current?.abort(); } catch {}
     recognitionRef.current = null;
-    if (mediaRecorderRef.current?.state === "recording") {
-      mediaRecorderRef.current.stop();
-    } else {
-      setListening(false);
-    }
-    modeRef.current = null;
-  }
-
-  async function startWhisper() {
-    modeRef.current = "whisper";
-    chunksRef.current = [];
-
-    let stream: MediaStream;
-    try {
-      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    } catch {
-      setError("Mic blocked — check browser permissions");
-      return;
-    }
-
-    const mimeType = MediaRecorder.isTypeSupported("audio/webm;codecs=opus")
-      ? "audio/webm;codecs=opus"
-      : MediaRecorder.isTypeSupported("audio/webm") ? "audio/webm" : "audio/mp4";
-
-    const recorder = new MediaRecorder(stream, { mimeType });
-    mediaRecorderRef.current = recorder;
-
-    recorder.ondataavailable = (e) => {
-      if (e.data.size > 0) chunksRef.current.push(e.data);
-    };
-
-    recorder.onstop = async () => {
-      stream.getTracks().forEach(t => t.stop());
-      setListening(false);
-      const blob = new Blob(chunksRef.current, { type: mimeType });
-      if (blob.size < 1000) return;
-
-      setProcessing(true);
-      try {
-        const formData = new FormData();
-        formData.append("audio", blob, "audio.webm");
-        const res = await fetch("/api/transcribe", { method: "POST", body: formData });
-        if (!res.ok) throw new Error("fail");
-        const data = await res.json();
-        if (data.text) onTranscript(data.text);
-      } catch {
-        setError("Could not transcribe — try typing instead");
-      } finally {
-        setProcessing(false);
-      }
-    };
-
-    recorder.start();
-    setListening(true);
-    timeoutRef.current = setTimeout(() => cleanup(), 30000);
+    setListening(false);
   }
 
   async function toggle() {
@@ -373,9 +315,8 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
     const w = window as any;
     const SpeechRecognition = w.SpeechRecognition || w.webkitSpeechRecognition;
 
-    // If no SpeechRecognition API at all, go straight to Whisper
     if (!SpeechRecognition) {
-      await startWhisper();
+      setError("Speech not supported — use keyboard dictation (Win+H)");
       return;
     }
 
@@ -388,12 +329,18 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
       return;
     }
 
-    // Try native SpeechRecognition
+    // Try on-device/local recognition first (Edge 150+ and future Chrome)
+    // Then fall back to standard cloud recognition
     modeRef.current = "speech";
     const recognition = new SpeechRecognition();
     recognition.lang = "en-IN";
     recognition.interimResults = false;
     recognition.continuous = false;
+
+    // Edge on-device speech: set processLocally if available
+    if ("processLocally" in recognition) {
+      recognition.processLocally = true;
+    }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     recognition.onresult = (event: any) => {
@@ -409,12 +356,15 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
       setListening(false);
 
-      // Fallback to Whisper on network/service errors (Chrome/Edge deprecated speech service)
       if (code === "network" || code === "service-not-allowed") {
-        startWhisper();
-        return;
-      }
-      if (code === "not-allowed") {
+        // Edge stable broke cloud speech — suggest Win+H or Chrome
+        const isEdge = navigator.userAgent.includes("Edg/");
+        if (isEdge) {
+          setError("Edge voice is broken (known bug). Use Win+H to dictate, or try Chrome/Safari.");
+        } else {
+          setError("Speech service unavailable — check connection");
+        }
+      } else if (code === "not-allowed") {
         setError("Mic blocked — check browser permissions");
       } else if (code !== "aborted") {
         setError("Mic error: " + code);
@@ -440,7 +390,6 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
   useEffect(() => {
     return () => {
       try { recognitionRef.current?.abort(); } catch {}
-      if (mediaRecorderRef.current?.state === "recording") mediaRecorderRef.current.stop();
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, []);
@@ -450,25 +399,18 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
       <button
         type="button"
         onClick={toggle}
-        disabled={processing}
         className={`h-9 w-9 sm:h-10 sm:w-10 rounded-lg sm:rounded-xl flex items-center justify-center transition-colors shrink-0 ${
           listening
             ? "bg-red-500/20 text-red-400 animate-pulse"
-            : processing
-              ? "bg-ink-800 text-muted opacity-50"
-              : "bg-ink-800 hover:bg-ink-700 text-muted hover:text-foreground"
+            : "bg-ink-800 hover:bg-ink-700 text-muted hover:text-foreground"
         }`}
-        title={listening ? "Tap to stop" : processing ? "Transcribing…" : "Speak your request"}
+        title={listening ? "Tap to stop" : "Speak your request"}
       >
-        {processing ? (
-          <svg className="animate-spin" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 12a9 9 0 1 1-6.219-8.56" /></svg>
-        ) : (
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
-            <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-            <line x1="12" y1="19" x2="12" y2="22" />
-          </svg>
-        )}
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+          <line x1="12" y1="19" x2="12" y2="22" />
+        </svg>
       </button>
       {error && (
         <div className="absolute bottom-full right-0 mb-2 w-56 p-2 rounded-lg bg-red-900/90 text-red-200 text-xs leading-snug z-50">
