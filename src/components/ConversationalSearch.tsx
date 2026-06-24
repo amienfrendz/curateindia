@@ -291,85 +291,45 @@ function ResultCard({ hit }: { hit: SearchHit & { property: Property } }) {
 
 function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
   const [listening, setListening] = useState(false);
-  const [processing, setProcessing] = useState(false);
+  const [supported, setSupported] = useState(false);
   const [error, setError] = useState("");
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const recognitionRef = useRef<any>(null);
-  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
-  const chunksRef = useRef<Blob[]>([]);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const usingWhisperRef = useRef(false);
 
-  function cleanup() {
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const w = window as any;
+    setSupported(!!(w.SpeechRecognition || w.webkitSpeechRecognition));
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      recognitionRef.current?.abort();
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
+  function stopListening() {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    try { recognitionRef.current?.abort(); } catch {}
+    try { recognitionRef.current?.stop(); } catch {}
     recognitionRef.current = null;
-    if (mediaRecorderRef.current?.state === "recording") {
-      mediaRecorderRef.current.stop();
-    }
     setListening(false);
   }
 
-  // Whisper fallback: record audio → send to /api/transcribe
-  async function startWhisper() {
-    usingWhisperRef.current = true;
-    chunksRef.current = [];
-
-    let stream: MediaStream;
-    try {
-      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    } catch {
-      setError("Mic blocked — tap the lock icon to allow");
+  function toggle() {
+    if (listening) {
+      stopListening();
       return;
     }
 
-    const mimeType = MediaRecorder.isTypeSupported("audio/webm;codecs=opus")
-      ? "audio/webm;codecs=opus"
-      : MediaRecorder.isTypeSupported("audio/webm") ? "audio/webm" : "audio/mp4";
+    setError("");
 
-    const recorder = new MediaRecorder(stream, { mimeType });
-    mediaRecorderRef.current = recorder;
-
-    recorder.ondataavailable = (e) => {
-      if (e.data.size > 0) chunksRef.current.push(e.data);
-    };
-
-    recorder.onstop = async () => {
-      stream.getTracks().forEach(t => t.stop());
-      const blob = new Blob(chunksRef.current, { type: mimeType });
-      if (blob.size < 1000) return;
-
-      setProcessing(true);
-      try {
-        const formData = new FormData();
-        formData.append("audio", blob, "audio.webm");
-        const res = await fetch("/api/transcribe", { method: "POST", body: formData });
-        if (!res.ok) throw new Error("fail");
-        const data = await res.json();
-        if (data.text) onTranscript(data.text);
-      } catch {
-        setError("Could not transcribe — try typing instead");
-      } finally {
-        setProcessing(false);
-      }
-    };
-
-    recorder.start();
-    setListening(true);
-    timeoutRef.current = setTimeout(() => cleanup(), 30000);
-  }
-
-  // Primary: try Web Speech API first
-  function startSpeechRecognition() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const w = window as any;
     const SpeechRecognition = w.SpeechRecognition || w.webkitSpeechRecognition;
-    if (!SpeechRecognition) {
-      startWhisper();
-      return;
-    }
+    if (!SpeechRecognition) return;
 
-    usingWhisperRef.current = false;
     const recognition = new SpeechRecognition();
     recognition.lang = "en-IN";
     recognition.interimResults = false;
@@ -380,38 +340,27 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
       const transcript: string = event?.results?.[0]?.[0]?.transcript || "";
       if (transcript) onTranscript(transcript);
     };
-
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     recognition.onerror = (e: any) => {
-      const code = e?.error || "";
-      cleanup();
-      // On "network" or "not-allowed", fall back to Whisper
-      if (code === "network" || code === "service-not-allowed") {
-        startWhisper();
+      const code = e?.error || "unknown";
+      if (code === "not-allowed") {
+        setError("Mic blocked — check browser permissions");
+      } else if (code === "network") {
+        setError("Speech service unavailable — check connection");
+      } else if (code !== "aborted") {
+        setError("Mic error: " + code);
       }
+      stopListening();
     };
-
-    recognition.onend = () => {
-      if (!usingWhisperRef.current) setListening(false);
-    };
+    recognition.onend = () => stopListening();
 
     recognitionRef.current = recognition;
-    try {
-      recognition.start();
-      setListening(true);
-      timeoutRef.current = setTimeout(() => cleanup(), 30000);
-    } catch {
-      startWhisper();
-    }
-  }
+    recognition.start();
+    setListening(true);
 
-  function toggle() {
-    if (listening) {
-      cleanup();
-      return;
-    }
-    setError("");
-    startSpeechRecognition();
+    timeoutRef.current = setTimeout(() => {
+      stopListening();
+    }, 30000);
   }
 
   useEffect(() => {
@@ -420,35 +369,23 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
     return () => clearTimeout(t);
   }, [error]);
 
-  useEffect(() => {
-    return () => cleanup();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  if (!supported) return null;
 
   return (
     <div className="relative">
       <button
         type="button"
         onClick={toggle}
-        disabled={processing}
         className={`h-9 w-9 sm:h-10 sm:w-10 rounded-lg sm:rounded-xl flex items-center justify-center transition-colors shrink-0 ${
-          listening
-            ? "bg-red-500/20 text-red-400 animate-pulse"
-            : processing
-              ? "bg-ink-800 text-muted opacity-50"
-              : "bg-ink-800 hover:bg-ink-700 text-muted hover:text-foreground"
+          listening ? "bg-red-500/20 text-red-400 animate-pulse" : "bg-ink-800 hover:bg-ink-700 text-muted hover:text-foreground"
         }`}
-        title={listening ? "Stop & transcribe" : processing ? "Transcribing…" : "Speak your request"}
+        title={listening ? "Stop listening" : "Speak your request"}
       >
-        {processing ? (
-          <svg className="animate-spin" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 12a9 9 0 1 1-6.219-8.56" /></svg>
-        ) : (
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
-            <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-            <line x1="12" y1="19" x2="12" y2="22" />
-          </svg>
-        )}
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+          <line x1="12" y1="19" x2="12" y2="22" />
+        </svg>
       </button>
       {error && (
         <div className="absolute bottom-full right-0 mb-2 w-56 p-2 rounded-lg bg-red-900/90 text-red-200 text-xs leading-snug z-50">
