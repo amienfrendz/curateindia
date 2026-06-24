@@ -317,7 +317,7 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
     setListening(false);
   }
 
-  function toggle() {
+  async function toggle() {
     if (listening) {
       stopListening();
       return;
@@ -329,6 +329,15 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
     const w = window as any;
     const SpeechRecognition = w.SpeechRecognition || w.webkitSpeechRecognition;
     if (!SpeechRecognition) return;
+
+    // Safari requires mic permission via getUserMedia BEFORE SpeechRecognition.start()
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      stream.getTracks().forEach(t => t.stop()); // release immediately — we just need the permission grant
+    } catch {
+      setError("Mic blocked — check browser permissions");
+      return;
+    }
 
     const recognition = new SpeechRecognition();
     recognition.lang = "en-IN";
@@ -347,6 +356,8 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
         setError("Mic blocked — check browser permissions");
       } else if (code === "network") {
         setError("Speech service unavailable — check connection");
+      } else if (code === "service-not-allowed") {
+        setError("Speech not available — try keyboard dictation (🎤 key)");
       } else if (code !== "aborted") {
         setError("Mic error: " + code);
       }
