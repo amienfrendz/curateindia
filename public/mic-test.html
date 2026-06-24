@@ -35,33 +35,39 @@ btn.onclick = async function() {
   l('Created recognition object');
   l('processLocally prop exists: ' + ('processLocally' in r));
   
-  r.lang = 'en-US';
-  r.interimResults = false;
-  r.continuous = false;
-  
-  // Try on-device processing
-  if ('processLocally' in r) {
-    r.processLocally = true;
-    l('Set processLocally = true');
+  // Test 1: processLocally=true, no lang (system default)
+  l('\n=== Test 1: processLocally=true, no lang ===');
+  const r1 = new SR();
+  r1.processLocally = true;
+  r1.interimResults = false;
+  r1.continuous = false;
+  r1.onresult = (e) => l('T1 result: "' + e.results[0][0].transcript + '"');
+  r1.onerror = (e) => { l('T1 error: ' + e.error); tryTest2(); };
+  r1.onend = () => l('T1 end');
+  try { r1.start(); l('T1 start OK'); } catch(e) { l('T1 start THREW: ' + e.message); tryTest2(); }
+
+  function tryTest2() {
+    l('\n=== Test 2: processLocally=false (cloud), en-US ===');
+    const r2 = new SR();
+    r2.processLocally = false;
+    r2.lang = 'en-US';
+    r2.interimResults = false;
+    r2.continuous = false;
+    r2.onresult = (e) => l('T2 result: "' + e.results[0][0].transcript + '"');
+    r2.onerror = (e) => { l('T2 error: ' + e.error); tryTest3(); };
+    r2.onend = () => l('T2 end');
+    try { r2.start(); l('T2 start OK'); } catch(e) { l('T2 start THREW: ' + e.message); tryTest3(); }
   }
-  
-  r.onstart = () => l('EVENT: onstart');
-  r.onaudiostart = () => l('EVENT: onaudiostart');
-  r.onsoundstart = () => l('EVENT: onsoundstart');
-  r.onspeechstart = () => l('EVENT: onspeechstart');
-  r.onresult = (e) => l('EVENT: onresult -> "' + e.results[0][0].transcript + '"');
-  r.onerror = (e) => l('EVENT: onerror -> code="' + e.error + '" message="' + e.message + '"');
-  r.onend = () => l('EVENT: onend');
-  r.onspeechend = () => l('EVENT: onspeechend');
-  r.onsoundend = () => l('EVENT: onsoundend');
-  r.onaudioend = () => l('EVENT: onaudioend');
-  r.onnomatch = () => l('EVENT: onnomatch');
-  
-  try {
-    r.start();
-    l('start() called OK');
-  } catch(e) {
-    l('start() THREW: ' + e.message);
+
+  function tryTest3() {
+    l('\n=== Test 3: no processLocally, no lang (bare minimum) ===');
+    const r3 = new SR();
+    r3.interimResults = false;
+    r3.continuous = false;
+    r3.onresult = (e) => l('T3 result: "' + e.results[0][0].transcript + '"');
+    r3.onerror = (e) => l('T3 error: ' + e.error);
+    r3.onend = () => l('T3 end');
+    try { r3.start(); l('T3 start OK'); } catch(e) { l('T3 start THREW: ' + e.message); }
   }
 };
 </script>
