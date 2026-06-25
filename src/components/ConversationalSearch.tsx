@@ -296,8 +296,8 @@ function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
   const recognitionRef = useRef<any>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Hide mic entirely on Edge (broken Web Speech API in v134-149)
-  const isEdge = typeof navigator !== "undefined" && navigator.userAgent.includes("Edg/");
+  // Hide mic on Edge (broken Web Speech API in v134-149, iOS Edge uses WebKit but also broken)
+  const isEdge = typeof navigator !== "undefined" && /Edg[eA-Z]*\//i.test(navigator.userAgent);
 
   function cleanup() {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
