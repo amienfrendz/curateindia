@@ -308,7 +308,7 @@ Rules:
     const msg = e instanceof Error ? e.message : "search failed";
     const status = msg.includes("429") ? 429 : 500;
     const userMsg = status === 429
-      ? "Our AI is temporarily rate-limited. Please try again in a minute."
+      ? "Our search is temporarily busy. Please try again in a minute."
       : "Something went wrong with the search. Please try again.";
     return NextResponse.json({ error: userMsg }, { status });
   }

@@ -18,7 +18,7 @@ const sans = Inter({
 export const metadata: Metadata = {
   title: "CurateIndia — Stay where India still lives",
   description:
-    "An LLM-curated discovery layer for India's most experiential small stays — havelis, plantation bungalows, tribal homestays, houseboats, ashrams. Conversational search, real-time inventory, no booking middleman.",
+    "A hand-curated collection of India's most extraordinary small stays — heritage havelis, plantation bungalows, tribal homestays, island retreats, forest lodges. Every property personally vetted for great food, expert hosts, and unforgettable experiences. Just describe what you want, we'll find the perfect stay.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
