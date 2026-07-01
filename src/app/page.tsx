@@ -44,7 +44,7 @@ export default function Home() {
                 Experiences
               </div>
               <h2 className="font-display text-4xl sm:text-5xl text-balance">
-                What do you want to feel?
+                What experiences call to you?
               </h2>
             </div>
             <Link
