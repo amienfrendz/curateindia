@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import reviewsData from "@/data/property-reviews.json";
+import generativeSummariesData from "@/data/semantic/generative-summaries.json";
 
 type ReviewEntry = {
   rating: number | null;
@@ -10,7 +11,18 @@ type ReviewEntry = {
   fetchedAt: string;
 };
 
+type GenerativeSummaryEntry = {
+  placeId: string;
+  displayName: string;
+  generativeSummary: string | null;
+  editorialSummary: string | null;
+  reviews: any[];
+  fetchedAt: string;
+};
+
 const allReviews = reviewsData as Record<string, ReviewEntry>;
+const allGenerativeSummaries = generativeSummariesData as Record<string, GenerativeSummaryEntry>;
+const SHOW_PLACE_SUMMARY = process.env.NEXT_PUBLIC_SHOW_PLACE_SUMMARY === "true";
 
 function ExpandableReview({ text }: { text: string }) {
   const [expanded, setExpanded] = useState(false);
@@ -33,6 +45,7 @@ function ExpandableReview({ text }: { text: string }) {
 
 export default function ReviewsPanel({ propertySlug }: { propertySlug: string }) {
   const data = allReviews[propertySlug];
+  const summaryData = SHOW_PLACE_SUMMARY ? allGenerativeSummaries[propertySlug] : null;
 
   if (!data || (!data.rating && data.reviews.length === 0)) {
     return (
@@ -57,6 +70,16 @@ export default function ReviewsPanel({ propertySlug }: { propertySlug: string })
             </div>
             <div className="text-xs text-muted">{data.ratingCount.toLocaleString()} Google reviews</div>
           </div>
+        </div>
+      )}
+
+      {/* Google Places generative summary (feature flagged) */}
+      {SHOW_PLACE_SUMMARY && summaryData?.generativeSummary && (
+        <div className="bg-ink-800/40 border border-spice-500/20 rounded-lg p-4">
+          <div className="text-xs uppercase tracking-wider text-spice-400 mb-2">Google Places Summary</div>
+          <p className="text-sm text-foreground/80 leading-relaxed">
+            {summaryData.generativeSummary}
+          </p>
         </div>
       )}
 
