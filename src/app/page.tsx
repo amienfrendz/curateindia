@@ -114,6 +114,8 @@ export default function Home() {
                 kicker: "01",
                 title: "Describe what you want",
                 body: "Mood, food, landscape, budget, dates — natural language, no filters.",
+                cta: "Ask CurateIndia →",
+                ctaHref: "/search",
               },
               {
                 kicker: "02",
@@ -130,6 +132,11 @@ export default function Home() {
                 <div className="text-spice-400 font-display text-3xl mb-2">{s.kicker}</div>
                 <div className="font-display text-2xl mb-2">{s.title}</div>
                 <div className="text-muted text-sm leading-relaxed">{s.body}</div>
+                {s.cta && (
+                  <Link href={s.ctaHref || "#"} className="text-spice-400 hover:text-spice-300 text-sm font-medium mt-4 inline-block transition-colors">
+                    {s.cta}
+                  </Link>
+                )}
               </div>
             ))}
           </div>
