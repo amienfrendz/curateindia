@@ -2,10 +2,10 @@
 
 > Stay where India still lives.
 
-An LLM-curated discovery layer for India's small, hosted, experience-led stays —
+A curated discovery layer for India's small, hosted, experience-led stays —
 havelis, plantation bungalows, tribal homestays, houseboats, ashrams.
 Conversational search, live web-grounded availability, real reviews. **No booking
-middleman** — we link out to Google, Booking, Airbnb, or the host's own site.
+middleperson** — we link out to Google, Booking, Airbnb, or the host's own site.
 
 ## Features
 
