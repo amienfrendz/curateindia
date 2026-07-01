@@ -16,7 +16,7 @@ type GenerativeSummaryEntry = {
   displayName: string;
   generativeSummary: string | null;
   editorialSummary: string | null;
-  reviews: any[];
+  reviews: unknown[];
   fetchedAt: string;
 };
 
