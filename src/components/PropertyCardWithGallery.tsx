@@ -8,7 +8,7 @@ import galleryData from "@/data/property-gallery.json";
 
 type GalleryEntry = {
   photos: Array<{
-    url: string;
+    file: string;
     category?: string;
   }>;
 };

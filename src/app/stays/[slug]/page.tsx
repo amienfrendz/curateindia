@@ -4,7 +4,7 @@ import { getPropertyBySlug, getAllProperties } from "@/lib/repo";
 import { getCluster } from "@/data/clusters";
 import { buildBookingLinks, getGoogleMapsUrl } from "@/lib/bookingLinks";
 import PropertyImage from "@/components/PropertyImage";
-import PropertyCard from "@/components/PropertyCard";
+import PropertyCardWrapper from "@/components/PropertyCardWrapper";
 import ReviewsPanel from "@/components/ReviewsPanel";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
 import ShareButton from "@/components/ShareButton";
@@ -13,6 +13,7 @@ import type { GalleryPhoto } from "@/components/PhotoGallery";
 import pricingData from "@/data/property-pricing.json";
 import reviewsData from "@/data/property-reviews.json";
 import galleryData from "@/data/property-gallery.json";
+import { findSemanticRelated } from "@/lib/semantic";
 
 // Set DISABLE_GALLERY=true in .env.local to turn off gallery
 const GALLERY_ENABLED = process.env.DISABLE_GALLERY !== "true";
@@ -38,13 +39,7 @@ export default async function StayPage({ params }: { params: { slug: string } })
   const links = buildBookingLinks(property);
   const mapsUrl = getGoogleMapsUrl(property);
   const all = await getAllProperties();
-  const related = all
-    .filter(
-      (p) =>
-        p.id !== property.id &&
-        p.clusters.some((c) => property.clusters.includes(c))
-    )
-    .slice(0, 4);
+  const related = findSemanticRelated(property, all, 4);
 
   const reviewEntry = (reviewsData as Record<string, { rating: number | null; ratingCount: number }>)[property.slug];
   const rating = reviewEntry?.rating;
@@ -219,7 +214,7 @@ export default async function StayPage({ params }: { params: { slug: string } })
             <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl mb-6 sm:mb-8">Similar curations</h2>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
               {related.map((p) => (
-                <PropertyCard key={p.id} property={p} />
+                <PropertyCardWrapper key={p.id} property={p} />
               ))}
             </div>
           </div>

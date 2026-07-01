@@ -3,13 +3,32 @@ import { Property } from "@/types";
 
 type TextEmbedding = {
   slug: string;
+  type: string;
   text: string;
-  embedding: number[];
-  source: string;
+  vector: number[];
 };
 
 const embeddings = textEmbeddingsData as TextEmbedding[];
-const embeddingMap = new Map(embeddings.map((e) => [e.slug, e.embedding]));
+
+// The dataset has multiple embeddings per property (review, blurb, food, etc.).
+// Pick one representative vector per slug, preferring the property-level "blurb".
+const TYPE_PRIORITY: Record<string, number> = {
+  blurb: 5,
+  editorialSummary: 4,
+  experience: 3,
+  food: 2,
+  review: 1,
+};
+
+const embeddingMap = new Map<string, number[]>();
+const chosenPriority = new Map<string, number>();
+for (const e of embeddings) {
+  const priority = TYPE_PRIORITY[e.type] ?? 0;
+  if (!embeddingMap.has(e.slug) || priority > (chosenPriority.get(e.slug) ?? -1)) {
+    embeddingMap.set(e.slug, e.vector);
+    chosenPriority.set(e.slug, priority);
+  }
+}
 
 /**
  * Cosine similarity between two vectors

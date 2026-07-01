@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Suspense } from "react";
 import ClusterTile from "@/components/ClusterTile";
-import PropertyCard from "@/components/PropertyCard";
+import PropertyCardWrapper from "@/components/PropertyCardWrapper";
 import { SkeletonCard, SkeletonClusterTile } from "@/components/Skeletons";
 import { getAllClustersWithImages, getFeaturedProperties } from "@/lib/repo";
 
@@ -10,7 +10,7 @@ async function FeaturedGrid() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
       {featured.map((p) => (
-        <PropertyCard key={p.id} property={p} />
+        <PropertyCardWrapper key={p.id} property={p} />
       ))}
     </div>
   );
