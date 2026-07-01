@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCluster, CLUSTERS } from "@/data/clusters";
 import { getClusterWithImage, getPropertiesByCluster } from "@/lib/repo";
-import PropertyCard from "@/components/PropertyCard";
+import PropertyCardWrapper from "@/components/PropertyCardWrapper";
 import ClusterImage from "@/components/ClusterImage";
 import type { ClusterSlug } from "@/types";
 
@@ -67,7 +67,7 @@ export default async function ClusterPage({ params }: { params: { slug: string }
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
               {properties.map((p) => (
-                <PropertyCard key={p.id} property={p} />
+                <PropertyCardWrapper key={p.id} property={p} />
               ))}
             </div>
           )}

@@ -212,7 +212,7 @@ export default async function StayPage({ params }: { params: { slug: string } })
               You might also love
             </div>
             <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl mb-6 sm:mb-8">Similar curations</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {related.map((p) => (
                 <PropertyCardWrapper key={p.id} property={p} />
               ))}

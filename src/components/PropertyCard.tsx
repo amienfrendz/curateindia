@@ -27,19 +27,21 @@ export default function PropertyCard({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-transparent to-transparent" />
 
-        {/* type chip + price tier */}
-        <div className="absolute top-3 left-3 flex gap-2">
-          <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full glass">
-            {property.type}
-          </span>
-          {property.rooms && (
-            <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full glass">
-              {property.rooms} {property.rooms === 1 ? "room" : "rooms"}
+        {/* Top row: type + rooms on the left, price tier on the right — flex so they never overlap */}
+        <div className="absolute top-3 inset-x-3 flex items-start justify-between gap-2">
+          <div className="flex flex-wrap gap-2 min-w-0">
+            <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full glass whitespace-nowrap">
+              {property.type}
             </span>
-          )}
-        </div>
-        <div className="absolute top-3 right-3 text-xs px-2 py-1 rounded-full glass">
-          {property.priceTier}
+            {property.rooms && (
+              <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full glass whitespace-nowrap">
+                {property.rooms} {property.rooms === 1 ? "room" : "rooms"}
+              </span>
+            )}
+          </div>
+          <span className="text-xs px-2 py-1 rounded-full glass shrink-0">
+            {property.priceTier}
+          </span>
         </div>
 
         {/* footer */}

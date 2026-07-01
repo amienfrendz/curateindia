@@ -1,10 +1,8 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import Link from "next/link";
 import type { Property, SearchHit } from "@/types";
-import { getCluster } from "@/data/clusters";
 import { SkeletonCard } from "./Skeletons";
-import PropertyImage from "./PropertyImage";
+import PropertyCardWrapper from "./PropertyCardWrapper";
 
 const SUGGESTIONS = [
   "A haveli in Rajasthan with Manganiar music evenings",
@@ -259,34 +257,7 @@ export default function ConversationalSearch({ minimal = false }: { minimal?: bo
 }
 
 function ResultCard({ hit }: { hit: SearchHit & { property: Property } }) {
-  const p = hit.property;
-  const cluster = getCluster(p.clusters[0]);
-  return (
-    <Link href={`/stays/${p.slug}`} className="block group min-w-0">
-      <div className="relative aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden border-hairline border">
-        <PropertyImage
-          imageUrl={`/photos/${p.slug}/1.jpg`}
-          website={p.website}
-          query={`${p.name} ${p.location} ${p.type}`}
-          alt={p.name}
-          className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-transparent to-transparent" />
-        <div className="absolute top-2 left-2 sm:top-3 sm:left-3 text-[9px] sm:text-[10px] uppercase tracking-wider px-2 py-1 rounded-full glass">
-          {p.type}
-        </div>
-        <div className="absolute bottom-0 inset-x-0 p-3 sm:p-4">
-          <div className="text-[10px] sm:text-xs text-muted mb-1 truncate">
-            {cluster?.icon} {p.location} · {p.state}
-          </div>
-          <div className="font-display text-base sm:text-xl leading-tight text-balance">{p.name}</div>
-        </div>
-      </div>
-      <div className="text-[11px] sm:text-xs text-sand-400 italic mt-2 leading-relaxed">
-        {hit.reason}
-      </div>
-    </Link>
-  );
+  return <PropertyCardWrapper property={hit.property} matchReason={hit.reason} />;
 }
 
 function MicButton({ onTranscript }: { onTranscript: (text: string) => void }) {
